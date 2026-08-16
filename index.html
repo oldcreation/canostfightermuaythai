@@ -823,7 +823,7 @@
 
             height: 55px;
 
-            background: rgba(20, 20, 20, 0.9);
+            background: black;
 
             display: flex;
 
@@ -999,7 +999,7 @@
         <h1>GALERI</h1>
         <div class="gallery-container">
 
-            <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Meraung" data-description="Acara Meraung menjadi salah satu momen yang menunjukkan betapa solidnya Serumpun Brothers, dengan semangat kebersamaan, kekompakan, dan dukungan yang luar biasa. Dari persiapan hingga acara berlangsung, semuanya terasa lebih seru karena dijalani bersama, saling mendukung, dan menikmati setiap momen yang tercipta. Bukan hanya tentang sebuah acara, tetapi juga tentang persaudaraan, kekuatan tim, dan kebersamaan yang membuat Meraung menjadi momen yang begitu berkesan.
+            <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Merasd" data-description="Acara Meraung menjadi salah satu momen yang menunjukkan betapa solidnya Serumpun Brothers, dengan semangat kebersamaan, kekompakan, dan dukungan yang luar biasa. Dari persiapan hingga acara berlangsung, semuanya terasa lebih seru karena dijalani bersama, saling mendukung, dan menikmati setiap momen yang tercipta. Bukan hanya tentang sebuah acara, tetapi juga tentang persaudaraan, kekuatan tim, dan kebersamaan yang membuat Meraung menjadi momen yang begitu berkesan.
 ">
 
                 <div class="gallery-image">
@@ -1007,7 +1007,7 @@
                 </div>
 
                 <div class="gallery-title">
-                    Meraung
+                    Meraung asda
                 </div>
 
             </div>
@@ -1149,7 +1149,7 @@
 
             <!-- WARRIOR 111-->
 
-            <div class="character active" data-name="OMAN" data-role=" THE K-TOWN BOYS"
+            <div class="character" data-name="OMAN" data-role=" THE K-TOWN BOYS"
                 data-description="Petarung jarak dekat dengan pertahanan kuat dan serangan fisik yang besar."
                 data-hp="95" data-atk="85" data-def="90"
                 data-story="Memiliki gaya bertarung yang bertolak belakang dengan bakat alami nya yang langka, selalu tampil santai seolah tidak perlu mengerahkan seluruh kemampuan nya untuk memenangkan pertarungan.">
@@ -1468,7 +1468,7 @@
 
             <!-- WARRIOR 111-->
 
-            <div class="character active" data-name="OMAN" data-role=" THE K-TOWN BOYS"
+            <div class="character" data-name="OMAN" data-role=" THE K-TOWN BOYS"
                 data-description="Petarung jarak dekat dengan pertahanan kuat dan serangan fisik yang besar."
                 data-hp="95" data-atk="85" data-def="90"
                 data-story="Memiliki gaya bertarung yang bertolak belakang dengan bakat alami nya yang langka, selalu tampil santai seolah tidak perlu mengerahkan seluruh kemampuan nya untuk memenangkan pertarungan.">
@@ -1901,36 +1901,55 @@
 
             setTimeout(() => {
 
-                next.classList.add(
-                    "active"
-                );
+    // Siapkan karakter TERLEBIH DAHULU
+    if (next.classList.contains("character-page")) {
 
+        const state = getCharacterState(next);
 
-                /* =====================
-                   CHARACTER
-                ===================== */
+        state.currentIndex = 5;
 
-                if (
-                    next.classList.contains(
-                        "character-page"
-                    )
-                ) {
+        const container = getCharacterContainer(next);
+        const characters = getCharacters(next);
 
-                    const state =
-                        getCharacterState(
-                            next
-                        );
+        if (container && characters.length > 5) {
 
+            const target = characters[5];
 
-                    centerCharacter(
-                        state.currentIndex,
-                        false,
-                        next
-                    );
+            characters.forEach(c => {
+                c.classList.remove("active");
+            });
 
-                }
+            target.classList.add("active");
 
-            }, 500);
+            updateInfo(target);
+
+            container.style.scrollSnapType = "none";
+
+            const posisi =
+                target.offsetLeft -
+                (container.clientWidth / 2) +
+                (target.offsetWidth / 2);
+
+            container.scrollLeft = posisi;
+        }
+    }
+
+    // Baru tampilkan halaman
+    next.classList.add("active");
+
+    requestAnimationFrame(() => {
+
+        const container =
+            getCharacterContainer(next);
+
+        if (container) {
+            container.style.scrollSnapType =
+                "x mandatory";
+        }
+
+    });
+
+}, 500);
         }
 
 
@@ -1984,7 +2003,7 @@
             if (!characterStates[id]) {
 
                 characterStates[id] = {
-                    currentIndex: 0,
+                    currentIndex: 5,
                     wheelBusy: false,
                     isMoving: false
                 };
