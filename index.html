@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Elms+Sans:wght@400;500;600;700&family=Fresca&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
-    <title>Serumpun Brothers</title>
+    <title>Canost Fighter Muaythai</title>
 
     <style>
         * {
@@ -25,7 +25,7 @@
     url("img/latar.webp")center center / cover no-repeat fixed;
     */
             color: white;
-            font-family: 'Elms Sans', sans-serif;
+            font-family: 'Nunito', sans-serif;
 
             display: flex;
             flex-direction: column;
@@ -45,7 +45,7 @@
         h3,
         p {
             margin: 0 0 20px;
-            font-family: 'Elms Sans', sans-serif;
+            font-family: 'Nunito', sans-serif;
             font-size: 42px;
 
             text-align: center;
@@ -73,6 +73,10 @@
             transition:
                 opacity 0.5s ease,
                 visibility 0s linear 0.5s;
+        }
+
+        .page h1 {
+            font-family: 'Caveat', cursive;
         }
 
         .page.active,
@@ -503,7 +507,7 @@
         .story-panel {
             width: 100%;
             max-width: 550px;
-            font-family: 'Fresca', sans-serif;
+            font-family: 'Nunito', sans-serif;
             background: transparent;
 
             border: none;
@@ -710,7 +714,7 @@
 
         .menu-content h1 {
             margin: 0 0 15px;
-
+            font-family: 'Caveat', cursive;
 
         }
 
@@ -822,15 +826,15 @@
             bottom: 0;
 
             height: 55px;
-
-            background: black;
+            font-family: 'Caveat', cursive;
+            background: #22222271;
 
             display: flex;
 
             align-items: center;
             justify-content: center;
 
-            font-size: 18px;
+            font-size: 30px;
             font-weight: bold;
 
             z-index: 2;
@@ -945,7 +949,7 @@
     <!-- INTRO -->
     <section id="intro" class="active">
         <h1 style="font-family: 'Caveat', cursive; 
-    ">SERUMPUN<br>BROTHERS</h1>
+    ">CANOST<br>FIGHTER</h1>
         <button onclick="showPage('home')">START</button>
     </section>
 
@@ -955,22 +959,25 @@
         <img src="img/logo.webp" alt="" width="200px" height="200px">
 
         <button class="menu-button" onclick="showPage('event')">
-            INFO
+            CANOST
         </button>
         <button class="menu-button" onclick="showPage('karakter')">
-            KARAKTER
+            COACH
         </button>
         <button class="menu-button" onclick="showPage('karakter2')">
-            KARAKTER
+            ATLET PUTRA
+        </button>
+        <button class="menu-button" onclick="showPage('karakter3')">
+            ATLET PUTRI
         </button>
         <button class="menu-button" onclick="showPage('galeri')">
-            GALERI
+            PRESTASI
         </button>
         <button class="menu-button" onclick="showPage('galeri2')">
-            GALERI2
+            GALERI
         </button>
         <button class="menu-button" onclick="showPage('lain')">
-            SOSMED
+            INFO
         </button>
     </section>
 
@@ -996,7 +1003,7 @@
 
     <!-- GALERI -->
     <section id="galeri" class="page">
-        <h1>GALERI</h1>
+        <h1>PRESTASI</h1>
         <div class="gallery-container">
 
             <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Merasd" data-description="Acara Meraung menjadi salah satu momen yang menunjukkan betapa solidnya Serumpun Brothers, dengan semangat kebersamaan, kekompakan, dan dukungan yang luar biasa. Dari persiapan hingga acara berlangsung, semuanya terasa lebih seru karena dijalani bersama, saling mendukung, dan menikmati setiap momen yang tercipta. Bukan hanya tentang sebuah acara, tetapi juga tentang persaudaraan, kekuatan tim, dan kebersamaan yang membuat Meraung menjadi momen yang begitu berkesan.
@@ -1149,10 +1156,10 @@
 
             <!-- WARRIOR 111-->
 
-            <div class="character" data-name="OMAN" data-role=" THE K-TOWN BOYS"
-                data-description="Petarung jarak dekat dengan pertahanan kuat dan serangan fisik yang besar."
-                data-hp="95" data-atk="85" data-def="90"
-                data-story="Memiliki gaya bertarung yang bertolak belakang dengan bakat alami nya yang langka, selalu tampil santai seolah tidak perlu mengerahkan seluruh kemampuan nya untuk memenangkan pertarungan.">
+            <div class="character active" data-name="Indra Prasetyo" data-role="Coach Andalan"
+                data-description="Sekretaris Umum Muaythai Indonesia (MI) Kota Banjarmasin." data-hp="100"
+                data-atk="100" data-def="100"
+                data-story="Pengelolaan organisasi, peningkatan kualitas atlet, serta program latihan lintas disiplin bela diri (seperti sparring dengan cabang olahraga lain untuk memperluas pengalaman tanding).">
 
                 <div class="character-bck">
 
@@ -1160,225 +1167,34 @@
                     </div>
 
                 </div>
+
                 <div class="character-image">
 
-                    <img src="img/oman.webp">
+                    <img src="img/coach1.webp">
 
                 </div>
 
                 <div class="character-name">
-                    Oman
+                    Coach Indra
                 </div>
 
             </div>
-
-
-
-            <!-- RIZQON -->
-
-            <div class="character" data-name="Gideon Alduk" data-role="Mage" data-description="Memiliki jurus mematikan, ledakan
-                api yg membara & suka friendly fire." data-hp="50" data-atk="100" data-def="30"
-                data-story="Ampunnya Alalak Selatan, penjagaunya Handil, p info gladiator.">
+            <div class="character" data-name="Fajrin Husnu Haitami" data-role="Coach Andalan"
+                data-description="Pelatih resmi Muaythai Indonesia (MI) Kota Banjarmasin dan pelatih di Canost Fighter Muaythai Banjarmasin."
+                data-hp="100" data-atk="100" data-def="100"
+                data-story="Membawa tim Muaythai Banjarmasin meraih banyak medali di ajang eksibisi maupun Porprov Kalsel, serta memprakarsai program ekstrakurikuler Muaythai pertama di sekolah-sekolah Banjarmasin.">
 
                 <div class="character-bck">
-
                     <div class="character-bg" style="background-image:url('img/laut.webp');">
                     </div>
-
                 </div>
+
                 <div class="character-image">
-
-                    <img src="img/aldi.webp">
-
+                    <img src="img/coach2.webp">
                 </div>
 
                 <div class="character-name">
-                    Gideon Alduk
-                </div>
-
-            </div>
-
-
-            <!-- ARCHER -->
-
-            <div class="character" data-name="Fajar" data-role="Fighter" data-description="Pemain handal." data-hp="70"
-                data-atk="88" data-def="66" data-story="Infomasi karakter tidak ditemukan.">
-
-                <div class="character-bck">
-
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
-                    </div>
-
-                </div>
-                <div class="character-image">
-
-                    <img src="img/fajar.webp">
-
-                </div>
-
-                <div class="character-name">
-                    Fajarjunk
-                </div>
-
-            </div>
-
-
-            <!-- ASSASSIN -->
-
-            <div class="character" data-name="Rizqon" data-role="Dreamer"
-                data-description="Berpikir kritis dengan intensitas tinggi." data-hp="65" data-atk="100" data-def="40"
-                data-story="Mempunyai kemampuan mengendalikan emosi dan pikiran.">
-
-                <div class="character-bck">
-
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
-                    </div>
-
-                </div>
-                <div class="character-image">
-
-                    <img src="img/rizqon.webp">
-
-                </div>
-
-                <div class="character-name">
-                    Ganteng
-                </div>
-
-            </div>
-
-
-            <!-- TANK -->
-
-            <div class="character" data-name="Sam" data-role="Chef"
-                data-description="Mampu mengelola berbagai macam bahan makanan menjadi hidangan lezat." data-hp="100"
-                data-atk="60" data-def="100"
-                data-story="Kemampuan mengolah berbagai bahan menjadi hidangan yang lezat dan menggugah selera. Dengan kreativitas, ketelitian, serta keahlian dalam memadukan rasa, ia mampu menciptakan sajian yang tidak hanya nikmat, tetapi juga memiliki cita rasa dan karakter yang khas.">
-
-                <div class="character-bck">
-
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
-                    </div>
-
-                </div>
-                <div class="character-image">
-
-                    <img src="img/sam.webp">
-
-                </div>
-
-                <div class="character-name">
-                    Paman Sam
-                </div>
-
-            </div>
-
-            <div class="character" data-name="SERUMPUN" data-role="Serumpun Brothers"
-                data-description="will u join us ?" data-hp="99" data-atk="99" data-def="99"
-                data-story="Solid - Selaras - Swiswiswi">
-
-                <div class="character-bck">
-
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
-                    </div>
-
-                </div>
-                <div class="character-image">
-
-                    <img src="img/text.webp">
-
-                </div>
-
-            </div>
-
-            <div class="character" data-name="Krisna" data-role="Informan"
-                data-description="Memiliki kemampuan mencari informasi yang sangat akurat." data-hp="100" data-atk="80"
-                data-def="90"
-                data-story="Memiliki kemampuan mengumpulkan dan menyampaikan informasi dengan cepat dan akurat. Dengan kepekaan yang tinggi, kemampuan mengamati situasi, serta jaringan informasi yang luas, ia mampu menemukan fakta penting dan memberikan informasi yang tepat pada saat yang dibutuhkan.">
-
-                <div class="character-bck">
-
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
-                    </div>
-
-                </div>
-                <div class="character-image">
-
-                    <img src="img/krisna.webp">
-
-                </div>
-
-                <div class="character-name">
-                    Krislaw
-                </div>
-
-            </div>
-
-            <div class="character" data-name="Akmal" data-role="Fotografer"
-                data-description="Kemampuan pengambilan foto dengan akurasi tinggi." data-hp="100" data-atk="75"
-                data-def="100"
-                data-story="Mampu menangkap setiap momen dengan ketepatan dan kreativitas yang tinggi. Dengan kepekaan terhadap detail, pencahayaan, dan komposisi, ia mampu mengubah momen sederhana menjadi sebuah karya visual yang penuh cerita dan berkesan.">
-
-                <div class="character-bck">
-
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
-                    </div>
-
-                </div>
-                <div class="character-image">
-
-                    <img src="img/akmal.webp">
-
-                </div>
-
-                <div class="character-name">
-                    Akmal Pemko
-                </div>
-
-            </div>
-
-            <div class="character" data-name="Aksay" data-role="Coach"
-                data-description="Mampu membuat materi latihan sepersekian detik." data-hp="100" data-atk="88"
-                data-def="95"
-                data-story="Coach yang handal dalam membimbing dan mengembangkan kemampuan tim, dengan pengalaman, strategi, serta ketegasan yang mampu membentuk mental dan meningkatkan performa. Mampu memberikan arahan yang tepat, memotivasi setiap anggota, dan menjadi sosok yang dapat diandalkan dalam menghadapi berbagai tantangan.">
-
-                <div class="character-bck">
-
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
-                    </div>
-
-                </div>
-                <div class="character-image">
-
-                    <img src="img/aksay.webp">
-
-                </div>
-
-                <div class="character-name">
-                    Coach Aksay
-                </div>
-
-            </div>
-
-            <div class="character" data-name="Klinten" data-role="Typologia"
-                data-description="Memiliki kemampuan mekanisme alur chatting yang sangat unik." data-hp="90"
-                data-atk="70" data-def="100"
-                data-story="Memiliki kemampuan unik bertahan hidup di segala medan dan kondisi, mampu beradaptasi dengan cepat dengan kondisi alam, termasuk spesies langka bukit batu.">
-
-                <div class="character-bck">
-
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
-                    </div>
-
-                </div>
-                <div class="character-image">
-
-                    <img src="img/klinten.webp">
-
-                </div>
-
-                <div class="character-name">
-                    Klintypo
+                    Coach Fajrin
                 </div>
 
             </div>
@@ -1777,7 +1593,325 @@
                                      dimasukkan di sini -->
 
     </section>
+    <section id="karakter3" class="page character-page">
 
+        <h1>Karakter</h1>
+
+
+        <div class="character-container">
+
+
+            <!-- WARRIOR 111-->
+
+            <div class="character" data-name="OMAN" data-role=" THE K-TOWN BOYS"
+                data-description="Petarung jarak dekat dengan pertahanan kuat dan serangan fisik yang besar."
+                data-hp="95" data-atk="85" data-def="90"
+                data-story="Memiliki gaya bertarung yang bertolak belakang dengan bakat alami nya yang langka, selalu tampil santai seolah tidak perlu mengerahkan seluruh kemampuan nya untuk memenangkan pertarungan.">
+
+                <div class="character-bck">
+
+                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    </div>
+
+                </div>
+                <div class="character-image">
+
+                    <img src="img/oman.webp">
+
+                </div>
+
+                <div class="character-name">
+                    Oman
+                </div>
+
+            </div>
+
+
+
+            <!-- RIZQON -->
+
+            <div class="character" data-name="Gideon Alduk" data-role="Mage" data-description="Memiliki jurus mematikan, ledakan
+                api yg membara & suka friendly fire." data-hp="50" data-atk="100" data-def="30"
+                data-story="Ampunnya Alalak Selatan, penjagaunya Handil, p info gladiator.">
+
+                <div class="character-bck">
+
+                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    </div>
+
+                </div>
+                <div class="character-image">
+
+                    <img src="img/aldi.webp">
+
+                </div>
+
+                <div class="character-name">
+                    Gideon Alduk
+                </div>
+
+            </div>
+
+
+            <!-- ARCHER -->
+
+            <div class="character" data-name="Fajar" data-role="Fighter" data-description="Pemain handal." data-hp="70"
+                data-atk="88" data-def="66" data-story="Infomasi karakter tidak ditemukan.">
+
+                <div class="character-bck">
+
+                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    </div>
+
+                </div>
+                <div class="character-image">
+
+                    <img src="img/fajar.webp">
+
+                </div>
+
+                <div class="character-name">
+                    Fajarjunk
+                </div>
+
+            </div>
+
+
+            <!-- ASSASSIN -->
+
+            <div class="character" data-name="Rizqon" data-role="Dreamer"
+                data-description="Berpikir kritis dengan intensitas tinggi." data-hp="65" data-atk="100" data-def="40"
+                data-story="Mempunyai kemampuan mengendalikan emosi dan pikiran.">
+
+                <div class="character-bck">
+
+                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    </div>
+
+                </div>
+                <div class="character-image">
+
+                    <img src="img/rizqon.webp">
+
+                </div>
+
+                <div class="character-name">
+                    Ganteng
+                </div>
+
+            </div>
+
+
+            <!-- TANK -->
+
+            <div class="character" data-name="Sam" data-role="Chef"
+                data-description="Mampu mengelola berbagai macam bahan makanan menjadi hidangan lezat." data-hp="100"
+                data-atk="60" data-def="100"
+                data-story="Kemampuan mengolah berbagai bahan menjadi hidangan yang lezat dan menggugah selera. Dengan kreativitas, ketelitian, serta keahlian dalam memadukan rasa, ia mampu menciptakan sajian yang tidak hanya nikmat, tetapi juga memiliki cita rasa dan karakter yang khas.">
+
+                <div class="character-bck">
+
+                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    </div>
+
+                </div>
+                <div class="character-image">
+
+                    <img src="img/sam.webp">
+
+                </div>
+
+                <div class="character-name">
+                    Paman Sam
+                </div>
+
+            </div>
+
+            <div class="character" data-name="SERUMPUN" data-role="Serumpun Brothers"
+                data-description="will u join us ?" data-hp="99" data-atk="99" data-def="99"
+                data-story="Solid - Selaras - Swiswiswi">
+
+                <div class="character-bck">
+
+                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    </div>
+
+                </div>
+                <div class="character-image">
+
+                    <img src="img/text.webp">
+
+                </div>
+
+            </div>
+
+            <div class="character" data-name="Krisna" data-role="Informan"
+                data-description="Memiliki kemampuan mencari informasi yang sangat akurat." data-hp="100" data-atk="80"
+                data-def="90"
+                data-story="Memiliki kemampuan mengumpulkan dan menyampaikan informasi dengan cepat dan akurat. Dengan kepekaan yang tinggi, kemampuan mengamati situasi, serta jaringan informasi yang luas, ia mampu menemukan fakta penting dan memberikan informasi yang tepat pada saat yang dibutuhkan.">
+
+                <div class="character-bck">
+
+                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    </div>
+
+                </div>
+                <div class="character-image">
+
+                    <img src="img/krisna.webp">
+
+                </div>
+
+                <div class="character-name">
+                    Krislaw
+                </div>
+
+            </div>
+
+            <div class="character" data-name="Akmal" data-role="Fotografer"
+                data-description="Kemampuan pengambilan foto dengan akurasi tinggi." data-hp="100" data-atk="75"
+                data-def="100"
+                data-story="Mampu menangkap setiap momen dengan ketepatan dan kreativitas yang tinggi. Dengan kepekaan terhadap detail, pencahayaan, dan komposisi, ia mampu mengubah momen sederhana menjadi sebuah karya visual yang penuh cerita dan berkesan.">
+
+                <div class="character-bck">
+
+                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    </div>
+
+                </div>
+                <div class="character-image">
+
+                    <img src="img/akmal.webp">
+
+                </div>
+
+                <div class="character-name">
+                    Akmal Pemko
+                </div>
+
+            </div>
+
+            <div class="character" data-name="Aksay" data-role="Coach"
+                data-description="Mampu membuat materi latihan sepersekian detik." data-hp="100" data-atk="88"
+                data-def="95"
+                data-story="Coach yang handal dalam membimbing dan mengembangkan kemampuan tim, dengan pengalaman, strategi, serta ketegasan yang mampu membentuk mental dan meningkatkan performa. Mampu memberikan arahan yang tepat, memotivasi setiap anggota, dan menjadi sosok yang dapat diandalkan dalam menghadapi berbagai tantangan.">
+
+                <div class="character-bck">
+
+                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    </div>
+
+                </div>
+                <div class="character-image">
+
+                    <img src="img/aksay.webp">
+
+                </div>
+
+                <div class="character-name">
+                    Coach Aksay
+                </div>
+
+            </div>
+
+            <div class="character" data-name="Klinten" data-role="Typologia"
+                data-description="Memiliki kemampuan mekanisme alur chatting yang sangat unik." data-hp="90"
+                data-atk="70" data-def="100"
+                data-story="Memiliki kemampuan unik bertahan hidup di segala medan dan kondisi, mampu beradaptasi dengan cepat dengan kondisi alam, termasuk spesies langka bukit batu.">
+
+                <div class="character-bck">
+
+                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    </div>
+
+                </div>
+                <div class="character-image">
+
+                    <img src="img/klinten.webp">
+
+                </div>
+
+                <div class="character-name">
+                    Klintypo
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+                             INFORMASI KARAKTER
+                        ========================= -->
+
+        <div class="character-info">
+
+            <div class="role">
+                Fighter
+            </div>
+
+
+            <div class="description">
+                Petarung jarak dekat dengan pertahanan kuat
+                dan serangan fisik yang besar.
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat">
+
+                    <span class="stat-title">
+                        HP
+                    </span>
+
+                    <span class="stat-value hp">
+                        95
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span class="stat-title">
+                        ATK
+                    </span>
+
+                    <span class="stat-value atk">
+                        85
+                    </span>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span class="stat-title">
+                        DEF
+                    </span>
+
+                    <span class="stat-value def">
+                        90
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button onclick="pilihKarakter()">
+            PILIH KARAKTER
+        </button>
+        <button onclick="showPage('home')">
+            KEMBALI
+        </button>
+        <!-- pemilihan karakter kamu
+                                     dimasukkan di sini -->
+
+    </section>
     <!-- LAIN-LAIN -->
     <section id="lain" class="page">
         <div class="menu-content">
@@ -1785,17 +1919,17 @@
             <p>
                 IG
             </p>
-            <button style="font-family: 'Elms Sans', sans-serif;"
+            <button style="font-family: 'Nunito', sans-serif;"
                 onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
                 canostfightermuaythai
             </button>
             <br>
-            <button style="font-family: 'Elms Sans', sans-serif;"
+            <button style="font-family: 'Nunito', sans-serif;"
                 onclick="window.location.href='https://www.instagram.com/cfm_behantaman/';">
                 cfm_behantaman
             </button>
             <br>
-            <button style="font-family: 'Elms Sans', sans-serif;"
+            <button style="font-family: 'Nunito', sans-serif;"
                 onclick="window.location.href='https://www.instagram.com/serumpunbrothers/';">
                 serumpunbrothers
             </button><br><br>
@@ -1908,52 +2042,50 @@
 
                     if (
                         container &&
-                        characters.length > 5
+                        characters.length > 0
                     ) {
 
-                        const target =
-                            characters[5];
+                        let startIndex;
 
-                        /*
-                         * Matikan snap sementara
-                         * supaya browser tidak mengoreksi
-                         * posisi scroll
-                         */
+                        if (next.id === "karakter") {
+                            startIndex = 0;
+                        }
+                        else if (next.id === "karakter2") {
+                            startIndex = 4;
+                        }
+                        else if (next.id === "karakter3") {
+                            startIndex = 5;
+                        }
+                        else {
+                            startIndex = 0;
+                        }
+
+                        const target =
+                            characters[startIndex];
+
                         container.style.scrollSnapType =
                             "none";
 
-                        /*
-                         * Hilangkan active dari semuanya
-                         */
                         characters.forEach(character => {
                             character.classList.remove("active");
                         });
 
-                        /*
-                         * Karakter ke-6 menjadi awal
-                         */
                         target.classList.add("active");
 
-                        state.currentIndex = 5;
+                        state.currentIndex =
+                            startIndex;
+
                         state.isMoving = false;
 
-                        /*
-                         * Update informasi karakter
-                         */
                         updateInfo(target);
 
-                        /*
-                         * Hitung posisi tengah
-                         */
                         const posisi =
                             target.offsetLeft -
                             (container.clientWidth / 2) +
                             (target.offsetWidth / 2);
 
-                        /*
-                         * Langsung posisikan tanpa animasi
-                         */
-                        container.scrollLeft = posisi;
+                        container.scrollLeft =
+                            posisi;
                     }
                 }
 
@@ -2038,7 +2170,7 @@
             if (!characterStates[id]) {
 
                 characterStates[id] = {
-                    currentIndex: 5,
+                    currentIndex: 0,
                     wheelBusy: false,
                     isMoving: false
                 };
@@ -2628,32 +2760,32 @@
 
         const clickSource = document.getElementById("clickSound");
 
-const clickPool = [];
-const CLICK_POOL_SIZE = 5;
+        const clickPool = [];
+        const CLICK_POOL_SIZE = 5;
 
-for (let i = 0; i < CLICK_POOL_SIZE; i++) {
-    const audio = clickSource.cloneNode(true);
-    audio.volume = 0.7;
-    clickPool.push(audio);
-}
+        for (let i = 0; i < CLICK_POOL_SIZE; i++) {
+            const audio = clickSource.cloneNode(true);
+            audio.volume = 0.7;
+            clickPool.push(audio);
+        }
 
-let clickIndex = 0;
+        let clickIndex = 0;
 
-function playClick() {
+        function playClick() {
 
-    const audio = clickPool[clickIndex];
+            const audio = clickPool[clickIndex];
 
-    clickIndex =
-        (clickIndex + 1) % CLICK_POOL_SIZE;
+            clickIndex =
+                (clickIndex + 1) % CLICK_POOL_SIZE;
 
-    audio.pause();
-    audio.currentTime = 0;
+            audio.pause();
+            audio.currentTime = 0;
 
-    audio.play().catch(() => {});
-}
-document.querySelectorAll("button").forEach(button => {
-    button.addEventListener("click", playClick);
-});
+            audio.play().catch(() => { });
+        }
+        document.querySelectorAll("button").forEach(button => {
+            button.addEventListener("click", playClick);
+        });
     </script>
 
 </body>
