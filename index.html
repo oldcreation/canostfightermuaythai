@@ -1881,75 +1881,110 @@
             const next =
                 document.getElementById(id);
 
-
-            if (
-                !next ||
-                current === next
-            ) {
+            if (!next || current === next) {
                 return;
             }
 
-
             if (current) {
-
-                current.classList.remove(
-                    "active"
-                );
-
+                current.classList.remove("active");
             }
-
 
             setTimeout(() => {
 
-    // Siapkan karakter TERLEBIH DAHULU
-    if (next.classList.contains("character-page")) {
+                /* =========================
+                   SIAPKAN CHARACTER
+                ========================= */
 
-        const state = getCharacterState(next);
+                if (next.classList.contains("character-page")) {
 
-        state.currentIndex = 5;
+                    const state =
+                        getCharacterState(next);
 
-        const container = getCharacterContainer(next);
-        const characters = getCharacters(next);
+                    const container =
+                        getCharacterContainer(next);
 
-        if (container && characters.length > 5) {
+                    const characters =
+                        getCharacters(next);
 
-            const target = characters[5];
+                    if (
+                        container &&
+                        characters.length > 5
+                    ) {
 
-            characters.forEach(c => {
-                c.classList.remove("active");
-            });
+                        const target =
+                            characters[5];
 
-            target.classList.add("active");
+                        /*
+                         * Matikan snap sementara
+                         * supaya browser tidak mengoreksi
+                         * posisi scroll
+                         */
+                        container.style.scrollSnapType =
+                            "none";
 
-            updateInfo(target);
+                        /*
+                         * Hilangkan active dari semuanya
+                         */
+                        characters.forEach(character => {
+                            character.classList.remove("active");
+                        });
 
-            container.style.scrollSnapType = "none";
+                        /*
+                         * Karakter ke-6 menjadi awal
+                         */
+                        target.classList.add("active");
 
-            const posisi =
-                target.offsetLeft -
-                (container.clientWidth / 2) +
-                (target.offsetWidth / 2);
+                        state.currentIndex = 5;
+                        state.isMoving = false;
 
-            container.scrollLeft = posisi;
-        }
-    }
+                        /*
+                         * Update informasi karakter
+                         */
+                        updateInfo(target);
 
-    // Baru tampilkan halaman
-    next.classList.add("active");
+                        /*
+                         * Hitung posisi tengah
+                         */
+                        const posisi =
+                            target.offsetLeft -
+                            (container.clientWidth / 2) +
+                            (target.offsetWidth / 2);
 
-    requestAnimationFrame(() => {
+                        /*
+                         * Langsung posisikan tanpa animasi
+                         */
+                        container.scrollLeft = posisi;
+                    }
+                }
 
-        const container =
-            getCharacterContainer(next);
+                /*
+                 * Setelah posisi karakter sudah siap,
+                 * baru tampilkan halaman
+                 */
+                next.classList.add("active");
 
-        if (container) {
-            container.style.scrollSnapType =
-                "x mandatory";
-        }
+                /*
+                 * Tunggu sampai halaman benar-benar
+                 * mulai tampil, baru aktifkan snap
+                 */
+                requestAnimationFrame(() => {
 
-    });
+                    requestAnimationFrame(() => {
 
-}, 500);
+                        const container =
+                            getCharacterContainer(next);
+
+                        if (container) {
+
+                            container.style.scrollSnapType =
+                                "x mandatory";
+                        }
+
+                    });
+
+                });
+
+            }, 500);
         }
 
 
@@ -2402,7 +2437,7 @@
                         state.wheelBusy =
                             false;
 
-                    }, 350);
+                    }, 50);
 
                 },
                 {
@@ -2591,15 +2626,34 @@
             }
         );
 
-        const clickSound = document.getElementById("clickSound");
+        const clickSource = document.getElementById("clickSound");
 
-        function playClick() {
-            clickSound.currentTime = 0;
-            clickSound.play();
-        }
-        document.querySelectorAll("button").forEach(button => {
-            button.addEventListener("click", playClick);
-        });
+const clickPool = [];
+const CLICK_POOL_SIZE = 5;
+
+for (let i = 0; i < CLICK_POOL_SIZE; i++) {
+    const audio = clickSource.cloneNode(true);
+    audio.volume = 0.7;
+    clickPool.push(audio);
+}
+
+let clickIndex = 0;
+
+function playClick() {
+
+    const audio = clickPool[clickIndex];
+
+    clickIndex =
+        (clickIndex + 1) % CLICK_POOL_SIZE;
+
+    audio.pause();
+    audio.currentTime = 0;
+
+    audio.play().catch(() => {});
+}
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", playClick);
+});
     </script>
 
 </body>
