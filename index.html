@@ -889,17 +889,20 @@
 
         @media (max-width: 600px) {
 
-            #galeri {
+            #galeri,
+            #galeri2 {
                 display: block;
                 overflow-y: auto;
                 padding: 25px 15px;
             }
 
-            #galeri h1 {
+            #galeri h1,
+            #galeri2 h1 {
                 margin-bottom: 20px;
             }
 
-            #galeri .gallery-container {
+            #galeri .gallery-container,
+            #galeri2 .gallery-container {
                 display: grid;
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -913,7 +916,8 @@
                 padding: 0 0 20px;
             }
 
-            #galeri .gallery-card {
+            #galeri .gallery-card,
+            #galeri2 .gallery-card {
                 width: 100%;
                 height: auto;
                 aspect-ratio: 10 / 10;
@@ -921,7 +925,8 @@
                 min-height: 0;
             }
 
-            #galeri>button {
+            #galeri>button,
+            #galeri2>button {
                 display: block;
                 margin: 20px auto;
             }
@@ -1046,7 +1051,7 @@
         </div>
 
 
-     
+
         <!-- isi galeri -->
 
         <button onclick="showPage('home')">
@@ -1070,9 +1075,7 @@
 
             </div>
 
-            <div class="gallery-card" onclick="bukaGaleri(this)" 
-            data-title="Porprov XII vv Muaythai" 
-            data-description="Porprov XII Muaythai di Tanah 
+            <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Porprov XII vv Muaythai" data-description="Porprov XII Muaythai di Tanah 
                 Bumbu, Kalimantan Selatan, menjadi momen yang penuh 
                 semangat, adrenalin, dan kebersamaan bagi Serumpun 
                 Brothers. Turut berpartisipasi dalam ajang ini, kami
