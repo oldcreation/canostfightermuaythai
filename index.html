@@ -957,6 +957,12 @@ ANIMASI
             display: block;
             margin: 20px auto 0;
         }
+        .story-close {
+            display: none !important;
+        }
+        .gallery-close {
+            display: none !important;
+        }
     </style>
 
 </head>
@@ -1229,8 +1235,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                         INFORMASI KARAKTER
-                                                    ========================= -->
+                                                                 INFORMASI KARAKTER
+                                                            ========================= -->
 
         <div class="character-info">
 
@@ -1293,7 +1299,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                 dimasukkan di sini -->
+                                                                         dimasukkan di sini -->
 
     </section>
     <section id="karakter2" class="page character-page">
@@ -1544,8 +1550,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                         INFORMASI KARAKTER
-                                                    ========================= -->
+                                                                 INFORMASI KARAKTER
+                                                            ========================= -->
 
         <div class="character-info">
 
@@ -1609,7 +1615,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                 dimasukkan di sini -->
+                                                                         dimasukkan di sini -->
 
     </section>
     <section id="karakter3" class="page character-page">
@@ -1860,8 +1866,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                         INFORMASI KARAKTER
-                                                    ========================= -->
+                                                                 INFORMASI KARAKTER
+                                                            ========================= -->
 
         <div class="character-info">
 
@@ -1926,7 +1932,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                 dimasukkan di sini -->
+                                                                         dimasukkan di sini -->
 
     </section>
     <!-- LAIN-LAIN -->
@@ -1961,8 +1967,8 @@ ANIMASI
 
 
     <!-- =========================
-                             SEJARAH KARAKTER
-                        ========================= -->
+                                 SEJARAH KARAKTER
+                            ========================= -->
 
     <div class="story-overlay" id="storyOverlay">
 
@@ -2009,22 +2015,19 @@ ANIMASI
 
 
         function tutupGaleri() {
+            const gallery = document.getElementById("galleryOverlay");
 
-            const gallery =
-            document.getElementById("galleryOverlay");
-
-            gallery.style.animation =
-            "storyFadeOut 0.4s ease";
+            gallery.style.animation = "storyFadeOut 0.4s ease";
 
             setTimeout(() => {
-
                 gallery.style.display = "none";
-                gallery.style.animation =
-                "storyFade 0.4s ease";
-
+                gallery.style.animation = "storyFade 0.4s ease";
             }, 400);
-        }
+        }document.getElementById("galleryOverlay").addEventListener("click", function(e) {
+                if (e.target.closest(".gallery-close")) return;
 
+                tutupGaleri();
+            });
 
         function showPage(id) {
             const current = document.querySelector(".page.active, #intro.active");
@@ -2685,30 +2688,27 @@ CLICK CHARACTER
             document.getElementById("storyOverlay").style.display = "flex";
         }
         function tutupSejarah() {
+            const story = document.getElementById("storyOverlay");
 
-            const story =
-            document.getElementById(
-                "storyOverlay"
-            );
+            story.style.animation = "storyFadeOut 0.4s ease";
 
-            story.style.animation =
-            "storyFadeOut 0.4s ease";
             const page = getCharacterPage();
 
             if (page) {
                 const state = getCharacterState(page);
                 state.openingStory = false;
             }
+
             setTimeout(() => {
-
-                story.style.display =
-                "none";
-
-                story.style.animation =
-                "storyFade 0.4s ease";
-
+                story.style.display = "none";
+                story.style.animation = "storyFade 0.4s ease";
             }, 400);
         }
+        document.getElementById("storyOverlay").addEventListener("click", function(e) {
+            if (e.target.closest("#storyInstagram")) return;
+
+            tutupSejarah();
+        });
 
 
         /* =========================
