@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
-        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <title>Canost Fighter Muaythai</title>
-
-    <style>
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <title>Canost Fighter Muaythai</title>  <style>
         * {
             box-sizing: border-box;
         }
@@ -18,12 +15,11 @@
             margin: 0;
             min-height: 100vh;
 
-            background: url("img/latar.webp")center center / cover no-repeat fixed;
+            background: #000 url("img/latar.webp")center center / cover no-repeat fixed;
 
             /*
-        
-    url("img/latar.webp")center center / cover no-repeat fixed;
-    */
+url("img/latar.webp")center center / cover no-repeat fixed;
+*/
             color: white;
             font-family: 'Nunito', sans-serif;
 
@@ -37,7 +33,8 @@
 
 
         /* =========================
-   JUDUL
+
+JUDUL
 ========================= */
 
         h1,
@@ -71,8 +68,8 @@
             padding: 20px;
 
             transition:
-                opacity 0.5s ease,
-                visibility 0s linear 0.5s;
+            opacity 0.5s ease,
+            visibility 0s linear 0.5s;
         }
 
         .page h1 {
@@ -86,11 +83,12 @@
             pointer-events: auto;
 
             transition:
-                opacity 0.5s ease;
+            opacity 0.5s ease;
         }
 
         /* =========================
-   CAROUSEL
+
+CAROUSEL
 ========================= */
 
         .character-container {
@@ -143,11 +141,12 @@
             border-color: white;
             z-index: 10;
             box-shadow:
-                0 0 30px rgba(255, 255, 255, 0.3);
+            0 0 30px rgba(255, 255, 255, 0.3);
         }
 
         /* =========================
-   KARTU
+
+KARTU
 ========================= */
 
         .character {
@@ -162,10 +161,10 @@
             transform: scale(0.75);
 
             transition:
-                transform 0.30s cubic-bezier(0.22, 1, 0.36, 1),
-                opacity 0.30s cubic-bezier(0.22, 1, 0.36, 1),
-                border-color 0.30s ease,
-                box-shadow 0.30s ease;
+            transform 0.30s cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 0.30s cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 0.30s ease,
+            box-shadow 0.30s ease;
 
             border: 2px solid #444;
             border-radius: 20px;
@@ -179,7 +178,8 @@
         }
 
         /* =========================
-   AREA PNG
+
+AREA PNG
 ========================= */
 
         .character-image {
@@ -227,7 +227,8 @@
         }
 
         /* =========================
-   PNG KARAKTER
+
+PNG KARAKTER
 ========================= */
 
         .character-image img {
@@ -255,7 +256,8 @@
 
 
         /* =========================
-   NAMA KARAKTER
+
+NAMA KARAKTER
 ========================= */
 
         .character-name {
@@ -287,7 +289,8 @@
         }
 
         /* =========================
-   KARAKTER AKTIF
+
+KARAKTER AKTIF
 ========================= */
 
         .character.active {
@@ -298,7 +301,7 @@
             border-color: white;
 
             box-shadow:
-                0 0 30px rgba(255, 255, 255, 0.3);
+            0 0 30px rgba(255, 255, 255, 0.3);
         }
 
         .character.active .character-name {
@@ -307,7 +310,8 @@
 
 
         /* =========================
-   INFORMASI
+
+INFORMASI
 ========================= */
 
         .character-info {
@@ -349,7 +353,8 @@
 
 
         /* =========================
-   STATUS
+
+STATUS
 ========================= */
 
         .stats {
@@ -386,7 +391,8 @@
 
 
         /* =========================
-   TOMBOL
+
+TOMBOL
 ========================= */
 
         button {
@@ -410,11 +416,11 @@
             cursor: pointer;
 
             transition:
-                transform 0.08s ease,
-                box-shadow 0.08s ease;
+            transform 0.08s ease,
+            box-shadow 0.08s ease;
 
             box-shadow:
-                0 5px 0 #999;
+            0 5px 0 #999;
         }
 
         button:hover {
@@ -425,7 +431,7 @@
             transform: translateY(4px) scale(0.96);
 
             box-shadow:
-                0 1px 0 #999;
+            0 1px 0 #999;
         }
 
         .menu-button {
@@ -434,7 +440,8 @@
         }
 
         /* =========================
-   ANIMASI
+
+ANIMASI
 ========================= */
 
         @keyframes fadeInfo {
@@ -459,7 +466,8 @@
         }
 
         /* =========================
-   HILANGKAN GLITCH / FLASH BIRU
+
+HILANGKAN GLITCH / FLASH BIRU
 ========================= */
 
         button,
@@ -475,7 +483,8 @@
         }
 
         /* =========================
-   OVERLAY SEJARAH
+
+OVERLAY SEJARAH
 ========================= */
 
         .story-overlay {
@@ -501,7 +510,8 @@
 
 
         /* =========================
-   TEKS SEJARAH
+
+TEKS SEJARAH
 ========================= */
 
         .story-panel {
@@ -524,7 +534,8 @@
 
 
         /* =========================
-   HAPUS GAMBAR
+
+HAPUS GAMBAR
 ========================= */
 
         .story-character {
@@ -535,7 +546,8 @@
 
 
         /* =========================
-   NAMA
+
+NAMA
 ========================= */
 
         .story-name {
@@ -548,7 +560,8 @@
 
 
         /* =========================
-   ROLE
+
+ROLE
 ========================= */
 
         .story-role {
@@ -567,7 +580,8 @@
 
 
         /* =========================
-   JUDUL
+
+JUDUL
 ========================= */
 
         .story-title {
@@ -584,7 +598,8 @@
 
 
         /* =========================
-   TEKS SEJARAH
+
+TEKS SEJARAH
 ========================= */
 
         .story-text {
@@ -601,7 +616,8 @@
 
 
         /* =========================
-   TOMBOL
+
+TOMBOL
 ========================= */
 
         .story-close {
@@ -626,7 +642,8 @@
 
 
         /* =========================
-   ANIMASI
+
+ANIMASI
 ========================= */
 
         @keyframes storyFade {
@@ -784,8 +801,8 @@
             user-select: none;
 
             transition:
-                transform 0.3s ease,
-                border-color 0.3s ease;
+            transform 0.3s ease,
+            border-color 0.3s ease;
         }
 
         .gallery-card:focus,
@@ -935,11 +952,15 @@
                 margin: 20px auto;
             }
         }
+        #storyInstagram,
+        .story-close {
+            display: block;
+            margin: 20px auto 0;
+        }
     </style>
+
 </head>
-
 <body>
-
     <div id="loader">
         <div id="loadingDots">
             .
@@ -948,8 +969,8 @@
 
     <!-- INTRO -->
     <section id="intro" class="active">
-        <h1 style="font-family: 'Caveat', cursive; 
-    ">CANOST<br>FIGHTER</h1>
+        <h1 style="font-family: 'Caveat', cursive;
+            ">CANOST<br>FIGHTER</h1>
         <button onclick="showPage('home')">START</button>
     </section>
 
@@ -965,10 +986,10 @@
             COACH
         </button>
         <button class="menu-button" onclick="showPage('karakter2')">
-            ATLET PUTRA
+            FIGHTER PUTRA
         </button>
         <button class="menu-button" onclick="showPage('karakter3')">
-            ATLET PUTRI
+            FIGHTER PUTRI
         </button>
         <button class="menu-button" onclick="showPage('galeri')">
             PRESTASI
@@ -1007,7 +1028,7 @@
         <div class="gallery-container">
 
             <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Merasd" data-description="Acara Meraung menjadi salah satu momen yang menunjukkan betapa solidnya Serumpun Brothers, dengan semangat kebersamaan, kekompakan, dan dukungan yang luar biasa. Dari persiapan hingga acara berlangsung, semuanya terasa lebih seru karena dijalani bersama, saling mendukung, dan menikmati setiap momen yang tercipta. Bukan hanya tentang sebuah acara, tetapi juga tentang persaudaraan, kekuatan tim, dan kebersamaan yang membuat Meraung menjadi momen yang begitu berkesan.
-">
+                ">
 
                 <div class="gallery-image">
                     <img src="img/glr1.webp">
@@ -1019,17 +1040,17 @@
 
             </div>
 
-            <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Porprov XII Muaythai" data-description="Porprov XII Muaythai di Tanah 
-                Bumbu, Kalimantan Selatan, menjadi momen yang penuh 
-                semangat, adrenalin, dan kebersamaan bagi Serumpun 
+            <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Porprov XII Muaythai" data-description="Porprov XII Muaythai di Tanah
+                Bumbu, Kalimantan Selatan, menjadi momen yang penuh
+                semangat, adrenalin, dan kebersamaan bagi Serumpun
                 Brothers. Turut berpartisipasi dalam ajang ini, kami
-                 merasakan langsung serunya atmosfer pertandingan, 
-                 perjuangan para atlet, sorakan penonton, serta 
-                 semangat sportivitas yang begitu kuat. Bukan sekadar 
-                 tentang menang dan kalah, momen ini menjadi pengalaman 
-                 berharga untuk membangun kebersamaan, menikmati 
-                 setiap proses, dan menciptakan cerita yang tak 
-                 terlupakan bersama.">
+                merasakan langsung serunya atmosfer pertandingan,
+                perjuangan para atlet, sorakan penonton, serta
+                semangat sportivitas yang begitu kuat. Bukan sekadar
+                tentang menang dan kalah, momen ini menjadi pengalaman
+                berharga untuk membangun kebersamaan, menikmati
+                setiap proses, dan menciptakan cerita yang tak
+                terlupakan bersama.">
 
                 <div class="gallery-image">
                     <img src="img/glr2.webp">
@@ -1043,7 +1064,7 @@
 
 
             <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Ramadhan" data-description="Momen Ramadhan menjadi waktu yang begitu berkesan bagi Serumpun Brothers, ketika kami kembali berkumpul, berbagi cerita, bercanda, dan menikmati kebersamaan setelah menjalani kesibukan masing-masing. Suasana sederhana namun penuh kehangatan membuat setiap pertemuan terasa begitu berarti, seolah kembali menghidupkan rasa persaudaraan dan kenangan lama. Ramadhan bukan hanya tentang menahan lapar dan dahaga, tetapi juga tentang kembali bersama, mempererat silaturahmi, dan menciptakan momen-momen indah yang akan selalu dikenang.
-">
+                ">
 
                 <div class="gallery-image">
                     <img src="img/glr3.webp">
@@ -1070,7 +1091,7 @@
         <div class="gallery-container">
 
             <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Meraung" data-description="Acara Meraung menjadi salah satu momen yang menunjukkan betapa solidnya Serumpun Brothers, dengan semangat kebersamaan, kekompakan, dan dukungan yang luar biasa. Dari persiapan hingga acara berlangsung, semuanya terasa lebih seru karena dijalani bersama, saling mendukung, dan menikmati setiap momen yang tercipta. Bukan hanya tentang sebuah acara, tetapi juga tentang persaudaraan, kekuatan tim, dan kebersamaan yang membuat Meraung menjadi momen yang begitu berkesan.
-">
+                ">
 
                 <div class="gallery-image">
                     <img src="img/glr1.webp">
@@ -1082,17 +1103,17 @@
 
             </div>
 
-            <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Porprov XII vv Muaythai" data-description="Porprov XII Muaythai di Tanah 
-                Bumbu, Kalimantan Selatan, menjadi momen yang penuh 
-                semangat, adrenalin, dan kebersamaan bagi Serumpun 
+            <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Porprov XII vv Muaythai" data-description="Porprov XII Muaythai di Tanah
+                Bumbu, Kalimantan Selatan, menjadi momen yang penuh
+                semangat, adrenalin, dan kebersamaan bagi Serumpun
                 Brothers. Turut berpartisipasi dalam ajang ini, kami
-                 merasakan langsung serunya atmosfer pertandingan, 
-                 perjuangan para atlet, sorakan penonton, serta 
-                 semangat sportivitas yang begitu kuat. Bukan sekadar 
-                 tentang menang dan kalah, momen ini menjadi pengalaman 
-                 berharga untuk membangun kebersamaan, menikmati 
-                 setiap proses, dan menciptakan cerita yang tak 
-                 terlupakan bersama.">
+                merasakan langsung serunya atmosfer pertandingan,
+                perjuangan para atlet, sorakan penonton, serta
+                semangat sportivitas yang begitu kuat. Bukan sekadar
+                tentang menang dan kalah, momen ini menjadi pengalaman
+                berharga untuk membangun kebersamaan, menikmati
+                setiap proses, dan menciptakan cerita yang tak
+                terlupakan bersama.">
 
                 <div class="gallery-image">
                     <img src="img/glr2.webp">
@@ -1106,7 +1127,7 @@
 
 
             <div class="gallery-card" onclick="bukaGaleri(this)" data-title="Ramadhan" data-description="Momen Ramadhan menjadi waktu yang begitu berkesan bagi Serumpun Brothers, ketika kami kembali berkumpul, berbagi cerita, bercanda, dan menikmati kebersamaan setelah menjalani kesibukan masing-masing. Suasana sederhana namun penuh kehangatan membuat setiap pertemuan terasa begitu berarti, seolah kembali menghidupkan rasa persaudaraan dan kenangan lama. Ramadhan bukan hanya tentang menahan lapar dan dahaga, tetapi juga tentang kembali bersama, mempererat silaturahmi, dan menciptakan momen-momen indah yang akan selalu dikenang.
-">
+                ">
 
                 <div class="gallery-image">
                     <img src="img/glr3.webp">
@@ -1148,7 +1169,7 @@
     <!-- KARAKTER -->
     <section id="karakter" class="page character-page">
 
-        <h1>Karakter</h1>
+        <h1>Coach</h1>
 
 
         <div class="character-container">
@@ -1159,12 +1180,15 @@
             <div class="character active" data-name="Indra Prasetyo" data-role="Coach Andalan"
                 data-description="Sekretaris Umum Muaythai Indonesia (MI) Kota Banjarmasin." data-hp="100"
                 data-atk="100" data-def="100"
-                data-story="Pengelolaan organisasi, peningkatan kualitas atlet, serta program latihan lintas disiplin bela diri (seperti sparring dengan cabang olahraga lain untuk memperluas pengalaman tanding).">
+                data-story="Pengelolaan organisasi, peningkatan kualitas atlet, serta program latihan lintas disiplin bela diri (seperti sparring dengan cabang olahraga lain untuk memperluas pengalaman tanding)."
+                data-instagram="Coach Indra"
+                data-instagram-link="https://www.instagram.com/wongapra/">
 
                 <div class="character-bck">
 
                     <div class="character-bg" style="background-image:url('img/laut.webp');">
                     </div>
+
 
                 </div>
 
@@ -1182,7 +1206,9 @@
             <div class="character" data-name="Fajrin Husnu Haitami" data-role="Coach Andalan"
                 data-description="Pelatih resmi Muaythai Indonesia (MI) Kota Banjarmasin dan pelatih di Canost Fighter Muaythai Banjarmasin."
                 data-hp="100" data-atk="100" data-def="100"
-                data-story="Membawa tim Muaythai Banjarmasin meraih banyak medali di ajang eksibisi maupun Porprov Kalsel, serta memprakarsai program ekstrakurikuler Muaythai pertama di sekolah-sekolah Banjarmasin.">
+                data-story="Membawa tim Muaythai Banjarmasin meraih banyak medali di ajang eksibisi maupun Porprov Kalsel, serta memprakarsai program ekstrakurikuler Muaythai pertama di sekolah-sekolah Banjarmasin."
+                data-instagram="Coach Fajrin"
+                data-instagram-link="https://www.instagram.com/fajrinnnnn/">
 
                 <div class="character-bck">
                     <div class="character-bg" style="background-image:url('img/laut.webp');">
@@ -1203,8 +1229,8 @@
 
 
         <!-- =========================
-                             INFORMASI KARAKTER
-                        ========================= -->
+                                                         INFORMASI KARAKTER
+                                                    ========================= -->
 
         <div class="character-info">
 
@@ -1263,20 +1289,16 @@
 
         </div>
 
-
-        <button onclick="pilihKarakter()">
-            PILIH KARAKTER
-        </button>
         <button onclick="showPage('home')">
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                     dimasukkan di sini -->
+                                                                 dimasukkan di sini -->
 
     </section>
     <section id="karakter2" class="page character-page">
 
-        <h1>Karakter</h1>
+        <h1>Fighter Putra</h1>
 
 
         <div class="character-container">
@@ -1522,8 +1544,8 @@
 
 
         <!-- =========================
-                             INFORMASI KARAKTER
-                        ========================= -->
+                                                         INFORMASI KARAKTER
+                                                    ========================= -->
 
         <div class="character-info">
 
@@ -1583,19 +1605,16 @@
         </div>
 
 
-        <button onclick="pilihKarakter()">
-            PILIH KARAKTER
-        </button>
         <button onclick="showPage('home')">
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                     dimasukkan di sini -->
+                                                                 dimasukkan di sini -->
 
     </section>
     <section id="karakter3" class="page character-page">
 
-        <h1>Karakter</h1>
+        <h1>Fighter Putri</h1>
 
 
         <div class="character-container">
@@ -1841,8 +1860,8 @@
 
 
         <!-- =========================
-                             INFORMASI KARAKTER
-                        ========================= -->
+                                                         INFORMASI KARAKTER
+                                                    ========================= -->
 
         <div class="character-info">
 
@@ -1902,14 +1921,12 @@
         </div>
 
 
-        <button onclick="pilihKarakter()">
-            PILIH KARAKTER
-        </button>
+
         <button onclick="showPage('home')">
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                     dimasukkan di sini -->
+                                                                 dimasukkan di sini -->
 
     </section>
     <!-- LAIN-LAIN -->
@@ -1944,8 +1961,8 @@
 
 
     <!-- =========================
-                 SEJARAH KARAKTER
-            ========================= -->
+                             SEJARAH KARAKTER
+                        ========================= -->
 
     <div class="story-overlay" id="storyOverlay">
 
@@ -1965,6 +1982,9 @@
 
             <div class="story-text" id="storyText">
             </div>
+            <button id="storyInstagram"
+                style="font-family: 'Nunito', sans-serif; display: none;">
+            </button>
 
             <button class="active story-close" onclick="tutupSejarah()">
                 KEMBALI
@@ -1978,93 +1998,65 @@
         function bukaGaleri(card) {
             playClick();
             document.getElementById("galleryDetailTitle").textContent =
-                card.dataset.title;
+            card.dataset.title;
 
             document.getElementById("galleryDetailText").textContent =
-                card.dataset.description;
+            card.dataset.description;
 
             document.getElementById("galleryOverlay").style.display =
-                "flex";
+            "flex";
         }
 
 
         function tutupGaleri() {
 
             const gallery =
-                document.getElementById("galleryOverlay");
+            document.getElementById("galleryOverlay");
 
             gallery.style.animation =
-                "storyFadeOut 0.4s ease";
+            "storyFadeOut 0.4s ease";
 
             setTimeout(() => {
 
                 gallery.style.display = "none";
                 gallery.style.animation =
-                    "storyFade 0.4s ease";
+                "storyFade 0.4s ease";
 
             }, 400);
         }
 
+
         function showPage(id) {
+            const current = document.querySelector(".page.active, #intro.active");
+            const next = document.getElementById(id);
 
-            const current =
-                document.querySelector(
-                    ".page.active, #intro.active"
-                );
-
-            const next =
-                document.getElementById(id);
-
-            if (!next || current === next) {
-                return;
-            }
+            if (!next || current === next) return;
 
             if (current) {
                 current.classList.remove("active");
             }
 
             setTimeout(() => {
-
-                /* =========================
-                   SIAPKAN CHARACTER
-                ========================= */
+                let target = null;
+                let container = null;
 
                 if (next.classList.contains("character-page")) {
+                    const state = getCharacterState(next);
+                    container = getCharacterContainer(next);
+                    const characters = getCharacters(next);
 
-                    const state =
-                        getCharacterState(next);
+                    if (container && characters.length > 0) {
+                        let startIndex = 0;
 
-                    const container =
-                        getCharacterContainer(next);
-
-                    const characters =
-                        getCharacters(next);
-
-                    if (
-                        container &&
-                        characters.length > 0
-                    ) {
-
-                        let startIndex;
-
-                        if (next.id === "karakter") {
-                            startIndex = 0;
-                        }
-                        else if (next.id === "karakter2") {
+                        if (next.id === "karakter2") {
                             startIndex = 4;
-                        }
-                        else if (next.id === "karakter3") {
+                        } else if (next.id === "karakter3") {
                             startIndex = 5;
                         }
-                        else {
-                            startIndex = 0;
-                        }
 
-                        const target =
-                            characters[startIndex];
+                        target = characters[startIndex];
 
-                        container.style.scrollSnapType =
-                            "none";
+                        container.style.scrollSnapType = "none";
 
                         characters.forEach(character => {
                             character.classList.remove("active");
@@ -2072,61 +2064,49 @@
 
                         target.classList.add("active");
 
-                        state.currentIndex =
-                            startIndex;
-
-                        state.isMoving = false;
+                        state.currentIndex = startIndex;
+                        state.isMoving = true;
 
                         updateInfo(target);
-
-                        const posisi =
-                            target.offsetLeft -
-                            (container.clientWidth / 2) +
-                            (target.offsetWidth / 2);
-
-                        container.scrollLeft =
-                            posisi;
                     }
                 }
 
-                /*
-                 * Setelah posisi karakter sudah siap,
-                 * baru tampilkan halaman
-                 */
                 next.classList.add("active");
 
-                /*
-                 * Tunggu sampai halaman benar-benar
-                 * mulai tampil, baru aktifkan snap
-                 */
-                requestAnimationFrame(() => {
-
+                if (container && target) {
                     requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            const containerRect = container.getBoundingClientRect();
+                            const targetRect = target.getBoundingClientRect();
 
-                        const container =
-                            getCharacterContainer(next);
+                            const selisih =
+                            targetRect.left +
+                            targetRect.width / 2 -
+                            (containerRect.left + containerRect.width / 2);
 
-                        if (container) {
+                            container.scrollLeft += selisih;
 
-                            container.style.scrollSnapType =
-                                "x mandatory";
-                        }
+                            requestAnimationFrame(() => {
+                                container.style.scrollSnapType = "x mandatory";
 
+                                const state = getCharacterState(next);
+                                state.isMoving = false;
+                            });
+                        });
                     });
-
-                });
-
-            }, 500);
+                }
+            },
+                500);
         }
 
 
         /* =========================
-           CONTAINER
-        ========================= */
+       CONTAINER
+    ========================= */
         /* =========================
-           CHARACTER SYSTEM
-           MULTI SECTION
-        ========================= */
+       CHARACTER SYSTEM
+       MULTI SECTION
+    ========================= */
 
         let characterStates = {};
 
@@ -2141,25 +2121,23 @@
         function getCharacterContainer(page = getCharacterPage()) {
 
             return page
-                ? page.querySelector(".character-container")
-                : null;
+            ? page.querySelector(".character-container"): null;
         }
 
 
         function getCharacters(page = getCharacterPage()) {
 
             const container =
-                getCharacterContainer(page);
+            getCharacterContainer(page);
 
             return container
-                ? container.querySelectorAll(".character")
-                : [];
+            ? container.querySelectorAll(".character"): [];
         }
 
 
         /* =========================
-           STATE PER SECTION
-        ========================= */
+       STATE PER SECTION
+    ========================= */
 
         function getCharacterState(page) {
 
@@ -2182,33 +2160,33 @@
 
 
         /* =========================
-           INFO
-        ========================= */
+       INFO
+    ========================= */
 
         function updateInfo(character) {
 
             const page =
-                character.closest(".character-page");
+            character.closest(".character-page");
 
             if (!page) return;
 
             const info =
-                page.querySelector(".character-info");
+            page.querySelector(".character-info");
 
             const role =
-                page.querySelector(".role");
+            page.querySelector(".role");
 
             const description =
-                page.querySelector(".description");
+            page.querySelector(".description");
 
             const hp =
-                page.querySelector(".hp");
+            page.querySelector(".hp");
 
             const atk =
-                page.querySelector(".atk");
+            page.querySelector(".atk");
 
             const def =
-                page.querySelector(".def");
+            page.querySelector(".def");
 
 
             if (!info) return;
@@ -2220,19 +2198,19 @@
 
 
             role.textContent =
-                character.dataset.role;
+            character.dataset.role;
 
             description.textContent =
-                character.dataset.description;
+            character.dataset.description;
 
             hp.textContent =
-                character.dataset.hp;
+            character.dataset.hp;
 
             atk.textContent =
-                character.dataset.atk;
+            character.dataset.atk;
 
             def.textContent =
-                character.dataset.def;
+            character.dataset.def;
 
 
             requestAnimationFrame(() => {
@@ -2246,8 +2224,8 @@
 
 
         /* =========================
-           CENTER CHARACTER
-        ========================= */
+       CENTER CHARACTER
+    ========================= */
 
         function centerCharacter(
             index,
@@ -2259,13 +2237,13 @@
 
 
             const container =
-                getCharacterContainer(page);
+            getCharacterContainer(page);
 
             const characters =
-                getCharacters(page);
+            getCharacters(page);
 
             const state =
-                getCharacterState(page);
+            getCharacterState(page);
 
 
             if (!container || !characters.length) {
@@ -2289,14 +2267,14 @@
 
 
             state.currentIndex =
-                index;
+            index;
 
             state.isMoving =
-                true;
+            true;
 
 
             const character =
-                characters[index];
+            characters[index];
 
 
             characters.forEach(c => {
@@ -2313,39 +2291,40 @@
             );
 
 
-            updateInfo(character);
+            if (!state.openingStory) {
+                updateInfo(character);
+            }
 
 
             requestAnimationFrame(() => {
 
                 const containerRect =
-                    container.getBoundingClientRect();
+                container.getBoundingClientRect();
 
                 const characterRect =
-                    character.getBoundingClientRect();
+                character.getBoundingClientRect();
 
 
                 const containerCenter =
-                    containerRect.left +
-                    containerRect.width / 2;
+                containerRect.left +
+                containerRect.width / 2;
 
 
                 const characterCenter =
-                    characterRect.left +
-                    characterRect.width / 2;
+                characterRect.left +
+                characterRect.width / 2;
 
 
                 container.scrollTo({
 
                     left:
-                        container.scrollLeft +
-                        characterCenter -
-                        containerCenter,
+                    container.scrollLeft +
+                    characterCenter -
+                    containerCenter,
 
                     behavior:
-                        smooth
-                            ? "smooth"
-                            : "auto"
+                    smooth
+                    ? "smooth": "auto"
 
                 });
 
@@ -2355,15 +2334,15 @@
             setTimeout(() => {
 
                 state.isMoving =
-                    false;
+                false;
 
-            }, smooth ? 350 : 0);
+            }, smooth ? 350: 0);
         }
 
 
         /* =========================
-           CARI CHARACTER TERDEKAT
-        ========================= */
+       CARI CHARACTER TERDEKAT
+    ========================= */
 
         function updateActive(page) {
 
@@ -2371,13 +2350,13 @@
 
 
             const container =
-                getCharacterContainer(page);
+            getCharacterContainer(page);
 
             const characters =
-                getCharacters(page);
+            getCharacters(page);
 
             const state =
-                getCharacterState(page);
+            getCharacterState(page);
 
 
             if (!container || !characters.length) {
@@ -2386,8 +2365,8 @@
 
 
             const center =
-                container.scrollLeft +
-                container.clientWidth / 2;
+            container.scrollLeft +
+            container.clientWidth / 2;
 
 
             let closest = null;
@@ -2397,15 +2376,15 @@
             characters.forEach(character => {
 
                 const characterCenter =
-                    character.offsetLeft +
-                    character.offsetWidth / 2;
+                character.offsetLeft +
+                character.offsetWidth / 2;
 
 
                 const difference =
-                    Math.abs(
-                        center -
-                        characterCenter
-                    );
+                Math.abs(
+                    center -
+                    characterCenter
+                );
 
 
                 if (
@@ -2414,10 +2393,10 @@
                 ) {
 
                     distance =
-                        difference;
+                    difference;
 
                     closest =
-                        character;
+                    character;
 
                 }
 
@@ -2428,9 +2407,9 @@
 
 
             const current =
-                container.querySelector(
-                    ".character.active"
-                );
+            container.querySelector(
+                ".character.active"
+            );
 
 
             if (current === closest) {
@@ -2460,17 +2439,17 @@
 
 
             state.currentIndex =
-                Array.from(
-                    characters
-                ).indexOf(
-                    closest
-                );
+            Array.from(
+                characters
+            ).indexOf(
+                closest
+            );
         }
 
 
         /* =========================
-           SETUP SETIAP CHARACTER PAGE
-        ========================= */
+       SETUP SETIAP CHARACTER PAGE
+    ========================= */
 
         function setupCharacterPage(page) {
 
@@ -2478,13 +2457,13 @@
 
 
             const container =
-                getCharacterContainer(page);
+            getCharacterContainer(page);
 
             const characters =
-                getCharacters(page);
+            getCharacters(page);
 
             const state =
-                getCharacterState(page);
+            getCharacterState(page);
 
 
             if (
@@ -2496,8 +2475,8 @@
 
 
             /* -------------------------
-               WHEEL
-            ------------------------- */
+           WHEEL
+        ------------------------- */
 
             container.addEventListener(
                 "wheel",
@@ -2529,7 +2508,7 @@
 
 
                     state.wheelBusy =
-                        true;
+                    true;
 
 
                     if (e.deltaY > 0) {
@@ -2567,7 +2546,7 @@
                     setTimeout(() => {
 
                         state.wheelBusy =
-                            false;
+                        false;
 
                     }, 50);
 
@@ -2579,8 +2558,8 @@
 
 
             /* -------------------------
-               SCROLL
-            ------------------------- */
+           SCROLL
+        ------------------------- */
 
             container.addEventListener(
                 "scroll",
@@ -2606,136 +2585,156 @@
 
 
             /* -------------------------
-               CLICK CHARACTER
-            ------------------------- */
 
-            characters.forEach(
-                (character, index) => {
+CLICK CHARACTER
+------------------------- */
 
-                    character.addEventListener(
-                        "click",
-                        () => {
+            characters.forEach((character, index) => {
 
-                            centerCharacter(
-                                index,
-                                true,
-                                page
-                            );
+                character.addEventListener("click", () => {
 
-                        }
-                    );
+                    if (index !== state.currentIndex) {
 
-                }
-            );
+                        centerCharacter(index, true, page);
+
+                    } else {
+
+                        pilihKarakter(character);
+
+                    }
+
+                });
+
+            });
+
         }
 
 
         /* =========================
-           AKTIFKAN SEMUA SECTION
-        ========================= */
+       AKTIFKAN SEMUA SECTION
+    ========================= */
 
         document
-            .querySelectorAll(
-                ".character-page"
-            )
-            .forEach(page => {
+        .querySelectorAll(
+            ".character-page"
+        )
+        .forEach(page => {
 
-                setupCharacterPage(
-                    page
-                );
+            setupCharacterPage(
+                page
+            );
 
-            });
+        });
 
         /* =========================
-           PILIH
-        ========================= */
+       PILIH
+    ========================= */
 
-        function pilihKarakter() {
+        function pilihKarakter(character = null) {
 
             const page =
-                getCharacterPage();
+            getCharacterPage();
 
             if (!page) return;
 
             const container =
-                page.querySelector(
-                    ".character-container"
-                );
+            page.querySelector(
+                ".character-container"
+            );
 
             const active =
-                container.querySelector(
-                    ".character.active"
-                );
+            character ||
+            container.querySelector(
+                ".character.active"
+            );
 
             if (!active) return;
+            const state = getCharacterState(page);
+            state.openingStory = true;
 
             document.getElementById(
                 "storyName"
             ).textContent =
-                active.dataset.name;
+            active.dataset.name;
 
             document.getElementById(
                 "storyRole"
             ).textContent =
-                active.dataset.role;
+            active.dataset.role;
 
             document.getElementById(
                 "storyText"
             ).textContent =
-                active.dataset.story ||
-                "Belum ada sejarah karakter.";
+            active.dataset.story ||
+            "Belum ada sejarah karakter.";
 
-            document.getElementById(
-                "storyOverlay"
-            ).style.display =
-                "flex";
+            const instagramButton = document.getElementById("storyInstagram");
+
+            const instagramName = active.dataset.instagram || "";
+            const instagramLink = active.dataset.instagramLink || "";
+
+            instagramButton.textContent = instagramName;
+            instagramButton.style.display =
+            instagramName && instagramLink ? "block": "none";
+            instagramButton.onclick = () => {
+                if (instagramLink) {
+                    window.open(instagramLink, "_blank");
+                }
+            };
+
+            document.getElementById("storyOverlay").style.display = "flex";
         }
         function tutupSejarah() {
 
             const story =
-                document.getElementById(
-                    "storyOverlay"
-                );
+            document.getElementById(
+                "storyOverlay"
+            );
 
             story.style.animation =
-                "storyFadeOut 0.4s ease";
+            "storyFadeOut 0.4s ease";
+            const page = getCharacterPage();
 
+            if (page) {
+                const state = getCharacterState(page);
+                state.openingStory = false;
+            }
             setTimeout(() => {
 
                 story.style.display =
-                    "none";
+                "none";
 
                 story.style.animation =
-                    "storyFade 0.4s ease";
+                "storyFade 0.4s ease";
 
             }, 400);
         }
 
 
         /* =========================
-           LOADING
-        ========================= */
+       LOADING
+    ========================= */
 
         const dots =
-            document.getElementById(
-                "loadingDots"
-            );
+        document.getElementById(
+            "loadingDots"
+        );
 
         let dotCount = 1;
 
         const loadingAnimation =
-            setInterval(() => {
+        setInterval(() => {
 
-                dotCount++;
+            dotCount++;
 
-                if (dotCount > 3) {
-                    dotCount = 1;
-                }
+            if (dotCount > 3) {
+                dotCount = 1;
+            }
 
-                dots.textContent =
-                    ".".repeat(dotCount);
+            dots.textContent =
+            ".".repeat(dotCount);
 
-            }, 400);
+        }, 400);
 
 
         window.addEventListener(
@@ -2749,9 +2748,9 @@
                 setTimeout(() => {
 
                     document
-                        .getElementById("loader")
-                        .classList
-                        .add("hide");
+                    .getElementById("loader")
+                    .classList
+                    .add("hide");
 
                 }, 300);
 
@@ -2776,12 +2775,12 @@
             const audio = clickPool[clickIndex];
 
             clickIndex =
-                (clickIndex + 1) % CLICK_POOL_SIZE;
+            (clickIndex + 1) % CLICK_POOL_SIZE;
 
             audio.pause();
             audio.currentTime = 0;
 
-            audio.play().catch(() => { });
+            audio.play().catch(() => {});
         }
         document.querySelectorAll("button").forEach(button => {
             button.addEventListener("click", playClick);
@@ -2789,5 +2788,4 @@
     </script>
 
 </body>
-
 </html>
