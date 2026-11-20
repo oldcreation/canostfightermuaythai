@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
-    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-    <title>Canost Fighter Muaythai</title>  <style>
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <title>Canost Fighter Muaythai</title>
+    <style>
         * {
             box-sizing: border-box;
         }
@@ -68,8 +70,8 @@ JUDUL
             padding: 20px;
 
             transition:
-            opacity 0.5s ease,
-            visibility 0s linear 0.5s;
+                opacity 0.5s ease,
+                visibility 0s linear 0.5s;
         }
 
         .page h1 {
@@ -83,7 +85,7 @@ JUDUL
             pointer-events: auto;
 
             transition:
-            opacity 0.5s ease;
+                opacity 0.5s ease;
         }
 
         /* =========================
@@ -141,7 +143,7 @@ CAROUSEL
             border-color: white;
             z-index: 10;
             box-shadow:
-            0 0 30px rgba(255, 255, 255, 0.3);
+                0 0 30px rgba(255, 255, 255, 0.3);
         }
 
         /* =========================
@@ -161,10 +163,10 @@ KARTU
             transform: scale(0.75);
 
             transition:
-            transform 0.30s cubic-bezier(0.22, 1, 0.36, 1),
-            opacity 0.30s cubic-bezier(0.22, 1, 0.36, 1),
-            border-color 0.30s ease,
-            box-shadow 0.30s ease;
+                transform 0.30s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.30s cubic-bezier(0.22, 1, 0.36, 1),
+                border-color 0.30s ease,
+                box-shadow 0.30s ease;
 
             border: 2px solid #444;
             border-radius: 20px;
@@ -296,7 +298,7 @@ KARAKTER AKTIF
             border-color: white;
 
             box-shadow:
-            0 0 30px rgba(255, 255, 255, 0.3);
+                0 0 30px rgba(255, 255, 255, 0.3);
         }
 
         .character.active .character-name {
@@ -411,11 +413,11 @@ TOMBOL
             cursor: pointer;
 
             transition:
-            transform 0.08s ease,
-            box-shadow 0.08s ease;
+                transform 0.08s ease,
+                box-shadow 0.08s ease;
 
             box-shadow:
-            0 5px 0 #999;
+                0 5px 0 #999;
         }
 
         button:hover {
@@ -426,7 +428,7 @@ TOMBOL
             transform: translateY(4px) scale(0.96);
 
             box-shadow:
-            0 1px 0 #999;
+                0 1px 0 #999;
         }
 
         .menu-button {
@@ -791,8 +793,8 @@ ANIMASI
             user-select: none;
 
             transition:
-            transform 0.3s ease,
-            border-color 0.3s ease;
+                transform 0.3s ease,
+                border-color 0.3s ease;
         }
 
         .gallery-card:focus,
@@ -930,8 +932,7 @@ ANIMASI
                 padding: 25px 15px;
             }
 
-            #galeri h1,
-            {
+            #galeri h1 {
                 margin-bottom: 20px;
             }
 
@@ -962,20 +963,24 @@ ANIMASI
                 margin: 20px auto;
             }
         }
+
         #storyInstagram,
         .story-close {
             display: block;
             margin: 20px auto 0;
         }
+
         .story-close {
             display: none !important;
         }
+
         .gallery-close {
             display: none !important;
         }
+
         /* JUDUL TETAP */
-        #galeri > h1,
-        #galeri2 > h1 {
+        #galeri>h1,
+        #galeri2>h1 {
             flex-shrink: 0;
         }
 
@@ -1008,10 +1013,10 @@ ANIMASI
             margin: 0;
             padding: 15px 20px;
 
-            background: rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.06);
             color: white;
 
-            border: 1px solid rgba(255,255,255,0.22);
+            border: 1px solid rgba(255, 255, 255, 0.22);
             border-radius: 12px;
 
             box-shadow: none;
@@ -1023,6 +1028,7 @@ ANIMASI
             font-family: 'Nunito', sans-serif;
             font-size: 16px;
         }
+
         /* AREA FOTO PRESTASI */
         #fotoPrestasi {
             width: 100%;
@@ -1102,9 +1108,9 @@ ANIMASI
         }
 
         /* JUDUL TETAP DI ATAS */
-        #galeri > h1,
-        #galeriPrestasi2 > h1,
-        #galeriPrestasi3 > h1 {
+        #galeri>h1,
+        #galeriPrestasi2>h1,
+        #galeriPrestasi3>h1 {
             position: absolute;
             top: 25px;
             left: 0;
@@ -1153,10 +1159,10 @@ ANIMASI
             margin: 0;
             padding: 15px 20px;
 
-            background: rgba(255,255,255,0.035);
+            background: rgba(255, 255, 255, 0.035);
             color: white;
 
-            border: 1px solid rgba(255,255,255,0.22);
+            border: 1px solid rgba(255, 255, 255, 0.22);
             border-radius: 12px;
 
             box-shadow: none;
@@ -1225,50 +1231,47 @@ ANIMASI
 
             overflow: visible;
         }
+
         /* FADE AREA FOTO */
         #fotoPrestasi,
         #fotoPrestasi2,
         #fotoPrestasi3 {
-            -webkit-mask-image: linear-gradient(
-            to bottom,
-            transparent 0%,
-            black 10%,
-            black 90%,
-            transparent 100%
-            );
+            -webkit-mask-image: linear-gradient(to bottom,
+                    transparent 0%,
+                    black 10%,
+                    black 90%,
+                    transparent 100%);
 
-            mask-image: linear-gradient(
-            to bottom,
-            transparent 0%,
-            black 10%,
-            black 90%,
-            transparent 100%
-            );
+            mask-image: linear-gradient(to bottom,
+                    transparent 0%,
+                    black 10%,
+                    black 90%,
+                    transparent 100%);
         }
 
         /* KARTU FOTO */
         #fotoPrestasi .gallery-card,
         #fotoPrestasi2 .gallery-card,
         #fotoPrestasi3 .gallery-card {
-            border: 1px solid rgba(255,255,255,0.3);
-            box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
         }
 
         /* TOMBOL KEMBALI MELAYANG */
-       /* TOMBOL KEMBALI */
-#galeri > #tombolKembaliPrestasi,
-#galeri > #kembaliFotoPrestasi,
-#galeriPrestasi2 > #tombolKembaliPrestasi2,
-#galeriPrestasi2 > #kembaliFotoPrestasi2,
-#galeriPrestasi3 > #tombolKembaliPrestasi3,
-#galeriPrestasi3 > #kembaliFotoPrestasi3 {
-    position: relative;
+        /* TOMBOL KEMBALI */
+        #galeri>#tombolKembaliPrestasi,
+        #galeri>#kembaliFotoPrestasi,
+        #galeriPrestasi2>#tombolKembaliPrestasi2,
+        #galeriPrestasi2>#kembaliFotoPrestasi2,
+        #galeriPrestasi3>#tombolKembaliPrestasi3,
+        #galeriPrestasi3>#kembaliFotoPrestasi3 {
+            position: relative;
 
-    margin: 3px auto 0;
+            margin: 3px auto 0;
 
-    flex-shrink: 0;
-    z-index: 101;
-}
+            flex-shrink: 0;
+            z-index: 101;
+        }
 
         /* HP */
         @media (max-width: 600px) {
@@ -1289,33 +1292,35 @@ ANIMASI
             }
 
         }
+
         /* FADE ATAS BAWAH DAFTAR PRESTASI */
-  /* DAFTAR NAMA PRESTASI */
-#daftarPrestasi,
-#daftarPrestasi2,
-#daftarPrestasi3 {
-    width: 90%;
-    max-width: 500px;
+        /* DAFTAR NAMA PRESTASI */
+        #daftarPrestasi,
+        #daftarPrestasi2,
+        #daftarPrestasi3 {
+            width: 90%;
+            max-width: 500px;
 
-    flex: 0 1 auto;
-    min-height: 0;
-    max-height: calc(100dvh - 135px);
+            flex: 0 1 auto;
+            min-height: 0;
+            max-height: calc(100dvh - 135px);
 
-    margin: 0 auto;
-    padding: 65px 0 20px;
+            margin: 0 auto;
+            padding: 65px 0 20px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
 
-    overflow-y: auto;
-    overflow-x: hidden;
+            overflow-y: auto;
+            overflow-x: hidden;
 
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain;
-}
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+        }
+
         /* ITEM DAFTAR PRESTASI */
         .item-prestasi {
             position: relative;
@@ -1325,10 +1330,10 @@ ANIMASI
             margin: 0;
             padding: 12px 15px;
 
-            background: rgba(255,255,255,0.035);
+            background: rgba(255, 255, 255, 0.035);
             color: white;
 
-            border: 1px solid rgba(255,255,255,0.22);
+            border: 1px solid rgba(255, 255, 255, 0.22);
             border-radius: 12px;
 
             box-shadow: none;
@@ -1371,7 +1376,7 @@ ANIMASI
             background: transparent;
             color: white;
 
-            border: 1px solid rgba(255,255,255,0.25);
+            border: 1px solid rgba(255, 255, 255, 0.25);
             border-radius: 50%;
 
             box-shadow: none;
@@ -1383,6 +1388,7 @@ ANIMASI
         .prestasi-instagram:active {
             transform: scale(0.9);
         }
+
         .item-prestasi,
         .prestasi-info {
             -webkit-tap-highlight-color: transparent;
@@ -1398,10 +1404,10 @@ ANIMASI
             outline: none;
             box-shadow: none;
         }
-        
     </style>
 
 </head>
+
 <body>
     <div id="loader">
         <div id="loadingDots">
@@ -1412,8 +1418,8 @@ ANIMASI
     <!-- INTRO -->
     <section id="intro" class="active">
         <h1 style="font-family: 'Caveat', cursive;
-            ">CANOST<br>FIGHTER</h1>
-        <button onclick="showPage('home')">START</button>
+            ">CANOST<br>FIGHTER<br>MUAYTHAI</h1>
+        <button onclick="showPage('home')">FIGHT</button>
     </section>
 
 
@@ -1454,7 +1460,13 @@ ANIMASI
         <div class="menu-content">
             <h1>SEJARAH</h1>
             <p>
-                Canost Fighter Muaythai (CFM) adalah sasana bela diri terkemuka di gedung eks Kawasan Wisata Kuliner (KWK) Kayutangi yang menjadi pusat pembinaan atlet muaythai berprestasi di Kota Banjarmasin, Kalimantan Selatan. Klub ini dikenal aktif melahirkan petarung lokal untuk mewakili Banjarmasin di berbagai ajang bergengsi, seperti meraih 11 emas dan 9 perak pada eksibisi 2022 serta menurunkan 23 atlet dalam gelaran Porprov XI Kalsel 2022. Selain fokus mencetak prestasi, sasana ini juga rutin mempromosikan olahraga muaythai ke berbagai sekolah dan sering dipercaya menjadi tuan rumah kejuaraan besar tingkat daerah, seperti Walikota Cup hingga Kejurprov Kalimantan Selatan 2025.
+                Canost Fighter Muaythai (CFM) adalah sasana bela diri terkemuka di gedung eks Kawasan Wisata Kuliner
+                (KWK) Kayutangi yang menjadi pusat pembinaan atlet muaythai berprestasi di Kota Banjarmasin, Kalimantan
+                Selatan. Klub ini dikenal aktif melahirkan petarung lokal untuk mewakili Banjarmasin di berbagai ajang
+                bergengsi, seperti meraih 11 emas dan 9 perak pada eksibisi 2022 serta menurunkan 23 atlet dalam gelaran
+                Porprov XI Kalsel 2022. Selain fokus mencetak prestasi, sasana ini juga rutin mempromosikan olahraga
+                muaythai ke berbagai sekolah dan sering dipercaya menjadi tuan rumah kejuaraan besar tingkat daerah,
+                seperti Walikota Cup hingga Kejurprov Kalimantan Selatan 2025.
             </p>
             <!--   <button style="font-family: 'Nunito', sans-serif;background-color: #E1306C; color: white; border: none;"
                                                                 onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
@@ -1480,12 +1492,9 @@ ANIMASI
             <div class="gallery-container" id="isiFotoPrestasi"></div>
         </div>
 
-        <button id="kembaliFotoPrestasi"
-            style="display:none;"
-            onclick="kembaliDaftarPrestasi(1)">KEMBALI</button>
+        <button id="kembaliFotoPrestasi" style="display:none;" onclick="kembaliDaftarPrestasi(1)">KEMBALI</button>
 
-        <button id="tombolKembaliPrestasi"
-            onclick="showPage('home')">KEMBALI</button>
+        <button id="tombolKembaliPrestasi" onclick="showPage('home')">KEMBALI</button>
     </section>
     <!-- PRESTASI 2 -->
     <section id="galeriPrestasi2" class="page">
@@ -1498,12 +1507,9 @@ ANIMASI
             <div class="gallery-container" id="isiFotoPrestasi2"></div>
         </div>
 
-        <button id="kembaliFotoPrestasi2"
-            style="display:none;"
-            onclick="kembaliDaftarPrestasi(2)">KEMBALI</button>
+        <button id="kembaliFotoPrestasi2" style="display:none;" onclick="kembaliDaftarPrestasi(2)">KEMBALI</button>
 
-        <button id="tombolKembaliPrestasi2"
-            onclick="showPage('home')">KEMBALI</button>
+        <button id="tombolKembaliPrestasi2" onclick="showPage('home')">KEMBALI</button>
     </section>
     <!-- BOOK -->
     <div class="gallery-overlay" id="galleryOverlay">
@@ -1532,12 +1538,9 @@ ANIMASI
             <div class="gallery-container" id="isiFotoPrestasi3"></div>
         </div>
 
-        <button id="kembaliFotoPrestasi3"
-            style="display:none;"
-            onclick="kembaliDaftarPrestasi(3)">KEMBALI</button>
+        <button id="kembaliFotoPrestasi3" style="display:none;" onclick="kembaliDaftarPrestasi(3)">KEMBALI</button>
 
-        <button id="tombolKembaliPrestasi3"
-            onclick="showPage('home')">KEMBALI</button>
+        <button id="tombolKembaliPrestasi3" onclick="showPage('home')">KEMBALI</button>
     </section>
     <!-- KARAKTER -->
     <section id="karakter" class="page character-page">
@@ -1554,8 +1557,7 @@ ANIMASI
                 data-description="Sekretaris Umum Muaythai Indonesia (MI) Kota Banjarmasin." data-hp="100"
                 data-atk="100" data-def="100"
                 data-story="Pengelolaan organisasi, peningkatan kualitas atlet, serta program latihan lintas disiplin bela diri (seperti sparring dengan cabang olahraga lain untuk memperluas pengalaman tanding)."
-                data-instagram="Coach Indra"
-                data-instagram-link="https://www.instagram.com/wongapra/">
+                data-instagram="Coach Indra" data-instagram-link="https://www.instagram.com/wongapra/">
 
                 <div class="character-bck">
 
@@ -1580,8 +1582,7 @@ ANIMASI
                 data-description="Pelatih resmi Muaythai Indonesia (MI) Kota Banjarmasin dan pelatih di Canost Fighter Muaythai Banjarmasin."
                 data-hp="100" data-atk="100" data-def="100"
                 data-story="Membawa tim Muaythai Banjarmasin meraih banyak medali di ajang eksibisi maupun Porprov Kalsel, serta memprakarsai program ekstrakurikuler Muaythai pertama di sekolah-sekolah Banjarmasin."
-                data-instagram="Coach Fajrin"
-                data-instagram-link="https://www.instagram.com/fajrinnnnn/">
+                data-instagram="Coach Fajrin" data-instagram-link="https://www.instagram.com/fajrinnnnn/">
 
                 <div class="character-bck">
                     <div class="character-bg" style="background-image:url('img/laut.webp');">
@@ -1679,7 +1680,7 @@ ANIMASI
 
             <!-- WARRIOR 111-->
 
-            <div class="character" data-name="OMAN" data-role=" THE K-TOWN BOYS"
+            <div class="character" data-name="Oman" data-role=" THE K-TOWN BOYS"
                 data-description="Petarung jarak dekat dengan pertahanan kuat dan serangan fisik yang besar."
                 data-hp="95" data-atk="85" data-def="90"
                 data-story="Memiliki gaya bertarung yang bertolak belakang dengan bakat alami nya yang langka, selalu tampil santai seolah tidak perlu mengerahkan seluruh kemampuan nya untuk memenangkan pertarungan.">
@@ -1692,7 +1693,7 @@ ANIMASI
                 </div>
                 <div class="character-image">
 
-                    <img src="img/wait.webp">
+                    <img src="img/oman.webp">
 
                 </div>
 
@@ -1706,7 +1707,7 @@ ANIMASI
 
             <!-- RIZQON -->
 
-            <div class="character" data-name="Gideon Alduk" data-role="Mage" data-description="Memiliki jurus mematikan, ledakan
+            <div class="character" data-name="Aldi Pratama" data-role="Aldux" data-description="Memiliki jurus mematikan, ledakan
                 api yg membara & suka friendly fire." data-hp="50" data-atk="100" data-def="30"
                 data-story="Ampunnya Alalak Selatan, penjagaunya Handil, p info gladiator.">
 
@@ -1718,7 +1719,7 @@ ANIMASI
                 </div>
                 <div class="character-image">
 
-                    <img src="img/wait.webp">
+                    <img src="img/aldi.webp">
 
                 </div>
 
@@ -1731,8 +1732,8 @@ ANIMASI
 
             <!-- ARCHER -->
 
-            <div class="character" data-name="Fajar" data-role="Fighter" data-description="Pemain handal." data-hp="70"
-                data-atk="88" data-def="66" data-story="Infomasi karakter tidak ditemukan.">
+            <div class="character" data-name="Saddam Ilham" data-role="The Calm Wolf" data-description="Pemain handal."
+                data-hp="70" data-atk="88" data-def="66" data-story="Infomasi karakter tidak ditemukan.">
 
                 <div class="character-bck">
 
@@ -1747,7 +1748,7 @@ ANIMASI
                 </div>
 
                 <div class="character-name">
-                    Fajarjunk
+                    Saddam
                 </div>
 
             </div>
@@ -1755,8 +1756,8 @@ ANIMASI
 
             <!-- ASSASSIN -->
 
-            <div class="character" data-name="Rizqon" data-role="Dreamer"
-                data-description="Berpikir kritis dengan intensitas tinggi." data-hp="65" data-atk="100" data-def="40"
+            <div class="character" data-name="M Safwani" data-role="The Stone Boy
+                data-description=" Berpikir kritis dengan intensitas tinggi." data-hp="65" data-atk="100" data-def="40"
                 data-story="Mempunyai kemampuan mengendalikan emosi dan pikiran.">
 
                 <div class="character-bck">
@@ -1772,7 +1773,7 @@ ANIMASI
                 </div>
 
                 <div class="character-name">
-                    Ganteng
+                    Safwan
                 </div>
 
             </div>
@@ -1780,7 +1781,7 @@ ANIMASI
 
             <!-- TANK -->
 
-            <div class="character" data-name="Sam" data-role="Chef"
+            <div class="character" data-name="Sam Daeng" data-role="The Titan Collosal"
                 data-description="Mampu mengelola berbagai macam bahan makanan menjadi hidangan lezat." data-hp="100"
                 data-atk="60" data-def="100"
                 data-story="Kemampuan mengolah berbagai bahan menjadi hidangan yang lezat dan menggugah selera. Dengan kreativitas, ketelitian, serta keahlian dalam memadukan rasa, ia mampu menciptakan sajian yang tidak hanya nikmat, tetapi juga memiliki cita rasa dan karakter yang khas.">
@@ -1793,35 +1794,17 @@ ANIMASI
                 </div>
                 <div class="character-image">
 
-                    <img src="img/wait.webp">
+                    <img src="img/sam.webp">
 
                 </div>
 
                 <div class="character-name">
-                    Paman Sam
+                    Sam
                 </div>
 
             </div>
 
-            <div class="character" data-name="SERUMPUN" data-role="Serumpun Brothers"
-                data-description="will u join us ?" data-hp="99" data-atk="99" data-def="99"
-                data-story="Solid - Selaras - Swiswiswi">
-
-                <div class="character-bck">
-
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
-                    </div>
-
-                </div>
-                <div class="character-image">
-
-                    <img src="img/text.webp">
-
-                </div>
-
-            </div>
-
-            <div class="character" data-name="Krisna" data-role="Informan"
+            <div class="character" data-name="Krisna Indra Sakti" data-role="The Titan Slayer"
                 data-description="Memiliki kemampuan mencari informasi yang sangat akurat." data-hp="100" data-atk="80"
                 data-def="90"
                 data-story="Memiliki kemampuan mengumpulkan dan menyampaikan informasi dengan cepat dan akurat. Dengan kepekaan yang tinggi, kemampuan mengamati situasi, serta jaringan informasi yang luas, ia mampu menemukan fakta penting dan memberikan informasi yang tepat pada saat yang dibutuhkan.">
@@ -1834,17 +1817,17 @@ ANIMASI
                 </div>
                 <div class="character-image">
 
-                    <img src="img/wait.webp">
+                    <img src="img/krisna.webp">
 
                 </div>
 
                 <div class="character-name">
-                    Krislaw
+                    Krisna
                 </div>
 
             </div>
 
-            <div class="character" data-name="Akmal" data-role="Fotografer"
+            <div class="character" data-name="Akmal Anshari" data-role="The Lunatic"
                 data-description="Kemampuan pengambilan foto dengan akurasi tinggi." data-hp="100" data-atk="75"
                 data-def="100"
                 data-story="Mampu menangkap setiap momen dengan ketepatan dan kreativitas yang tinggi. Dengan kepekaan terhadap detail, pencahayaan, dan komposisi, ia mampu mengubah momen sederhana menjadi sebuah karya visual yang penuh cerita dan berkesan.">
@@ -1857,17 +1840,17 @@ ANIMASI
                 </div>
                 <div class="character-image">
 
-                    <img src="img/wait.webp">
+                    <img src="img/akmal.webp">
 
                 </div>
 
                 <div class="character-name">
-                    Akmal Pemko
+                    Akmal
                 </div>
 
             </div>
 
-            <div class="character" data-name="Aksay" data-role="Coach"
+            <div class="character" data-name="M Aksay" data-role="El-Escobar"
                 data-description="Mampu membuat materi latihan sepersekian detik." data-hp="100" data-atk="88"
                 data-def="95"
                 data-story="Coach yang handal dalam membimbing dan mengembangkan kemampuan tim, dengan pengalaman, strategi, serta ketegasan yang mampu membentuk mental dan meningkatkan performa. Mampu memberikan arahan yang tepat, memotivasi setiap anggota, dan menjadi sosok yang dapat diandalkan dalam menghadapi berbagai tantangan.">
@@ -1880,17 +1863,17 @@ ANIMASI
                 </div>
                 <div class="character-image">
 
-                    <img src="img/wait.webp">
+                    <img src="img/aksay.webp">
 
                 </div>
 
                 <div class="character-name">
-                    Coach Aksay
+                    Aksay
                 </div>
 
             </div>
 
-            <div class="character" data-name="Klinten" data-role="Typologia"
+            <div class="character" data-name="Klinten Mahendra" data-role="Badak Jawa"
                 data-description="Memiliki kemampuan mekanisme alur chatting yang sangat unik." data-hp="90"
                 data-atk="70" data-def="100"
                 data-story="Memiliki kemampuan unik bertahan hidup di segala medan dan kondisi, mampu beradaptasi dengan cepat dengan kondisi alam, termasuk spesies langka bukit batu.">
@@ -1903,12 +1886,12 @@ ANIMASI
                 </div>
                 <div class="character-image">
 
-                    <img src="img/wait.webp">
+                    <img src="img/klinten.webp">
 
                 </div>
 
                 <div class="character-name">
-                    Klintypo
+                    Klinten
                 </div>
 
             </div>
@@ -2355,8 +2338,7 @@ ANIMASI
 
             <div class="story-text" id="storyText">
             </div>
-            <button id="storyInstagram"
-                style="font-family: 'Nunito', sans-serif; display: none;">
+            <button id="storyInstagram" style="font-family: 'Nunito', sans-serif; display: none;">
             </button>
 
 
@@ -2369,13 +2351,13 @@ ANIMASI
         function bukaGaleri(card) {
             playClick();
             document.getElementById("galleryDetailTitle").textContent =
-            card.dataset.title;
+                card.dataset.title;
 
             document.getElementById("galleryDetailText").textContent =
-            card.dataset.description;
+                card.dataset.description;
 
             document.getElementById("galleryOverlay").style.display =
-            "flex";
+                "flex";
         }
 
 
@@ -2388,11 +2370,11 @@ ANIMASI
                 gallery.style.display = "none";
                 gallery.style.animation = "storyFade 0.4s ease";
             }, 400);
-        }document.getElementById("galleryOverlay").addEventListener("click", function(e) {
-                if (e.target.closest(".gallery-close")) return;
+        } document.getElementById("galleryOverlay").addEventListener("click", function (e) {
+            if (e.target.closest(".gallery-close")) return;
 
-                tutupGaleri();
-            });
+            tutupGaleri();
+        });
         const dataPrestasi = {
             "PORPROV XI 2022": [{
                 foto: "img/PPXI/akmal.webp",
@@ -2400,36 +2382,36 @@ ANIMASI
                 namaPemenang: "AKMAL",
                 keterangan: "KELAS FIGHT 80 KG PUTRA"
             },
-                {
-                    foto: "img/PPXI/ray.webp",
-                    judul: "EMAS",
-                    namaPemenang: "RAY",
-                    keterangan: "KELAS FIGHT 65 KG PUTRA"
-                },
-                {
-                    foto: "img/PPXI/rahma.webp",
-                    judul: "PERAK",
-                    namaPemenang: "RAHMA",
-                    keterangan: "KELAS FIGHT 60 KG PUTRI"
-                },
-                {
-                    foto: "img/PPXI/yadin.webp",
-                    judul: "PERAK",
-                    namaPemenang: "YADIN",
-                    keterangan: "KELAS FIGHT 80+ PUTRA"
-                },
-                {
-                    foto: "img/PPXI/neli.webp",
-                    judul: "PERAK",
-                    namaPemenang: "NELI",
-                    keterangan: "KELAS SENI WAIKRU PUTRI"
-                },
-                {
-                    foto: "img/PPXI/dayat.webp",
-                    judul: "PERAK",
-                    namaPemenang: "DAYAT",
-                    keterangan: "KELAS SENI WAIKRU PUTRA"
-                }]
+            {
+                foto: "img/PPXI/ray.webp",
+                judul: "EMAS",
+                namaPemenang: "RAY",
+                keterangan: "KELAS FIGHT 65 KG PUTRA"
+            },
+            {
+                foto: "img/PPXI/rahma.webp",
+                judul: "PERAK",
+                namaPemenang: "RAHMA",
+                keterangan: "KELAS FIGHT 60 KG PUTRI"
+            },
+            {
+                foto: "img/PPXI/yadin.webp",
+                judul: "PERAK",
+                namaPemenang: "YADIN",
+                keterangan: "KELAS FIGHT 80+ PUTRA"
+            },
+            {
+                foto: "img/PPXI/neli.webp",
+                judul: "PERAK",
+                namaPemenang: "NELI",
+                keterangan: "KELAS SENI WAIKRU PUTRI"
+            },
+            {
+                foto: "img/PPXI/dayat.webp",
+                judul: "PERAK",
+                namaPemenang: "DAYAT",
+                keterangan: "KELAS SENI WAIKRU PUTRA"
+            }]
         };
 
         const instagramPrestasi = {
@@ -2453,7 +2435,7 @@ ANIMASI
 ========================= */
 
         const dataPrestasi2 = {
-             
+
         };
 
         const dataPrestasi3 = {
@@ -2463,30 +2445,31 @@ ANIMASI
                 namaPemenang: ".",
                 keterangan: "Rp 500.000"
             },
-                {
-                    foto: "img/store/gsbn.webp",
-                    judul: "BN",
-                    namaPemenang: ".",
-                    keterangan: "Rp 300.000"
-                },
-                {
-                    foto: "img/store/gskwk.webp",
-                    judul: "KWK",
-                    namaPemenang: ".",
-                    keterangan: "Rp 1.000.000"
-                }],
+            {
+                foto: "img/store/gsbn.webp",
+                judul: "BN",
+                namaPemenang: ".",
+                keterangan: "Rp 300.000"
+            },
+            {
+                foto: "img/store/gskwk.webp",
+                judul: "KWK",
+                namaPemenang: ".",
+                keterangan: "Rp 1.000.000"
+            }],
             "GLOVES": [{
                 foto: "img/store/gvtwins.webp",
                 judul: "TWINS",
                 namaPemenang: ".",
                 keterangan: "Rp 1.000.000"
             },
-                {
-                    foto: "img/store/gvyk.webp",
-                    judul: "YOKKAO",
-                    namaPemenang: ".",
-                    keterangan: "Rp 5.000.000"
-                }]};
+            {
+                foto: "img/store/gvyk.webp",
+                judul: "YOKKAO",
+                namaPemenang: ".",
+                keterangan: "Rp 5.000.000"
+            }]
+        };
         function ambilDataPrestasi(nomor) {
             if (nomor === 1) return dataPrestasi;
             if (nomor === 2) return dataPrestasi2;
@@ -2495,7 +2478,7 @@ ANIMASI
         }
 
         function ambilElemenPrestasi(nomor) {
-            const akhiran = nomor === 1 ? "": nomor;
+            const akhiran = nomor === 1 ? "" : nomor;
 
             return {
                 daftar: document.getElementById("daftarPrestasi" + akhiran),
@@ -2519,7 +2502,7 @@ ANIMASI
                 onclick="bukaPrestasi('${nama}', ${nomor})"
                 style="flex:1;cursor:pointer;">
                 <span>${nama}</span>
-                <span class="prestasi-jumlah">${foto.length} ${nomor === 1 ? 'Prestasi': nomor === 2 ? 'Foto': 'Produk'}</span>
+                <span class="prestasi-jumlah">${foto.length} ${nomor === 1 ? 'Prestasi' : nomor === 2 ? 'Foto' : 'Produk'}</span>
                 </div> 
                 <button class="prestasi-instagram"
                 onclick="event.stopPropagation(); bukaInstagramPrestasi('${nama}')">◎</button>
@@ -2537,10 +2520,10 @@ ANIMASI
             const durasi = 500;
 
             [el.daftar,
-                el.tombolHome].forEach(element => {
-                    element.style.transition = "opacity 0.5s ease";
-                    element.style.opacity = "0";
-                });
+            el.tombolHome].forEach(element => {
+                element.style.transition = "opacity 0.5s ease";
+                element.style.opacity = "0";
+            });
 
             setTimeout(async () => {
                 el.daftar.style.display = "none";
@@ -2580,7 +2563,7 @@ ANIMASI
                     }
 
                     if (img.decode) {
-                        await img.decode().catch(() => {});
+                        await img.decode().catch(() => { });
                     }
                 }));
 
@@ -2680,9 +2663,9 @@ ANIMASI
                             const targetRect = target.getBoundingClientRect();
 
                             const selisih =
-                            targetRect.left +
-                            targetRect.width / 2 -
-                            (containerRect.left + containerRect.width / 2);
+                                targetRect.left +
+                                targetRect.width / 2 -
+                                (containerRect.left + containerRect.width / 2);
 
                             container.scrollLeft += selisih;
 
@@ -2721,17 +2704,17 @@ ANIMASI
         function getCharacterContainer(page = getCharacterPage()) {
 
             return page
-            ? page.querySelector(".character-container"): null;
+                ? page.querySelector(".character-container") : null;
         }
 
 
         function getCharacters(page = getCharacterPage()) {
 
             const container =
-            getCharacterContainer(page);
+                getCharacterContainer(page);
 
             return container
-            ? container.querySelectorAll(".character"): [];
+                ? container.querySelectorAll(".character") : [];
         }
 
 
@@ -2766,27 +2749,27 @@ ANIMASI
         function updateInfo(character) {
 
             const page =
-            character.closest(".character-page");
+                character.closest(".character-page");
 
             if (!page) return;
 
             const info =
-            page.querySelector(".character-info");
+                page.querySelector(".character-info");
 
             const role =
-            page.querySelector(".role");
+                page.querySelector(".role");
 
             const description =
-            page.querySelector(".description");
+                page.querySelector(".description");
 
             const hp =
-            page.querySelector(".hp");
+                page.querySelector(".hp");
 
             const atk =
-            page.querySelector(".atk");
+                page.querySelector(".atk");
 
             const def =
-            page.querySelector(".def");
+                page.querySelector(".def");
 
 
             if (!info) return;
@@ -2798,19 +2781,19 @@ ANIMASI
 
 
             role.textContent =
-            character.dataset.role;
+                character.dataset.role;
 
             description.textContent =
-            character.dataset.description;
+                character.dataset.description;
 
             hp.textContent =
-            character.dataset.hp;
+                character.dataset.hp;
 
             atk.textContent =
-            character.dataset.atk;
+                character.dataset.atk;
 
             def.textContent =
-            character.dataset.def;
+                character.dataset.def;
 
 
             requestAnimationFrame(() => {
@@ -2837,13 +2820,13 @@ ANIMASI
 
 
             const container =
-            getCharacterContainer(page);
+                getCharacterContainer(page);
 
             const characters =
-            getCharacters(page);
+                getCharacters(page);
 
             const state =
-            getCharacterState(page);
+                getCharacterState(page);
 
 
             if (!container || !characters.length) {
@@ -2867,14 +2850,14 @@ ANIMASI
 
 
             state.currentIndex =
-            index;
+                index;
 
             state.isMoving =
-            true;
+                true;
 
 
             const character =
-            characters[index];
+                characters[index];
 
 
             characters.forEach(c => {
@@ -2899,32 +2882,32 @@ ANIMASI
             requestAnimationFrame(() => {
 
                 const containerRect =
-                container.getBoundingClientRect();
+                    container.getBoundingClientRect();
 
                 const characterRect =
-                character.getBoundingClientRect();
+                    character.getBoundingClientRect();
 
 
                 const containerCenter =
-                containerRect.left +
-                containerRect.width / 2;
+                    containerRect.left +
+                    containerRect.width / 2;
 
 
                 const characterCenter =
-                characterRect.left +
-                characterRect.width / 2;
+                    characterRect.left +
+                    characterRect.width / 2;
 
 
                 container.scrollTo({
 
                     left:
-                    container.scrollLeft +
-                    characterCenter -
-                    containerCenter,
+                        container.scrollLeft +
+                        characterCenter -
+                        containerCenter,
 
                     behavior:
-                    smooth
-                    ? "smooth": "auto"
+                        smooth
+                            ? "smooth" : "auto"
 
                 });
 
@@ -2934,9 +2917,9 @@ ANIMASI
             setTimeout(() => {
 
                 state.isMoving =
-                false;
+                    false;
 
-            }, smooth ? 350: 0);
+            }, smooth ? 350 : 0);
         }
 
 
@@ -2950,13 +2933,13 @@ ANIMASI
 
 
             const container =
-            getCharacterContainer(page);
+                getCharacterContainer(page);
 
             const characters =
-            getCharacters(page);
+                getCharacters(page);
 
             const state =
-            getCharacterState(page);
+                getCharacterState(page);
 
 
             if (!container || !characters.length) {
@@ -2965,8 +2948,8 @@ ANIMASI
 
 
             const center =
-            container.scrollLeft +
-            container.clientWidth / 2;
+                container.scrollLeft +
+                container.clientWidth / 2;
 
 
             let closest = null;
@@ -2976,15 +2959,15 @@ ANIMASI
             characters.forEach(character => {
 
                 const characterCenter =
-                character.offsetLeft +
-                character.offsetWidth / 2;
+                    character.offsetLeft +
+                    character.offsetWidth / 2;
 
 
                 const difference =
-                Math.abs(
-                    center -
-                    characterCenter
-                );
+                    Math.abs(
+                        center -
+                        characterCenter
+                    );
 
 
                 if (
@@ -2993,10 +2976,10 @@ ANIMASI
                 ) {
 
                     distance =
-                    difference;
+                        difference;
 
                     closest =
-                    character;
+                        character;
 
                 }
 
@@ -3007,9 +2990,9 @@ ANIMASI
 
 
             const current =
-            container.querySelector(
-                ".character.active"
-            );
+                container.querySelector(
+                    ".character.active"
+                );
 
 
             if (current === closest) {
@@ -3039,11 +3022,11 @@ ANIMASI
 
 
             state.currentIndex =
-            Array.from(
-                characters
-            ).indexOf(
-                closest
-            );
+                Array.from(
+                    characters
+                ).indexOf(
+                    closest
+                );
         }
 
 
@@ -3057,13 +3040,13 @@ ANIMASI
 
 
             const container =
-            getCharacterContainer(page);
+                getCharacterContainer(page);
 
             const characters =
-            getCharacters(page);
+                getCharacters(page);
 
             const state =
-            getCharacterState(page);
+                getCharacterState(page);
 
 
             if (
@@ -3108,7 +3091,7 @@ ANIMASI
 
 
                     state.wheelBusy =
-                    true;
+                        true;
 
 
                     if (e.deltaY > 0) {
@@ -3146,7 +3129,7 @@ ANIMASI
                     setTimeout(() => {
 
                         state.wheelBusy =
-                        false;
+                            false;
 
                     }, 50);
 
@@ -3215,16 +3198,16 @@ CLICK CHARACTER
     ========================= */
 
         document
-        .querySelectorAll(
-            ".character-page"
-        )
-        .forEach(page => {
+            .querySelectorAll(
+                ".character-page"
+            )
+            .forEach(page => {
 
-            setupCharacterPage(
-                page
-            );
+                setupCharacterPage(
+                    page
+                );
 
-        });
+            });
 
         /* =========================
        PILIH
@@ -3233,20 +3216,20 @@ CLICK CHARACTER
         function pilihKarakter(character = null) {
 
             const page =
-            getCharacterPage();
+                getCharacterPage();
 
             if (!page) return;
 
             const container =
-            page.querySelector(
-                ".character-container"
-            );
+                page.querySelector(
+                    ".character-container"
+                );
 
             const active =
-            character ||
-            container.querySelector(
-                ".character.active"
-            );
+                character ||
+                container.querySelector(
+                    ".character.active"
+                );
 
             if (!active) return;
             const state = getCharacterState(page);
@@ -3255,18 +3238,18 @@ CLICK CHARACTER
             document.getElementById(
                 "storyName"
             ).textContent =
-            active.dataset.name;
+                active.dataset.name;
 
             document.getElementById(
                 "storyRole"
             ).textContent =
-            active.dataset.role;
+                active.dataset.role;
 
             document.getElementById(
                 "storyText"
             ).textContent =
-            active.dataset.story ||
-            "Belum ada sejarah karakter.";
+                active.dataset.story ||
+                "Belum ada sejarah karakter.";
 
             const instagramButton = document.getElementById("storyInstagram");
 
@@ -3275,7 +3258,7 @@ CLICK CHARACTER
 
             instagramButton.textContent = instagramName;
             instagramButton.style.display =
-            instagramName && instagramLink ? "block": "none";
+                instagramName && instagramLink ? "block" : "none";
             instagramButton.onclick = () => {
                 if (instagramLink) {
                     window.location.href = instagramLink;
@@ -3300,7 +3283,7 @@ CLICK CHARACTER
                 story.style.animation = "storyFade 0.4s ease";
             }, 400);
         }
-        document.getElementById("storyOverlay").addEventListener("click", function(e) {
+        document.getElementById("storyOverlay").addEventListener("click", function (e) {
             if (e.target.closest("#storyInstagram")) return;
 
             tutupSejarah();
@@ -3312,25 +3295,25 @@ CLICK CHARACTER
     ========================= */
 
         const dots =
-        document.getElementById(
-            "loadingDots"
-        );
+            document.getElementById(
+                "loadingDots"
+            );
 
         let dotCount = 1;
 
         const loadingAnimation =
-        setInterval(() => {
+            setInterval(() => {
 
-            dotCount++;
+                dotCount++;
 
-            if (dotCount > 3) {
-                dotCount = 1;
-            }
+                if (dotCount > 3) {
+                    dotCount = 1;
+                }
 
-            dots.textContent =
-            ".".repeat(dotCount);
+                dots.textContent =
+                    ".".repeat(dotCount);
 
-        }, 400);
+            }, 400);
 
 
         window.addEventListener(
@@ -3344,9 +3327,9 @@ CLICK CHARACTER
                 setTimeout(() => {
 
                     document
-                    .getElementById("loader")
-                    .classList
-                    .add("hide");
+                        .getElementById("loader")
+                        .classList
+                        .add("hide");
 
                 }, 300);
 
@@ -3371,12 +3354,11 @@ CLICK CHARACTER
             const audio = clickPool[clickIndex];
 
             clickIndex =
-            (clickIndex + 1) % CLICK_POOL_SIZE;
+                (clickIndex + 1) % CLICK_POOL_SIZE;
 
             audio.pause();
             audio.currentTime = 0;
 
-            audio.play().catch(() => {});
         }
         document.querySelectorAll("button").forEach(button => {
             button.addEventListener("click", playClick);
@@ -3384,4 +3366,5 @@ CLICK CHARACTER
     </script>
 
 </body>
+
 </html>
