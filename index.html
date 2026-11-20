@@ -2609,79 +2609,82 @@ ANIMASI
         tampilkanDaftarPrestasi(1);
         tampilkanDaftarPrestasi(2);
         tampilkanDaftarPrestasi(3);
-        function showPage(id) {
-            const current = document.querySelector(".page.active, #intro.active");
-            const next = document.getElementById(id);
+      function showPage(id) {
+    const current = document.querySelector(".page.active, #intro.active");
+    const next = document.getElementById(id);
 
-            if (!next || current === next) return;
+    if (!next || current === next) return;
 
-            if (current) {
-                current.classList.remove("active");
+    if (current) {
+        current.classList.remove("active");
+    }
+
+    setTimeout(() => {
+        let target = null;
+        let container = null;
+        let characters = [];
+        let state = null;
+
+        if (next.classList.contains("character-page")) {
+            state = getCharacterState(next);
+            container = getCharacterContainer(next);
+            characters = getCharacters(next);
+
+            if (container && characters.length > 0) {
+                let startIndex = 0;
+
+                if (next.id === "karakter2" || next.id === "karakter3") {
+                    startIndex = 5;
+                }
+
+                startIndex = Math.min(startIndex, characters.length - 1);
+                target = characters[startIndex];
+
+                container.style.scrollSnapType = "none";
+
+                characters.forEach(character => {
+                    character.classList.remove("active");
+                    character.classList.add("no-transition");
+                });
+
+                target.classList.add("active");
+
+                state.currentIndex = startIndex;
+                state.isMoving = true;
+
+                updateInfo(target);
+
+                const containerRect = container.getBoundingClientRect();
+                const targetRect = target.getBoundingClientRect();
+
+                const selisih =
+                    targetRect.left + targetRect.width / 2 -
+                    (containerRect.left + containerRect.width / 2);
+
+                // Posisikan carousel sebelum halaman ditampilkan
+                container.scrollLeft += selisih;
             }
-
-            setTimeout(() => {
-                let target = null;
-                let container = null;
-
-                if (next.classList.contains("character-page")) {
-                    const state = getCharacterState(next);
-                    container = getCharacterContainer(next);
-                    const characters = getCharacters(next);
-
-                    if (container && characters.length > 0) {
-                        let startIndex = 0;
-
-                        if (next.id === "karakter2") {
-                            startIndex = 5;
-                        } else if (next.id === "karakter3") {
-                            startIndex = 5;
-                        }
-
-                        target = characters[startIndex];
-
-                        container.style.scrollSnapType = "none";
-
-                        characters.forEach(character => {
-                            character.classList.remove("active");
-                        });
-
-                        target.classList.add("active");
-
-                        state.currentIndex = startIndex;
-                        state.isMoving = true;
-
-                        updateInfo(target);
-                    }
-                }
-
-                next.classList.add("active");
-
-                if (container && target) {
-                    requestAnimationFrame(() => {
-                        requestAnimationFrame(() => {
-                            const containerRect = container.getBoundingClientRect();
-                            const targetRect = target.getBoundingClientRect();
-
-                            const selisih =
-                                targetRect.left +
-                                targetRect.width / 2 -
-                                (containerRect.left + containerRect.width / 2);
-
-                            container.scrollLeft += selisih;
-
-                            requestAnimationFrame(() => {
-                                container.style.scrollSnapType = "x mandatory";
-
-                                const state = getCharacterState(next);
-                                state.isMoving = false;
-                            });
-                        });
-                    });
-                }
-            },
-                500);
         }
 
+        next.classList.add("active");
+
+        if (container && target) {
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+
+                    characters.forEach(character => {
+                        character.classList.remove("no-transition");
+                    });
+
+                    container.style.scrollSnapType = "x mandatory";
+                    state.isMoving = false;
+
+                });
+            });
+        }
+
+    }, 500);
+}
 
         /* =========================
        CONTAINER
@@ -3338,31 +3341,29 @@ CLICK CHARACTER
 
         const clickSource = document.getElementById("clickSound");
 
-        const clickPool = [];
-        const CLICK_POOL_SIZE = 5;
+if (clickSource) {
+    clickSource.volume = 0.7;
+    clickSource.load();
 
-        for (let i = 0; i < CLICK_POOL_SIZE; i++) {
-            const audio = clickSource.cloneNode(true);
-            audio.volume = 0.7;
-            clickPool.push(audio);
-        }
+    clickSource.addEventListener("error", () => {
+        console.error("Suara tombol gagal dimuat:", clickSource.currentSrc);
+    });
+}
 
-        let clickIndex = 0;
+function playClick() {
+    if (!clickSource) return;
 
-        function playClick() {
+    clickSource.pause();
+    clickSource.currentTime = 0;
 
-            const audio = clickPool[clickIndex];
+    clickSource.play().catch(error => {
+        console.error("Suara tombol gagal diputar:", error);
+    });
+}
 
-            clickIndex =
-                (clickIndex + 1) % CLICK_POOL_SIZE;
-
-            audio.pause();
-            audio.currentTime = 0;
-
-        }
-        document.querySelectorAll("button").forEach(button => {
-            button.addEventListener("click", playClick);
-        });
+document.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", playClick);
+});
     </script>
 
 </body>
