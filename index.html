@@ -15,7 +15,7 @@
             margin: 0;
             min-height: 100vh;
 
-            background: black url("img/latar.webp")center center / cover no-repeat fixed;
+            background: white url("img/latar.webp")center center / cover no-repeat fixed;
 
             /*
 url("img/latar.webp")center center / cover no-repeat fixed;
@@ -825,27 +825,40 @@ ANIMASI
         }
 
 
-        .gallery-title {
-            position: absolute;
+  .gallery-title {
+    position: absolute;
 
-            left: 0;
-            right: 0;
-            bottom: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
-            height: 55px;
-            font-family: 'Caveat', cursive;
-            background: transparent;
+    height: 55px;
+    font-family: 'Caveat', cursive;
 
-            display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            align-items: center;
-            justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
 
-            font-size: 30px;
-            font-weight: bold;
+    z-index: 2;
+}
 
-            z-index: 2;
-        }
+.gallery-title::before {
+    content: "";
+    position: absolute;
+
+    width: 110px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    z-index: -1;
+}
 
         .gallery-overlay {
             position: fixed;
@@ -1439,11 +1452,11 @@ ANIMASI
             <p>
                 Canost Fighter Muaythai (CFM) adalah sasana bela diri terkemuka di gedung eks Kawasan Wisata Kuliner (KWK) Kayutangi yang menjadi pusat pembinaan atlet muaythai berprestasi di Kota Banjarmasin, Kalimantan Selatan. Klub ini dikenal aktif melahirkan petarung lokal untuk mewakili Banjarmasin di berbagai ajang bergengsi, seperti meraih 11 emas dan 9 perak pada eksibisi 2022 serta menurunkan 23 atlet dalam gelaran Porprov XI Kalsel 2022. Selain fokus mencetak prestasi, sasana ini juga rutin mempromosikan olahraga muaythai ke berbagai sekolah dan sering dipercaya menjadi tuan rumah kejuaraan besar tingkat daerah, seperti Walikota Cup hingga Kejurprov Kalimantan Selatan 2025.
             </p>
-                      <!--   <button style="font-family: 'Nunito', sans-serif;background-color: #E1306C; color: white; border: none;"
-                onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
-                canostfightermuaythai
-            </button>
-            <!-- isi event -->
+            <!--   <button style="font-family: 'Nunito', sans-serif;background-color: #E1306C; color: white; border: none;"
+                            onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
+                            canostfightermuaythai
+                        </button>
+                        <!-- isi event -->
 
             <button onclick="showPage('home')">
                 KEMBALI
@@ -1585,8 +1598,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                     INFORMASI KARAKTER
-                                                                                                ========================= -->
+                                                                                                             INFORMASI KARAKTER
+                                                                                                        ========================= -->
 
         <div class="character-info">
 
@@ -1649,7 +1662,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                             dimasukkan di sini -->
+                                                                                                                     dimasukkan di sini -->
 
     </section>
     <section id="karakter2" class="page character-page">
@@ -1900,8 +1913,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                     INFORMASI KARAKTER
-                                                                                                ========================= -->
+                                                                                                             INFORMASI KARAKTER
+                                                                                                        ========================= -->
 
         <div class="character-info">
 
@@ -1965,7 +1978,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                             dimasukkan di sini -->
+                                                                                                                     dimasukkan di sini -->
 
     </section>
     <section id="karakter3" class="page character-page">
@@ -2216,8 +2229,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                     INFORMASI KARAKTER
-                                                                                                ========================= -->
+                                                                                                             INFORMASI KARAKTER
+                                                                                                        ========================= -->
 
         <div class="character-info">
 
@@ -2282,7 +2295,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                             dimasukkan di sini -->
+                                                                                                                     dimasukkan di sini -->
 
     </section>
     <!-- LAIN-LAIN -->
@@ -2317,8 +2330,8 @@ ANIMASI
 
 
     <!-- =========================
-                                             SEJARAH KARAKTER
-                                        ========================= -->
+                                                 SEJARAH KARAKTER
+                                            ========================= -->
 
     <div class="story-overlay" id="storyOverlay">
 
@@ -2376,46 +2389,44 @@ ANIMASI
 
                 tutupGaleri();
             });
-    const dataPrestasi = {
-    "PORPROV XI 2022": [
-        {
-            foto: "img/PPXI/akmal.webp",
-            judul: "EMAS",
-            namaPemenang: "AKMAL",
-            keterangan: "KELAS FIGHT 80 KG PUTRA"
-        },
-        {
-            foto: "img/PPXI/ray.webp",
-            judul: "EMAS",
-            namaPemenang: "RAY",
-            keterangan: "KELAS FIGHT 65 KG PUTRA"
-        },
-        {
-            foto: "img/PPXI/rahma.webp",
-            judul: "PERAK",
-            namaPemenang: "RAHMA",
-            keterangan: "KELAS FIGHT 60 KG PUTRI"
-        },
-        {
-            foto: "img/PPXI/yadin.webp",
-            judul: "PERAK",
-            namaPemenang: "YADIN",
-            keterangan: "KELAS FIGHT 80+ PUTRA"
-        },
-        {
-            foto: "img/PPXI/neli.webp",
-            judul: "PERAK",
-            namaPemenang: "NELI",
-            keterangan: "KELAS SENI WAIKRU PUTRI"
-        },
-        {
-            foto: "img/PPXI/dayat.webp",
-            judul: "PERAK",
-            namaPemenang: "DAYAT",
-            keterangan: "KELAS SENI WAIKRU PUTRA"
-        }
-    ]
-};
+        const dataPrestasi = {
+            "PORPROV XI 2022": [{
+                foto: "img/PPXI/akmal.webp",
+                judul: "EMAS",
+                namaPemenang: "AKMAL",
+                keterangan: "KELAS FIGHT 80 KG PUTRA"
+            },
+                {
+                    foto: "img/PPXI/ray.webp",
+                    judul: "EMAS",
+                    namaPemenang: "RAY",
+                    keterangan: "KELAS FIGHT 65 KG PUTRA"
+                },
+                {
+                    foto: "img/PPXI/rahma.webp",
+                    judul: "PERAK",
+                    namaPemenang: "RAHMA",
+                    keterangan: "KELAS FIGHT 60 KG PUTRI"
+                },
+                {
+                    foto: "img/PPXI/yadin.webp",
+                    judul: "PERAK",
+                    namaPemenang: "YADIN",
+                    keterangan: "KELAS FIGHT 80+ PUTRA"
+                },
+                {
+                    foto: "img/PPXI/neli.webp",
+                    judul: "PERAK",
+                    namaPemenang: "NELI",
+                    keterangan: "KELAS SENI WAIKRU PUTRI"
+                },
+                {
+                    foto: "img/PPXI/dayat.webp",
+                    judul: "PERAK",
+                    namaPemenang: "DAYAT",
+                    keterangan: "KELAS SENI WAIKRU PUTRA"
+                }]
+        };
 
         const instagramPrestasi = {
             "PORPROV XI 2022": "https://www.baritopost.co.id/muaythai-banjarmasin-panen-medali-porprov-kalsel/",
@@ -2523,17 +2534,17 @@ ANIMASI
 
 
 
-           el.isiFoto.innerHTML = data[nama].map(item => `
-    <div class="gallery-card"
-    onclick="bukaGaleri(this)"
-    data-title="${item.namaPemenang || item.judul}"
-    data-description="${item.keterangan}">
-    <div class="gallery-image">
-    <img src="${item.foto}">
-    </div>
-    <div class="gallery-title">${item.judul}</div>
-    </div>
-    `).join("");
+                el.isiFoto.innerHTML = data[nama].map(item => `
+                    <div class="gallery-card"
+                    onclick="bukaGaleri(this)"
+                    data-title="${item.namaPemenang || item.judul}"
+                    data-description="${item.keterangan}">
+                    <div class="gallery-image">
+                    <img src="${item.foto}">
+                    </div>
+                    <div class="gallery-title">${item.judul}</div>
+                    </div>
+                    `).join("");
                 el.foto.style.display = "block";
                 el.tombolFoto.style.display = "block";
 
