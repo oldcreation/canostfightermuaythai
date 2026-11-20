@@ -825,40 +825,40 @@ ANIMASI
         }
 
 
-  .gallery-title {
-    position: absolute;
+        .gallery-title {
+            position: absolute;
 
-    left: 0;
-    right: 0;
-    bottom: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
 
-    height: 55px;
-    font-family: 'Caveat', cursive;
+            height: 55px;
+            font-family: 'Caveat', cursive;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    font-size: 30px;
-    font-weight: bold;
+            font-size: 30px;
+            font-weight: bold;
 
-    z-index: 2;
-}
+            z-index: 2;
+        }
 
-.gallery-title::before {
-    content: "";
-    position: absolute;
+        .gallery-title::before {
+            content: "";
+            position: absolute;
 
-    width: 110px;
-    height: 38px;
+            width: 110px;
+            height: 38px;
 
-    border-radius: 10px;
+            border-radius: 10px;
 
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
 
-    z-index: -1;
-}
+            z-index: -1;
+        }
 
         .gallery-overlay {
             position: fixed;
@@ -1181,7 +1181,7 @@ ANIMASI
             flex: 1;
             min-height: 0;
 
-            padding: 65px 0 90px;
+            padding: 65px 0 45px;
 
             display: flex;
             flex-direction: column;
@@ -1216,7 +1216,7 @@ ANIMASI
             max-height: none;
 
             margin: 0 auto;
-            padding: 25px 20px;
+            padding: 25px 20px 0;
 
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1453,10 +1453,10 @@ ANIMASI
                 Canost Fighter Muaythai (CFM) adalah sasana bela diri terkemuka di gedung eks Kawasan Wisata Kuliner (KWK) Kayutangi yang menjadi pusat pembinaan atlet muaythai berprestasi di Kota Banjarmasin, Kalimantan Selatan. Klub ini dikenal aktif melahirkan petarung lokal untuk mewakili Banjarmasin di berbagai ajang bergengsi, seperti meraih 11 emas dan 9 perak pada eksibisi 2022 serta menurunkan 23 atlet dalam gelaran Porprov XI Kalsel 2022. Selain fokus mencetak prestasi, sasana ini juga rutin mempromosikan olahraga muaythai ke berbagai sekolah dan sering dipercaya menjadi tuan rumah kejuaraan besar tingkat daerah, seperti Walikota Cup hingga Kejurprov Kalimantan Selatan 2025.
             </p>
             <!--   <button style="font-family: 'Nunito', sans-serif;background-color: #E1306C; color: white; border: none;"
-                            onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
-                            canostfightermuaythai
-                        </button>
-                        <!-- isi event -->
+                                        onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
+                                        canostfightermuaythai
+                                    </button>
+                                    <!-- isi event -->
 
             <button onclick="showPage('home')">
                 KEMBALI
@@ -1598,8 +1598,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                             INFORMASI KARAKTER
-                                                                                                        ========================= -->
+                                                                                                                     INFORMASI KARAKTER
+                                                                                                                ========================= -->
 
         <div class="character-info">
 
@@ -1662,7 +1662,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                     dimasukkan di sini -->
+                                                                                                                             dimasukkan di sini -->
 
     </section>
     <section id="karakter2" class="page character-page">
@@ -1913,8 +1913,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                             INFORMASI KARAKTER
-                                                                                                        ========================= -->
+                                                                                                                     INFORMASI KARAKTER
+                                                                                                                ========================= -->
 
         <div class="character-info">
 
@@ -1978,7 +1978,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                     dimasukkan di sini -->
+                                                                                                                             dimasukkan di sini -->
 
     </section>
     <section id="karakter3" class="page character-page">
@@ -2229,8 +2229,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                             INFORMASI KARAKTER
-                                                                                                        ========================= -->
+                                                                                                                     INFORMASI KARAKTER
+                                                                                                                ========================= -->
 
         <div class="character-info">
 
@@ -2295,7 +2295,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                     dimasukkan di sini -->
+                                                                                                                             dimasukkan di sini -->
 
     </section>
     <!-- LAIN-LAIN -->
@@ -2330,8 +2330,8 @@ ANIMASI
 
 
     <!-- =========================
-                                                 SEJARAH KARAKTER
-                                            ========================= -->
+                                                     SEJARAH KARAKTER
+                                                ========================= -->
 
     <div class="story-overlay" id="storyOverlay">
 
@@ -2511,72 +2511,73 @@ ANIMASI
 
         }
 
-  async function bukaPrestasi(nama, nomor) {
-    playClick();
+        async function bukaPrestasi(nama, nomor) {
+            playClick();
 
-    const data = ambilDataPrestasi(nomor);
-    const el = ambilElemenPrestasi(nomor);
-    const durasi = 500;
+            const data = ambilDataPrestasi(nomor);
+            const el = ambilElemenPrestasi(nomor);
+            const durasi = 500;
 
-    [el.daftar, el.tombolHome].forEach(element => {
-        element.style.transition = "opacity 0.5s ease";
-        element.style.opacity = "0";
-    });
-
-    setTimeout(async () => {
-        el.daftar.style.display = "none";
-        el.tombolHome.style.display = "none";
-
-        el.isiFoto.innerHTML = data[nama].map(item => `
-            <div class="gallery-card"
-            onclick="bukaGaleri(this)"
-            data-title="${item.namaPemenang || item.judul}"
-            data-description="${item.keterangan}">
-                <div class="gallery-image">
-                    <img src="${item.foto}">
-                </div>
-                <div class="gallery-title">${item.judul}</div>
-            </div>
-        `).join("");
-
-        el.foto.style.transition = "none";
-        el.tombolFoto.style.transition = "none";
-
-        el.foto.style.display = "block";
-        el.tombolFoto.style.display = "block";
-
-        el.foto.style.opacity = "0";
-        el.tombolFoto.style.opacity = "0";
-
-        el.foto.scrollTop = 0;
-
-        const gambar = [...el.isiFoto.querySelectorAll("img")];
-
-        await Promise.all(gambar.map(async img => {
-            if (!img.complete) {
-                await new Promise(resolve => {
-                    img.onload = resolve;
-                    img.onerror = resolve;
+            [el.daftar,
+                el.tombolHome].forEach(element => {
+                    element.style.transition = "opacity 0.5s ease";
+                    element.style.opacity = "0";
                 });
-            }
 
-            if (img.decode) {
-                await img.decode().catch(() => {});
-            }
-        }));
+            setTimeout(async () => {
+                el.daftar.style.display = "none";
+                el.tombolHome.style.display = "none";
 
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                el.foto.style.transition = "opacity 0.5s ease";
-                el.tombolFoto.style.transition = "opacity 0.5s ease";
+                el.isiFoto.innerHTML = data[nama].map(item => `
+                    <div class="gallery-card"
+                    onclick="bukaGaleri(this)"
+                    data-title="${item.namaPemenang || item.judul}"
+                    data-description="${item.keterangan}">
+                    <div class="gallery-image">
+                    <img src="${item.foto}">
+                    </div>
+                    <div class="gallery-title">${item.judul}</div>
+                    </div>
+                    `).join("");
 
-                el.foto.style.opacity = "1";
-                el.tombolFoto.style.opacity = "1";
-            });
-        });
+                el.foto.style.transition = "none";
+                el.tombolFoto.style.transition = "none";
 
-    }, durasi);
-}
+                el.foto.style.display = "block";
+                el.tombolFoto.style.display = "block";
+
+                el.foto.style.opacity = "0";
+                el.tombolFoto.style.opacity = "0";
+
+                el.foto.scrollTop = 0;
+
+                const gambar = [...el.isiFoto.querySelectorAll("img")];
+
+                await Promise.all(gambar.map(async img => {
+                    if (!img.complete) {
+                        await new Promise(resolve => {
+                            img.onload = resolve;
+                            img.onerror = resolve;
+                        });
+                    }
+
+                    if (img.decode) {
+                        await img.decode().catch(() => {});
+                    }
+                }));
+
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        el.foto.style.transition = "opacity 0.5s ease";
+                        el.tombolFoto.style.transition = "opacity 0.5s ease";
+
+                        el.foto.style.opacity = "1";
+                        el.tombolFoto.style.opacity = "1";
+                    });
+                });
+
+            }, durasi);
+        }
         function kembaliDaftarPrestasi(nomor) {
             playClick();
 
