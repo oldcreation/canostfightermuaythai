@@ -1453,10 +1453,10 @@ ANIMASI
                 Canost Fighter Muaythai (CFM) adalah sasana bela diri terkemuka di gedung eks Kawasan Wisata Kuliner (KWK) Kayutangi yang menjadi pusat pembinaan atlet muaythai berprestasi di Kota Banjarmasin, Kalimantan Selatan. Klub ini dikenal aktif melahirkan petarung lokal untuk mewakili Banjarmasin di berbagai ajang bergengsi, seperti meraih 11 emas dan 9 perak pada eksibisi 2022 serta menurunkan 23 atlet dalam gelaran Porprov XI Kalsel 2022. Selain fokus mencetak prestasi, sasana ini juga rutin mempromosikan olahraga muaythai ke berbagai sekolah dan sering dipercaya menjadi tuan rumah kejuaraan besar tingkat daerah, seperti Walikota Cup hingga Kejurprov Kalimantan Selatan 2025.
             </p>
             <!--   <button style="font-family: 'Nunito', sans-serif;background-color: #E1306C; color: white; border: none;"
-                                        onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
-                                        canostfightermuaythai
-                                    </button>
-                                    <!-- isi event -->
+                                                                onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
+                                                                canostfightermuaythai
+                                                            </button>
+                                                            <!-- isi event -->
 
             <button onclick="showPage('home')">
                 KEMBALI
@@ -1598,8 +1598,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                                     INFORMASI KARAKTER
-                                                                                                                ========================= -->
+                                                                                                                                     INFORMASI KARAKTER
+                                                                                                                                ========================= -->
 
         <div class="character-info">
 
@@ -1662,7 +1662,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                             dimasukkan di sini -->
+                                                                                                                                             dimasukkan di sini -->
 
     </section>
     <section id="karakter2" class="page character-page">
@@ -1913,8 +1913,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                                     INFORMASI KARAKTER
-                                                                                                                ========================= -->
+                                                                                                                                     INFORMASI KARAKTER
+                                                                                                                                ========================= -->
 
         <div class="character-info">
 
@@ -1978,7 +1978,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                             dimasukkan di sini -->
+                                                                                                                                             dimasukkan di sini -->
 
     </section>
     <section id="karakter3" class="page character-page">
@@ -2229,8 +2229,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                                     INFORMASI KARAKTER
-                                                                                                                ========================= -->
+                                                                                                                                     INFORMASI KARAKTER
+                                                                                                                                ========================= -->
 
         <div class="character-info">
 
@@ -2295,7 +2295,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                             dimasukkan di sini -->
+                                                                                                                                             dimasukkan di sini -->
 
     </section>
     <!-- LAIN-LAIN -->
@@ -2330,8 +2330,8 @@ ANIMASI
 
 
     <!-- =========================
-                                                     SEJARAH KARAKTER
-                                                ========================= -->
+                                                             SEJARAH KARAKTER
+                                                        ========================= -->
 
     <div class="story-overlay" id="storyOverlay">
 
@@ -2449,26 +2449,40 @@ ANIMASI
 ========================= */
 
         const dataPrestasi2 = {
-            "FAJAR": [{
-                foto: "img/prestasi/fajar1.webp",
-                judul: "Juara 1",
-                keterangan: "Dokumentasi prestasi Fajar."
-            }],
-
-            "OMAN": [{
-                foto: "img/prestasi/oman1.webp",
-                judul: "Kejuaraan",
-                keterangan: "Dokumentasi prestasi Oman."
-            }]
+             
         };
 
         const dataPrestasi3 = {
-            "NAMA 1": [{
-                foto: "img/prestasi3/nama1.webp",
-                judul: "Juara 1",
-                keterangan: "Dokumentasi prestasi Nama 1."
-            }]
-        };
+            "GUMSHIELD": [{
+                foto: "img/store/gsrox.webp",
+                judul: "ROX",
+                namaPemenang: ".",
+                keterangan: "Rp 500.000"
+            },
+                {
+                    foto: "img/store/gsbn.webp",
+                    judul: "BN",
+                    namaPemenang: ".",
+                    keterangan: "Rp 300.000"
+                },
+                {
+                    foto: "img/store/gskwk.webp",
+                    judul: "KWK",
+                    namaPemenang: ".",
+                    keterangan: "Rp 1.000.000"
+                }],
+            "GLOVES": [{
+                foto: "img/store/gvtwins.webp",
+                judul: "TWINS",
+                namaPemenang: ".",
+                keterangan: "Rp 1.000.000"
+            },
+                {
+                    foto: "img/store/gvyk.webp",
+                    judul: "YOKKAO",
+                    namaPemenang: ".",
+                    keterangan: "Rp 5.000.000"
+                }]};
         function ambilDataPrestasi(nomor) {
             if (nomor === 1) return dataPrestasi;
             if (nomor === 2) return dataPrestasi2;
@@ -2501,8 +2515,8 @@ ANIMASI
                 onclick="bukaPrestasi('${nama}', ${nomor})"
                 style="flex:1;cursor:pointer;">
                 <span>${nama}</span>
-                <span class="prestasi-jumlah">${foto.length} Foto</span>
-                </div>
+                <span class="prestasi-jumlah">${foto.length} ${nomor === 1 ? 'Prestasi': nomor === 2 ? 'Foto': 'Produk'}</span>
+                </div> 
                 <button class="prestasi-instagram"
                 onclick="event.stopPropagation(); bukaInstagramPrestasi('${nama}')">◎</button>
                 </div>
