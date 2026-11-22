@@ -214,17 +214,37 @@ AREA PNG
         }
 
         .character-bg {
-            position: absolute;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
 
-            inset: 0px;
+    background: linear-gradient(
+        to bottom,
+        blue 0%,
+        blue 78.5%, 
+        transparent 60%
+    );
+}
 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+.character-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: grayscale(100%);
+    opacity: 0.3;
+
+    /* Multiply */
+    mix-blend-mode: multiply;
+}
 
         /* =========================
-
+ini ehh 21
 PNG KARAKTER
 ========================= */
 
@@ -1511,10 +1531,10 @@ ANIMASI
                 seperti Walikota Cup hingga Kejurprov Kalimantan Selatan 2025.
             </p>
             <!--   <button style="font-family: 'Nunito', sans-serif;background-color: #E1306C; color: white; border: none;"
-                                                                                                                onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
-                                                                                                                canostfightermuaythai
-                                                                                                            </button>
-                                                                                                            <!-- isi event -->
+                                                                                                                            onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
+                                                                                                                            canostfightermuaythai
+                                                                                                                        </button>
+                                                                                                                        <!-- isi event -->
 
             <button onclick="showPage('home')">
                 KEMBALI
@@ -1603,8 +1623,8 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
-                    </div>
+                    <div class="character-bg" style=
+                    "--bg-image: url('img/laut.webp');"></div>
 
 
                 </div>
@@ -1627,7 +1647,7 @@ ANIMASI
                 data-instagram="Coach Fajrin" data-instagram-link="https://www.instagram.com/fajrinnnnn/">
 
                 <div class="character-bck">
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
                 </div>
 
@@ -1645,8 +1665,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                                                                                     INFORMASI KARAKTER
-                                                                                                                                                                ========================= -->
+                                                                                                                                                                             INFORMASI KARAKTER
+                                                                                                                                                                        ========================= -->
 
         <div class="character-info">
 
@@ -1709,7 +1729,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                                                                             dimasukkan di sini -->
+                                                                                                                                                                                     dimasukkan di sini -->
 
     </section>
     <section id="karakter2" class="page character-page">
@@ -1729,7 +1749,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -1752,7 +1772,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -1776,7 +1796,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -1799,7 +1819,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -1820,7 +1840,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -1843,7 +1863,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -1871,7 +1891,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -1896,7 +1916,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -1919,7 +1939,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -1944,8 +1964,8 @@ ANIMASI
 
 
         <!-- =========================
-                        INFORMASI KARAKTER
-                        ========================= -->
+                                INFORMASI KARAKTER
+                                ========================= -->
 
         <div class="character-info">
 
@@ -2009,7 +2029,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                        dimasukkan di sini -->
+                                dimasukkan di sini -->
 
     </section>
     <section id="karakter3" class="page character-page">
@@ -2029,7 +2049,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -2055,7 +2075,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -2079,7 +2099,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -2104,7 +2124,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -2130,7 +2150,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -2152,7 +2172,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -2171,7 +2191,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -2194,7 +2214,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -2217,7 +2237,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -2240,7 +2260,7 @@ ANIMASI
 
                 <div class="character-bck">
 
-                    <div class="character-bg" style="background-image:url('img/laut.webp');">
+                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
                 </div>
@@ -2260,8 +2280,8 @@ ANIMASI
 
 
         <!-- =========================
-                        INFORMASI KARAKTER
-                        ========================= -->
+                                INFORMASI KARAKTER
+                                ========================= -->
 
         <div class="character-info">
 
@@ -2326,34 +2346,33 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                        dimasukkan di sini -->
+                                dimasukkan di sini -->
 
     </section>
     <!-- LAIN-LAIN -->
     <section id="lain" class="page">
         <div class="menu-content">
-            <h1>SUMBER</h1>
-            <p>
-                IG
-            </p>
+            <h1>INFO</h1>
+
             <button style="font-family: 'Nunito', sans-serif;"
                 onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
                 INSTAGRAM
             </button>
             <br>
             <button style="font-family: 'Nunito', sans-serif;"
-    onclick="window.location.href='https://wa.me/6285751678089'">
-    WA ADMIN
-</button>
+                onclick="window.location.href='https://wa.me/6285751678089'">
+                WA ADMIN
+            </button>
 
             <br>
-            <!-- 
-            <button style="font-family: 'Nunito', sans-serif;"
-                onclick="window.location.href='https://www.instagram.com/serumpunbrothers/';">
-                serumpunbrothers
-            </button><br><br>
+            <br>
+            <!--
+                        <button style="font-family: 'Nunito', sans-serif;"
+                            onclick="window.location.href='https://www.instagram.com/serumpunbrothers/';">
+                            serumpunbrothers
+                        </button><br><br>
 
-             event -->
+                         event -->
 
             <button onclick="showPage('home')">
                 KEMBALI
@@ -2363,8 +2382,8 @@ ANIMASI
 
 
     <!-- =========================
-                    SEJARAH KARAKTER
-                    ========================= -->
+                        SEJARAH KARAKTER
+                        ========================= -->
 
     <div class="story-overlay" id="storyOverlay">
 
