@@ -1465,6 +1465,11 @@ ANIMASI
             outline: none;
             box-shadow: none;
         }
+        
+    .prestasi-instagram {
+    filter: brightness(0) invert(1);
+    font-size: 18px;
+}
     </style>
 
 </head>
@@ -2567,7 +2572,7 @@ ANIMASI
                 <span class="prestasi-jumlah">${foto.length} ${nomor === 1 ? 'Prestasi': nomor === 2 ? 'Foto': 'Produk'}</span>
                 </div>
                 <button class="prestasi-instagram"
-                onclick="event.stopPropagation(); bukaInstagramPrestasi('${nama}')">◎</button>
+                onclick="event.stopPropagation(); bukaInstagramPrestasi('${nama}')">🌐</button>
                 </div>
                 `).join("");
 
