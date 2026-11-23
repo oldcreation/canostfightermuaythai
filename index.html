@@ -3487,17 +3487,19 @@ buttons.forEach(item => {
     button.className = "story-instagram-button";
     button.textContent = item.name;
 
-    button.onclick = (e) => {
-    e.stopPropagation();
-
     if (item.name === "WA") {
-        window.location.href = item.link;
+        button.setAttribute(
+            "onclick",
+            `window.location.href='${item.link}'`
+        );
     } else {
-        window.open(item.link, "_blank");
+        button.onclick = () => {
+            window.location.href = item.link;
+        };
     }
-};
+
     buttonArea.appendChild(button);
-});
+}); 
 
 buttonArea.style.display = buttons.length ? "flex" : "none";
             document.getElementById("storyOverlay").style.display = "flex";
