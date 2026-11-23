@@ -3441,7 +3441,7 @@ data-buttons='[{"name":"IG","link":"https://www.instagram.com/safwannii/"}]'>
             const container =
             page.querySelector(
                 ".character-container"
-            );
+            ); 
 
             const active =
             character ||
@@ -3488,10 +3488,14 @@ buttons.forEach(item => {
     button.textContent = item.name;
 
     button.onclick = (e) => {
-        e.stopPropagation();
-        window.open(item.link, "_blank");
-    };
+    e.stopPropagation();
 
+    if (item.name === "WA") {
+        window.location.href = item.link;
+    } else {
+        window.open(item.link, "_blank");
+    }
+};
     buttonArea.appendChild(button);
 });
 
