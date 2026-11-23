@@ -1032,14 +1032,39 @@ ANIMASI
             }
         }
 
-        #storyInstagram,
-        .story-close {
-            display: block;
-            margin: 20px auto 0;
-        }
+        #storyInstagram {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px auto 0;
+}
 
+.story-instagram-button {
+    width: auto;
+    min-width: 50px;
+    height: 40px;
+
+    margin: 0;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 25px;
+
+    box-shadow: none;
+
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+}
         .story-close {
-            display: none !important;
+            display: none !important; 
         }
 
         .gallery-close {
@@ -1630,7 +1655,12 @@ ANIMASI
                 data-description="Sekretaris Umum Muaythai Indonesia (MI) Kota Banjarmasin." data-hp="100"
                 data-atk="100" data-def="100"
                 data-story="Pengelolaan organisasi, peningkatan kualitas atlet, serta program latihan lintas disiplin bela diri (seperti sparring dengan cabang olahraga lain untuk memperluas pengalaman tanding)."
-                data-instagram="Coach Indra" data-instagram-link="https://www.instagram.com/wongapra/">
+                data-buttons='[
+    {
+        "name": "IG",
+        "link": "https://www.instagram.com/wongapra/"
+    }
+]'>
 
                 <div class="character-bck">
 
@@ -1655,7 +1685,7 @@ ANIMASI
                 data-description="Pelatih resmi Muaythai Indonesia (MI) Kota Banjarmasin dan pelatih di Canost Fighter Muaythai Banjarmasin."
                 data-hp="100" data-atk="100" data-def="100"
                 data-story="Membawa tim Muaythai Banjarmasin meraih banyak medali di ajang eksibisi maupun Porprov Kalsel, serta memprakarsai program ekstrakurikuler Muaythai pertama di sekolah-sekolah Banjarmasin."
-                data-instagram="Coach Fajrin" data-instagram-link="https://www.instagram.com/fajrinnnnn/">
+         data-buttons='[{"name":"IG","link":"https://www.instagram.com/fajrinnnnn/"}]'>
 
                 <div class="character-bck">
                     <div class="character-bg" style="--bg-image:url('img/laut.webp');">
@@ -1757,7 +1787,7 @@ ANIMASI
                 data-description="Kemampuan pengambilan foto dengan akurasi tinggi." data-hp="100" data-atk="75"
                 data-def="100"
                 data-story="Mampu menangkap setiap momen dengan ketepatan dan kreativitas yang tinggi. Dengan kepekaan terhadap detail, pencahayaan, dan komposisi, ia mampu mengubah momen sederhana menjadi sebuah karya visual yang penuh cerita dan berkesan."
-                data-instagram="IG" data-instagram-link="https://www.instagram.com/akmalanshari_/"> 
+    data-buttons='[{"name":"IG","link":"https://www.instagram.com/akmalanshari_/"}]'> 
 
                 <div class="character-bck">
 
@@ -1781,7 +1811,7 @@ ANIMASI
                 data-description="Memiliki kemampuan mencari informasi yang sangat akurat." data-hp="100" data-atk="80"
                 data-def="90"
                 data-story="Memiliki kemampuan mengumpulkan dan menyampaikan informasi dengan cepat dan akurat. Dengan kepekaan yang tinggi, kemampuan mengamati situasi, serta jaringan informasi yang luas, ia mampu menemukan fakta penting dan memberikan informasi yang tepat pada saat yang dibutuhkan."
-                data-instagram="IG" data-instagram-link="https://www.instagram.com/iya_ini_krisna/">
+ data-buttons='[{"name":"IG","link":"https://www.instagram.com/iya_ini_krisna/"}]'>
 
                 <div class="character-bck">
 
@@ -1806,7 +1836,7 @@ ANIMASI
             <div class="character bg-ungu" data-name="Aldi Pratama" data-role="THE IRONMAN" data-description="Memiliki jurus mematikan, ledakan
                 api yg membara & suka friendly fire." data-hp="50" data-atk="100" data-def="30"
                 data-story="Ampunnya Alalak Selatan, penjagaunya Handil, p info gladiator."
-                data-instagram="IG" data-instagram-link="https://www.instagram.com/aldiiu13/">
+data-buttons='[{"name":"IG","link":"https://www.instagram.com/aldiiu13/"}]'>
 
                 <div class="character-bck">
 
@@ -1830,7 +1860,7 @@ ANIMASI
                 data-description="Mampu membuat materi latihan sepersekian detik." data-hp="100" data-atk="88"
                 data-def="95"
                 data-story="Coach yang handal dalam membimbing dan mengembangkan kemampuan tim, dengan pengalaman, strategi, serta ketegasan yang mampu membentuk mental dan meningkatkan performa. Mampu memberikan arahan yang tepat, memotivasi setiap anggota, dan menjadi sosok yang dapat diandalkan dalam menghadapi berbagai tantangan."
-                data-instagram="IG" data-instagram-link="https://www.instagram.com/muhmmdaksay_/">
+data-buttons='[{"name":"IG","link":"https://www.instagram.com/muhmmdaksay_/"}]'>
 
                 <div class="character-bck">
 
@@ -1852,7 +1882,7 @@ ANIMASI
 
             <div class="character bg-ungu" data-name="Saddam Ilham" data-role="The Calm Wolf" data-description="Pemain handal."
                 data-hp="70" data-atk="88" data-def="66" data-story="Infomasi karakter tidak ditemukan."
-                data-instagram="IG" data-instagram-link="https://www.instagram.com/msaddamilham11/">
+data-buttons='[{"name":"IG","link":"https://www.instagram.com/msaddamilham11/"}]'>
 
                 <div class="character-bck">
 
@@ -1876,7 +1906,7 @@ ANIMASI
                 data-description="Memiliki kemampuan mekanisme alur chatting yang sangat unik." data-hp="90"
                 data-atk="70" data-def="100"
                 data-story="Memiliki kemampuan unik bertahan hidup di segala medan dan kondisi, mampu beradaptasi dengan cepat dengan kondisi alam, termasuk spesies langka bukit batu."
-                data-instagram="IG" data-instagram-link="https://www.instagram.com/mhndra.aaa/">
+data-buttons='[{"name":"IG","link":"https://www.instagram.com/mhndra.aaa/"}]'>
 
                 <div class="character-bck">
 
@@ -1905,7 +1935,7 @@ ANIMASI
                 data-description="Mampu mengelola berbagai macam bahan makanan menjadi hidangan lezat." data-hp="100"
                 data-atk="60" data-def="100"
                 data-story="Kemampuan mengolah berbagai bahan menjadi hidangan yang lezat dan menggugah selera. Dengan kreativitas, ketelitian, serta keahlian dalam memadukan rasa, ia mampu menciptakan sajian yang tidak hanya nikmat, tetapi juga memiliki cita rasa dan karakter yang khas."
-                data-instagram="IG" data-instagram-link="https://www.instagram.com/daeng.ilamassaguni/">
+ data-buttons='[{"name":"IG","link":"https://www.instagram.com/daeng.ilamassaguni/"}]'>
 
                 <div class="character-bck">
 
@@ -1931,7 +1961,10 @@ ANIMASI
                 data-description="Petarung jarak dekat dengan pertahanan kuat dan serangan fisik yang besar."
                 data-hp="95" data-atk="85" data-def="90"
                 data-story="Memiliki gaya bertarung yang bertolak belakang dengan bakat alami nya yang langka, selalu tampil santai seolah tidak perlu mengerahkan seluruh kemampuan nya untuk memenangkan pertarungan."
-                data-instagram="IG" data-instagram-link="https://www.instagram.com/unclemann__/">
+data-buttons='[{"name":"IG","link":"https://www.instagram.com/unclemann__/"},{
+        "name": "WA",
+        "link": "https://wa.me/6287859049267"
+    }]'>
 
                 <div class="character-bck">
 
@@ -1955,7 +1988,7 @@ ANIMASI
                 data-description=" Berpikir kritis dengan intensitas tinggi."
                 data-hp="65" data-atk="100" data-def="40"
                 data-story="Mempunyai kemampuan mengendalikan emosi dan pikiran."
-                data-instagram="IG" data-instagram-link="https://www.instagram.com/safwannii/">
+data-buttons='[{"name":"IG","link":"https://www.instagram.com/safwannii/"}]'>
 
                 <div class="character-bck">
 
@@ -2521,8 +2554,7 @@ ANIMASI
 
             <div class="story-text" id="storyText">
             </div>
-            <button id="storyInstagram" style="font-family: 'Nunito', sans-serif; display: none;">
-            </button>
+            <div id="storyInstagram"></div>
 
 
 
@@ -3437,19 +3469,33 @@ ANIMASI
             active.dataset.story ||
             "Belum ada sejarah karakter.";
 
-            const instagramButton = document.getElementById("storyInstagram");
+          const buttonArea = document.getElementById("storyInstagram");
 
-            const instagramName = active.dataset.instagram || "";
-            const instagramLink = active.dataset.instagramLink || "";
+let buttons = [];
 
-            instagramButton.textContent = instagramName;
-            instagramButton.style.display =
-            instagramName && instagramLink ? "block": "none";
-            instagramButton.onclick = () => {
-                if (instagramLink) {
-                    window.location.href = instagramLink;
-                }
-            };
+try {
+    buttons = JSON.parse(active.dataset.buttons || "[]");
+} catch (error) {
+    buttons = [];
+}
+
+buttonArea.innerHTML = "";
+
+buttons.forEach(item => {
+    const button = document.createElement("button");
+
+    button.className = "story-instagram-button";
+    button.textContent = item.name;
+
+    button.onclick = (e) => {
+        e.stopPropagation();
+        window.open(item.link, "_blank");
+    };
+
+    buttonArea.appendChild(button);
+});
+
+buttonArea.style.display = buttons.length ? "flex" : "none";
             document.getElementById("storyOverlay").style.display = "flex";
         }
         function tutupSejarah() {
