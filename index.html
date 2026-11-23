@@ -2485,14 +2485,14 @@ ANIMASI
             "ANDI": "https://www.instagram.com/username4/"
         };
         function bukaInstagramPrestasi(nama) {
-            playClick();
+    playClick();
 
-            const link = instagramPrestasi[nama];
+    const link = instagramPrestasi[nama];
 
-            if (link) {
-                window.open(link, "_blank");
-            }
-        }
+    if (link) {
+        window.location.href = link;
+    }
+}
 
         /* =========================
                 DATA PRESTASI 2
@@ -2574,57 +2574,73 @@ ANIMASI
 
         }
 
-    async function bukaPrestasi(nama, nomor) {
-    playClick();
+        async function bukaPrestasi(nama, nomor) {
+            playClick();
 
-    const data = ambilDataPrestasi(nomor);
-    const el = ambilElemenPrestasi(nomor);
-    const durasi = 500;
+            const data = ambilDataPrestasi(nomor);
+            const el = ambilElemenPrestasi(nomor);
+            const durasi = 500;
 
-    [el.daftar, el.tombolHome].forEach(element => {
-        element.style.transition = "opacity 0.5s ease";
-        element.style.opacity = "0";
-    });
+            [el.daftar,
+                el.tombolHome].forEach(element => {
+                    element.style.transition = "opacity 0.5s ease";
+                    element.style.opacity = "0";
+                });
 
-    setTimeout(() => {
-        el.daftar.style.display = "none";
-        el.tombolHome.style.display = "none";
+            setTimeout(async () => {
+                el.daftar.style.display = "none";
+                el.tombolHome.style.display = "none";
 
-        el.isiFoto.innerHTML = data[nama].map(item => `
-            <div class="gallery-card"
-                onclick="bukaGaleri(this)"
-                data-title="${item.namaPemenang || item.judul}"
-                data-description="${item.keterangan}">
-                <div class="gallery-image">
-                    <img src="${item.foto}" loading="eager">
-                </div>
-                <div class="gallery-title">${item.judul}</div>
-            </div>
-        `).join("");
+                el.isiFoto.innerHTML = data[nama].map(item => `
+                    <div class="gallery-card"
+                    onclick="bukaGaleri(this)"
+                    data-title="${item.namaPemenang || item.judul}"
+                    data-description="${item.keterangan}">
+                    <div class="gallery-image">
+                    <img src="${item.foto}">
+                    </div>
+                    <div class="gallery-title">${item.judul}</div>
+                    </div>
+                    `).join("");
 
-        el.foto.style.transition = "none";
-        el.tombolFoto.style.transition = "none";
+                el.foto.style.transition = "none";
+                el.tombolFoto.style.transition = "none";
 
-        el.foto.style.display = "flex";
-        el.tombolFoto.style.display = "block";
+                el.foto.style.display = "block";
+                el.tombolFoto.style.display = "block";
 
-        el.foto.style.opacity = "0";
-        el.tombolFoto.style.opacity = "0";
+                el.foto.style.opacity = "0";
+                el.tombolFoto.style.opacity = "0";
 
-        el.foto.scrollTop = 0;
+                el.foto.scrollTop = 0;
 
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                el.foto.style.transition = "opacity 0.5s ease";
-                el.tombolFoto.style.transition = "opacity 0.5s ease";
+                const gambar = [...el.isiFoto.querySelectorAll("img")];
 
-                el.foto.style.opacity = "1";
-                el.tombolFoto.style.opacity = "1";
-            });
-        });
+                await Promise.all(gambar.map(async img => {
+                    if (!img.complete) {
+                        await new Promise(resolve => {
+                            img.onload = resolve;
+                            img.onerror = resolve;
+                        });
+                    }
 
-    }, durasi);
-} 
+                    if (img.decode) {
+                        await img.decode().catch(() => {});
+                    }
+                }));
+
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        el.foto.style.transition = "opacity 0.5s ease";
+                        el.tombolFoto.style.transition = "opacity 0.5s ease";
+
+                        el.foto.style.opacity = "1";
+                        el.tombolFoto.style.opacity = "1";
+                    });
+                });
+
+            }, durasi);
+        }
         function kembaliDaftarPrestasi(nomor) {
             playClick();
 
@@ -2633,7 +2649,7 @@ ANIMASI
 
             el.foto.style.opacity = "0";
             el.tombolFoto.style.opacity = "0";
-
+ 
             setTimeout(() => {
                 el.foto.style.display = "none";
                 el.tombolFoto.style.display = "none";
