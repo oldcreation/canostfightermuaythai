@@ -1789,7 +1789,7 @@ ANIMASI
 
 
 
-            <div class="character bg-ungu" data-name="Aldi Pratama" data-role="Aldux" data-description="Memiliki jurus mematikan, ledakan
+            <div class="character bg-ungu" data-name="Aldi Pratama" data-role="THE IRONMAN" data-description="Memiliki jurus mematikan, ledakan
                 api yg membara & suka friendly fire." data-hp="50" data-atk="100" data-def="30"
                 data-story="Ampunnya Alalak Selatan, penjagaunya Handil, p info gladiator.">
 
@@ -2044,10 +2044,10 @@ ANIMASI
             <div class="character" data-name="OMAN" data-role=" THE K-TOWN BOYS"
                 data-description="Petarung jarak dekat dengan pertahanan kuat dan serangan fisik yang besar."
                 data-hp="95" data-atk="85" data-def="90"
-                data-story="Memiliki gaya bertarung yang bertolak belakang dengan bakat alami nya yang langka, selalu tampil santai seolah tidak perlu mengerahkan seluruh kemampuan nya untuk memenangkan pertarungan.">
+                data-story="Fighter yang selalu tampil enjoy dan seolah tidak punya beban dalam setiap pertandingan,tetapi selalu memberikan kejutan besar terhadap lawan-lawan nya.">
 
                 <div class="character-bck">
-
+ 
                     <div class="character-bg" style="--bg-image:url('img/laut.webp');">
                     </div>
 
@@ -2164,7 +2164,7 @@ ANIMASI
                 </div>
 
             </div>
-
+<!--
             <div class="character" data-name="SERUMPUN" data-role="Serumpun Brothers"
                 data-description="will u join us ?" data-hp="99" data-atk="99" data-def="99"
                 data-story="Solid - Selaras - Swiswiswi">
@@ -2182,7 +2182,7 @@ ANIMASI
                 </div>
 
             </div>
-
+-->
             <div class="character" data-name="Krisna" data-role="Informan"
                 data-description="Memiliki kemampuan mencari informasi yang sangat akurat." data-hp="100" data-atk="80"
                 data-def="90"
@@ -3428,7 +3428,13 @@ ANIMASI
         document.querySelectorAll("button").forEach(button => {
             button.addEventListener("click", playClick);
         });
-    </script>
+        
+        document.addEventListener('error', function(e) {
+    if (e.target.tagName === 'IMG') {
+        e.target.style.display = 'none';
+    }
+}, true);
+    </script> 
 
 </body>
 
