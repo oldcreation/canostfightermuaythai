@@ -2756,12 +2756,14 @@ ANIMASI
                 <span>${nama}</span>
                 <span class="prestasi-jumlah">${foto.length} ${nomor === 1 ? 'Prestasi': nomor === 2 ? 'Foto': 'Produk'}</span>
                 </div>
-                <button class="prestasi-instagram"
-                onclick="event.stopPropagation(); bukaInstagramPrestasi('${nama}')">🌐</button>
+                ${nomor === 1 ? `
+    <button class="prestasi-instagram"
+        onclick="event.stopPropagation(); bukaInstagramPrestasi('${nama}')">🌐</button>
+` : ""}
                 </div>
                 `).join("");
 
-
+ 
         }
 
         async function bukaPrestasi(nama, nomor) {
