@@ -3077,11 +3077,14 @@ ANIMASI
 
             if (!characterStates[id]) {
 
-                characterStates[id] = {
-                    currentIndex: 0,
-                    wheelBusy: false,
-                    isMoving: false
-                };
+               characterStates[id] = {
+
+    currentIndex: 0,
+    wheelBusy: false,
+    isMoving: false,
+    scrollFrame: null
+
+};
 
             }
 
@@ -3523,12 +3526,11 @@ ANIMASI
                     }
 
 
-                    setTimeout(() => {
+                  setTimeout(() => {
 
-                        state.wheelBusy =
-                        false;
+    state.wheelBusy = false;
 
-                    }, 50);
+}, 350);
 
                 },
                 {
@@ -3541,27 +3543,23 @@ ANIMASI
                 SCROLL
                 ------------------------- */
 
-            container.addEventListener(
-                "scroll",
-                () => {
+           container.addEventListener("scroll", () => {
 
-                    if (state.isMoving) {
-                        return;
-                    }
+    if (state.isMoving || state.scrollFrame !== null) {
+        return;
+    }
 
+    state.scrollFrame = requestAnimationFrame(() => {
 
-                    requestAnimationFrame(
-                        () => {
+        state.scrollFrame = null;
 
-                            updateActive(
-                                page
-                            );
+        if (!state.isMoving) {
+            updateActive(page);
+        }
 
-                        }
-                    );
+    });
 
-                }
-            );
+});
 
 
             /* -------------------------
