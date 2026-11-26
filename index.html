@@ -1503,6 +1503,31 @@ ANIMASI
             filter: brightness(0) invert(1);
             font-size: 18px;
         }
+        
+        .tmbl{
+    width: 180px;
+    padding: 12px 0;
+    color: gray;
+}
+/* OPTIMASI PERFORMA CAROUSEL */
+
+.character-container {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+}
+
+.character-bg::before {
+    filter: none !important;
+}
+
+.character {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.character.active {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
 
     </style>
 
@@ -2572,17 +2597,17 @@ ANIMASI
         <div class="menu-content">
             <h1>INFO</h1>
 
-            <button style="font-family: 'Nunito', sans-serif;"
+            <button class="tmbl" style="font-family: 'Nunito', sans-serif;"
                 onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
                 INSTAGRAM
             </button>
             <br>
-            <button style="font-family: 'Nunito', sans-serif;"
+            <button class="tmbl"style="font-family: 'Nunito', sans-serif;"
                 onclick="window.location.href='https://wa.me/6285751678089'">
                 WA ADMIN
             </button>
             <br>
-            <button style="font-family: 'Nunito', sans-serif;"
+            <button class="tmbl"style="font-family: 'Nunito', sans-serif;"
                 onclick="window.location.href='https://maps.app.goo.gl/crnW7Uye5poyooji6?g_st=ac'">
                 G MAPS
             </button>
