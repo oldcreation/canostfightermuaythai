@@ -17,7 +17,7 @@
             margin: 0;
             min-height: 100vh;
 
-            background: black url("img/latar.webp")center center / cover no-repeat fixed;
+            background: black url("img/latar.webp") center center / cover no-repeat fixed;
 
             /*
 url("img/latar.webp")center center / cover no-repeat fixed;
@@ -144,11 +144,11 @@ CAROUSEL
         }
 
         .character.active {
-
+            transform: scale(1.15);
             opacity: 1;
-
+            z-index: 20;
             border-color: white;
-            z-index: 10;
+
             box-shadow:
             0 0 30px rgba(255, 255, 255, 0.3);
         }
@@ -333,7 +333,7 @@ NAMA KARAKTER text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
 
         .bg-biru .character-name::before {
             background-color: #87CEEB;
-            background-image: blue url("img/biru.webp");
+            background-image: url("img/biru.webp");
             background-blend-mode: multiply;
         }
 
@@ -351,23 +351,13 @@ NAMA KARAKTER text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
         }
         .bg-putih .character-name::before {
             background-color: white;
-            background-image: green url("img/hijau.webp");
+            background-image: url("img/hijau.webp");
         }
         /* =========================
 
 KARAKTER AKTIF
 ========================= */
 
-        .character.active {
-            transform: scale(1.15);
-
-            opacity: 1;
-            z-index: 20;
-            border-color: white;
-
-            box-shadow:
-            0 0 30px rgba(255, 255, 255, 0.3);
-        }
 
         .character.active .character-name {
             border-color: white;
@@ -542,10 +532,12 @@ HILANGKAN GLITCH / FLASH BIRU
             outline: none;
         }
 
-        button:focus,
+        button:focus {
+            outline: none;
+        }
+
         button:active {
             outline: none;
-            box-shadow: none;
         }
 
         /* =========================
@@ -682,25 +674,22 @@ TOMBOL
 ========================= */
 
         .story-close {
-            margin-top: 30px;
+            display: none !important;
 
+            margin-top: 30px;
             padding: 10px 28px;
 
             border: 1px solid rgba(255, 255, 255, 0.5);
-
             border-radius: 30px;
 
             background: rgba(255, 255, 255, 0.9);
-
             color: #111;
 
             font-weight: bold;
-
             cursor: pointer;
 
             -webkit-tap-highlight-color: transparent;
         }
-
 
         /* =========================
 
@@ -1064,9 +1053,7 @@ ANIMASI
             font-family: 'Nunito', sans-serif;
             font-size: 13px;
         }
-        .story-close {
-            display: none !important;
-        }
+
 
         .gallery-close {
             display: none !important;
@@ -1101,13 +1088,14 @@ ANIMASI
 
         /* TOMBOL NAMA PRESTASI */
         .item-prestasi {
+            position: relative;
             width: 100%;
             flex-shrink: 0;
 
             margin: 0;
-            padding: 15px 20px;
+            padding: 12px 15px;
 
-            background: rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.035);
             color: white;
 
             border: 1px solid rgba(255, 255, 255, 0.22);
@@ -1121,6 +1109,10 @@ ANIMASI
 
             font-family: 'Nunito', sans-serif;
             font-size: 16px;
+
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
+            user-select: none;
         }
 
         /* AREA FOTO PRESTASI */
@@ -1247,31 +1239,6 @@ ANIMASI
         }
 
         /* TOMBOL NAMA */
-        .item-prestasi {
-            width: 100%;
-            flex-shrink: 0;
-            margin: 0;
-            padding: 15px 20px;
-
-            background: rgba(255, 255, 255, 0.035);
-            color: white;
-
-            border: 1px solid rgba(255, 255, 255, 0.22);
-            border-radius: 12px;
-
-            box-shadow: none;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            font-family: 'Nunito', sans-serif;
-            font-size: 16px;
-
-            /* Optimasi rendering daftar panjang */
-            content-visibility: auto;
-            contain-intrinsic-size: auto 53px;
-        }
 
         /* AREA FOTO PRESTASI */
         #fotoPrestasi,
@@ -1416,29 +1383,7 @@ ANIMASI
         }
 
         /* ITEM DAFTAR PRESTASI */
-        .item-prestasi {
-            position: relative;
-            width: 100%;
-            flex-shrink: 0;
 
-            margin: 0;
-            padding: 12px 15px;
-
-            background: rgba(255, 255, 255, 0.035);
-            color: white;
-
-            border: 1px solid rgba(255, 255, 255, 0.22);
-            border-radius: 12px;
-
-            box-shadow: none;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            font-family: 'Nunito', sans-serif;
-            font-size: 16px;
-        }
 
         /* NAMA DAN JUMLAH */
         .prestasi-info {
@@ -1503,32 +1448,12 @@ ANIMASI
             filter: brightness(0) invert(1);
             font-size: 18px;
         }
-        
-        .tmbl{
-    width: 180px;
-    padding: 12px 0;
-    color: gray;
-}
-/* OPTIMASI PERFORMA CAROUSEL */
 
-.character-container {
-    -webkit-mask-image: none !important;
-    mask-image: none !important;
-}
-
-.character-bg::before {
-    filter: none !important;
-}
-
-.character {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
-
-.character.active {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
+        .tmbl {
+            width: 180px;
+            padding: 12px 0;
+            color: gray;
+        }
     </style>
 
 </head>
@@ -1550,7 +1475,7 @@ ANIMASI
 
     <!-- HOME -->
     <section id="home" class="page">
-        <img src="img/logo.webp" alt="" width="200px" height="200px">
+        <img src="img/logo.webp" alt="Logo Canost Fighter Muaythai" width="200" height="200">
 
         <button class="menu-button" onclick="showPage('event')">
             CANOST
@@ -1594,10 +1519,10 @@ ANIMASI
                 seperti Walikota Cup hingga Kejurprov Kalimantan Selatan 2025.
             </p>
             <!--   <button style="font-family: 'Nunito', sans-serif;background-color: #E1306C; color: white; border: none;"
-                                                                                                                                                                                                                                                                onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
-                                                                                                                                                                                                                                                                canostfightermuaythai
-                                                                                                                                                                                                                                                            </button>
-                                                                                                                                                                                                                                                            <!-- isi event -->
+                                                                                                                                                                                                                                                                            onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
+                                                                                                                                                                                                                                                                            canostfightermuaythai
+                                                                                                                                                                                                                                                                        </button>
+                                                                                                                                                                                                                                                                        <!-- isi event -->
 
             <button onclick="showPage('home')">
                 KEMBALI
@@ -1735,8 +1660,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                                                                                                                                                                                     INFORMASI KARAKTER
-                                                                                                                                                                                                                                                                ========================= -->
+                                                                                                                                                                                                                                                                             INFORMASI KARAKTER
+                                                                                                                                                                                                                                                                        ========================= -->
 
         <div class="character-info">
 
@@ -1799,7 +1724,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                                                                                                                                                                             dimasukkan di sini -->
+                                                                                                                                                                                                                                                                                     dimasukkan di sini -->
 
     </section>
     <section id="karakter2" class="page character-page">
@@ -1908,7 +1833,7 @@ ANIMASI
                 </div>
 
             </div>
-            
+
             <div class="character bg-ungu" data-name="Maulana" data-role="Lanut" data-description="Gamers Fighter"
                 data-hp="100" data-atk="70" data-def="100" data-story="Menguasai elemen Api."
                 data-buttons='[{"name":"IG","link":"https://www.instagram.com/lanut211/"}]'>
@@ -1952,7 +1877,7 @@ ANIMASI
                 </div>
 
             </div>
-            
+
             <div class="character bg-ungu" data-name="M Lutfi" data-role="The Mafia" data-description="Tahan banting, berdedikasi tinggi."
                 data-hp="90" data-atk="90" data-def="90" data-story="Pemuda pejuang tangguh."
                 data-buttons='[{"name":"IG","link":"https://www.instagram.com/muhmmdlthfi__/"}]'>
@@ -2080,7 +2005,7 @@ ANIMASI
                 </div>
 
             </div>
-            
+
             <div class="character bg-orange" data-name="Rizky Abdillah" data-role="Bedil Winner"
                 data-description="Seraba bisa."
                 data-hp="80" data-atk="85" data-def="75"
@@ -2104,7 +2029,7 @@ ANIMASI
                 </div>
 
             </div>
-            
+
             <div class="character bg-biru" data-name="M Nafis" data-role="The Man"
                 data-description="NBA Player"
                 data-hp="70" data-atk="70" data-def="70"
@@ -2121,14 +2046,14 @@ ANIMASI
 
                     <img src="img/nafis.webp">
 
-                </div> 
+                </div>
 
                 <div class="character-name">
                     Nafis
                 </div>
 
             </div>
-            
+
             <div class="character bg-putih" data-name="M Rizqon F" data-role="The Hash-Slinging Slasher"
                 data-description="Intinya aja knp?"
                 data-hp="60" data-atk="20" data-def="100"
@@ -2164,8 +2089,8 @@ ANIMASI
 
 
         <!-- =========================
-                                                                                                                        INFORMASI KARAKTER
-                                                                                                                        ========================= -->
+                                                                                                                                INFORMASI KARAKTER
+                                                                                                                                ========================= -->
 
         <div class="character-info">
 
@@ -2229,7 +2154,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                        dimasukkan di sini -->
+                                                                                                                                dimasukkan di sini -->
 
     </section>
     <section id="karakter3" class="page character-page">
@@ -2439,7 +2364,7 @@ ANIMASI
 
                     <div class="character-bg" style="--bg-image:url('img/bibi.webp');">
                     </div>
- 
+
                 </div>
                 <div class="character-image">
 
@@ -2499,32 +2424,32 @@ ANIMASI
 
             </div>
             <!--
-                                                                                                                                    <div class="character" data-name="SERUMPUN" data-role="Serumpun Brothers"
-                                                                                                                                        data-description="will u join us ?" data-hp="99" data-atk="99" data-def="99"
-                                                                                                                                        data-story="Solid - Selaras - Swiswiswi">
+                                                                                                                                                <div class="character" data-name="SERUMPUN" data-role="Serumpun Brothers"
+                                                                                                                                                    data-description="will u join us ?" data-hp="99" data-atk="99" data-def="99"
+                                                                                                                                                    data-story="Solid - Selaras - Swiswiswi">
 
-                                                                                                                                        <div class="character-bck">
+                                                                                                                                                    <div class="character-bck">
 
-                                                                                                                                            <div class="character-bg" style="--bg-image:url('img/laut.webp');">
-                                                                                                                                            </div>
+                                                                                                                                                        <div class="character-bg" style="--bg-image:url('img/laut.webp');">
+                                                                                                                                                        </div>
 
-                                                                                                                                        </div>
-                                                                                                                                        <div class="character-image">
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="character-image">
 
-                                                                                                                                            <img src="img/text.webp">
+                                                                                                                                                        <img src="img/text.webp">
 
-                                                                                                                                        </div>
+                                                                                                                                                    </div>
 
-                                                                                                                                    </div>
-                                                                                                                        -->
+                                                                                                                                                </div>
+                                                                                                                                    -->
 
 
         </div>
 
 
         <!-- =========================
-                                                                                                                        INFORMASI KARAKTER
-                                                                                                                        ========================= -->
+                                                                                                                                INFORMASI KARAKTER
+                                                                                                                                ========================= -->
 
         <div class="character-info">
 
@@ -2589,7 +2514,7 @@ ANIMASI
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                        dimasukkan di sini -->
+                                                                                                                                dimasukkan di sini -->
 
     </section>
     <!-- LAIN-LAIN -->
@@ -2615,12 +2540,12 @@ ANIMASI
             <br>
             <br>
             <!--
-                                                                                                                                                            <button style="font-family: 'Nunito', sans-serif;"
-                                                                                                                                                                onclick="window.location.href='https://www.instagram.com/serumpunbrothers/';">
-                                                                                                                                                                serumpunbrothers
-                                                                                                                                                            </button><br><br>
+                                                                                                                                                                        <button style="font-family: 'Nunito', sans-serif;"
+                                                                                                                                                                            onclick="window.location.href='https://www.instagram.com/serumpunbrothers/';">
+                                                                                                                                                                            serumpunbrothers
+                                                                                                                                                                        </button><br><br>
 
-                                                                                                                                                             event -->
+                                                                                                                                                                         event -->
 
             <button onclick="showPage('home')">
                 KEMBALI
@@ -2630,8 +2555,8 @@ ANIMASI
 
 
     <!-- =========================
-                                                                    SEJARAH KARAKTER
-                                                                    ========================= -->
+                                                                        SEJARAH KARAKTER
+                                                                        ========================= -->
 
     <div class="story-overlay" id="storyOverlay">
 
@@ -2660,6 +2585,11 @@ ANIMASI
     </div>
     <audio id="clickSound" src="msc/click.mp3" preload="auto"></audio>
     <script>
+        document.addEventListener('error', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.target.style.display = 'none';
+            }
+        }, true);
         const daftarTimer = {
             timer1: "1945-08-17T10:00:00",
             timer2: "2020-01-01T00:00:00",
@@ -2775,10 +2705,10 @@ ANIMASI
                 gallery.style.animation = "storyFade 0.4s ease";
             }, 400);
         } document.getElementById("galleryOverlay").addEventListener("click", function (e) {
-                if (e.target.closest(".gallery-close")) return;
-
-                tutupGaleri();
-            });
+    if (e.target === this) {
+        tutupGaleri();
+    }
+});
         const dataPrestasi = {
             "PORPROV XI 2022": [{
                 foto: "img/PPXI/akmal.webp",
@@ -3778,11 +3708,10 @@ ANIMASI
             }, 400);
         }
         document.getElementById("storyOverlay").addEventListener("click", function (e) {
-            if (e.target.closest("#storyInstagram")) return;
-
-            tutupSejarah();
-        });
-
+    if (e.target === this) {
+        tutupSejarah();
+    }
+});
 
         /* =========================
                 LOADING
@@ -3856,11 +3785,7 @@ ANIMASI
             button.addEventListener("click", playClick);
         });
 
-        document.addEventListener('error', function(e) {
-            if (e.target.tagName === 'IMG') {
-                e.target.style.display = 'none';
-            }
-        }, true);
+
     </script>
 
 </body>
