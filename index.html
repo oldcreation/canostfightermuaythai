@@ -635,6 +635,7 @@
             z-index: 99999;
 
             background: #111;
+            filter: grayscale(1);
 
             display: flex;
             justify-content: center;
@@ -652,10 +653,42 @@
         }
 
         #loadingDots {
-            width: 60px;
-            text-align: left;
+    width: 250px;
+    text-align: center;
+    font-size: 30px;
+    white-space: nowrap;
+}
 
-        }
+#loadingDots::before {
+    content: "°";
+    animation: loadingText 2.4s steps(1) infinite;
+}
+
+@keyframes loadingText {
+    0% {
+        content: "°";
+    }
+
+    16% {
+        content: "°‧";
+    }
+
+    32% {
+        content: "°‧ 𓆝";
+    }
+
+    48% {
+        content: "°‧ 𓆝 𓆟";
+    }
+
+    64% {
+        content: "°‧ 𓆝 𓆟 𓆞";
+    }
+
+    80%, 100% {
+        content: "°‧ 𓆝 𓆟 𓆞 ·｡";
+    }
+}
 
         .menu-content {
             width: 90%;
@@ -928,6 +961,7 @@
 
             background: transparent;
             color: white;
+            filter: grayscale(1);
 
             border: 1px solid rgba(255,255,255,0.4);
             border-radius: 25px;
@@ -1319,9 +1353,8 @@
 </head>
 <body>
     <div id="loader">
-        <div id="loadingDots">
-            .
-        </div>
+        <div id="loadingDots"></div>
+        
     </div>
     
     <section id="intro" class="active">
@@ -1850,7 +1883,7 @@
                 data-description="Seraba bisa."
                 data-hp="80" data-atk="85" data-def="75"
                 data-story="Siap sedia segala tugas, termasuk tugas negara."
-                data-buttons='[{"name":"IG","link":"https://www.instagram.com/rz.abdillah_/"}]'>
+                data-buttons='[{"name":"IG","link":"https://www.instagram.com/rz.abdillah_/"},{"name":"🥬","link":"https://www.instagram.com/selada_dillah.bjm/"}]'>
 
                 <div class="character-bck">
 
@@ -3471,35 +3504,12 @@
             }
         });
 
-        const dots =
-        document.getElementById(
-            "loadingDots"
-        );
-
-        let dotCount = 1;
-
-        const loadingAnimation =
-        setInterval(() => {
-
-            dotCount++;
-
-            if (dotCount > 3) {
-                dotCount = 1;
-            }
-
-            dots.textContent =
-            ".".repeat(dotCount);
-
-        }, 400);
+        const loadingAnimation = null;
 
 
         window.addEventListener(
             "load",
             () => {
-
-                clearInterval(
-                    loadingAnimation
-                );
 
                 setTimeout(() => {
 
