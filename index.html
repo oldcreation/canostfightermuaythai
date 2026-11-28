@@ -18,10 +18,7 @@
 
             background: gray url("img/latar.webp") center center / cover no-repeat fixed;
 
-            /*
-
-url("img/latar.webp")center center / cover no-repeat fixed;
-*/
+          
             color: white;
             font-family: 'Nunito', sans-serif;
 
@@ -32,12 +29,6 @@ url("img/latar.webp")center center / cover no-repeat fixed;
 
             overflow: hidden;
         }
-
-
-        /* =======================
-
-JUDUL
-========================= */
 
         h1,
         h2,
@@ -88,42 +79,37 @@ JUDUL
             opacity 0.5s ease;
         }
 
-        /* =========================
+        .character-container {
+            width: 100%;
+            max-width: 1200px;
+            height: 430px;
 
-CAROUSEL
-========================= */
+            overflow-x: auto;
+            overflow-y: hidden;
 
-       .character-container {
-    width: 100%;
-    max-width: 1200px;
-    height: 430px;
+            touch-action: pan-x;
 
-    overflow-x: auto;
-    overflow-y: hidden;
+            display: flex;
+            align-items: center;
 
-    touch-action: pan-x;
+            gap: 25px;
 
-    display: flex;
-    align-items: center;
+            padding: 110px 50% 40px;
 
-    gap: 25px;
+            scroll-behavior: auto;
+            scrollbar-width: none;
+            flex-shrink: 0;
 
-    padding: 110px 50% 40px;
+            scroll-snap-type: x mandatory;
 
-    scroll-behavior: auto;
-    scrollbar-width: none;
-    flex-shrink: 0;
-
-    scroll-snap-type: x mandatory;
-
-    -webkit-mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        black 10%,
-        black 90%,
-        transparent 100%
-    );
-}
+            -webkit-mask-image: linear-gradient(
+            to right,
+            transparent 0%,
+            black 10%,
+            black 90%,
+            transparent 100%
+            );
+        }
 
         .character-container::-webkit-scrollbar {
             display: none;
@@ -146,12 +132,7 @@ CAROUSEL
             box-shadow:
             0 0 30px rgba(255, 255, 255, 0.3);
         }
-        /* =========================
-
-EFEK MONOKROM KARAKTER
-========================= */
-
-        /* Karakter belum aktif */
+       
         .character {
             filter: grayscale(100%);
 
@@ -164,15 +145,10 @@ EFEK MONOKROM KARAKTER
 
         }
 
-        /* Karakter aktif kembali berwarna */
+      
         .character.active {
             filter: grayscale(0%);
         }
-
-        /* =========================
-
-KARTU
-========================= */
 
         .character {
             position: relative;
@@ -196,11 +172,6 @@ KARTU
 
             overflow: visible;
         }
-
-        /* =========================
-
-AREA PNG
-========================= */
 
         .character-image {
             position: absolute;
@@ -241,14 +212,14 @@ AREA PNG
             inset: 0;
             overflow: hidden;
 
-            /* Gambar asli berwarna */
+            
             background-image: var(--bg-image);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
 
-        /* Monokrom hanya bagian bawah */
+        
         .character-bg::before {
             content: "";
             position: absolute;
@@ -261,15 +232,9 @@ AREA PNG
 
             filter: grayscale(100%);
 
-            /* Batas area monokrom */
+            
             clip-path: inset(78.5% 0 0 0);
         }
-
-        /* =========================
-
-ini ehh 21
-PNG KARAKTER
-========================= */
 
         .character-image img {
             position: absolute;
@@ -293,13 +258,6 @@ PNG KARAKTER
 
             z-index: 10;
         }
-
-
-        /* =========================
-
-NAMA KARAKTER text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
-
-========================= */
 
         .character-name {
             position: absolute;
@@ -340,7 +298,6 @@ NAMA KARAKTER text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
             z-index: -1;
         }
 
-        /* LATAR MASING-MASING KARAKTER */
         .bg-orange .character-name::before {
             background-color: #FF6347;
             background-image: url("img/merah.webp");
@@ -369,20 +326,10 @@ NAMA KARAKTER text-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
             background-color: white;
             background-image: url("img/hijau.webp");
         }
-        /* =========================
-
-KARAKTER AKTIF
-========================= */
-
+       
         .character.active .character-name {
             border-color: white;
         }
-
-
-        /* =========================
-
-INFORMASI
-========================= */
 
         .character-info {
             width: 90%;
@@ -421,12 +368,6 @@ INFORMASI
             font-size: 15px;
         }
 
-
-        /* =========================
-
-STATUS
-========================= */
-
         .stats {
             display: flex;
 
@@ -459,12 +400,6 @@ STATUS
 
             font-weight: bold;
         }
-
-
-        /* =========================
-
-TOMBOL
-========================= */
 
         button {
             font-family: 'Caveat', cursive;
@@ -510,11 +445,6 @@ TOMBOL
             font-family: 'Caveat', cursive;
         }
 
-        /* =========================
-
-ANIMASI
-========================= */
-
         @keyframes fadeInfo {
 
             from {
@@ -536,11 +466,7 @@ ANIMASI
 
         }
 
-        /* =========================
-
-HILANGKAN GLITCH / FLASH BIRU
-========================= */
-
+     
         button,
         .character {
             -webkit-tap-highlight-color: transparent;
@@ -555,11 +481,7 @@ HILANGKAN GLITCH / FLASH BIRU
             outline: none;
         }
 
-        /* =========================
-
-OVERLAY SEJARAH
-========================= */
-
+   
         .story-overlay {
             position: fixed;
             inset: 0;
@@ -582,11 +504,7 @@ OVERLAY SEJARAH
         }
 
 
-        /* =========================
-
-TEKS SEJARAH
-========================= */
-
+    
         .story-panel {
             width: 100%;
             max-width: 550px;
@@ -604,18 +522,7 @@ TEKS SEJARAH
 
             animation: storyEnter 0.5s ease;
         }
-
-
-        /* =========================
-
-HAPUS GAMBAR
-========================= */
-
-        /* =========================
-
-NAMA
-========================= */
-
+        
         .story-name {
             font-size: 36px;
 
@@ -623,12 +530,6 @@ NAMA
 
             color: white;
         }
-
-
-        /* =========================
-
-ROLE
-========================= */
 
         .story-role {
             margin-top: 5px;
@@ -644,12 +545,6 @@ ROLE
             text-transform: uppercase;
         }
 
-
-        /* =========================
-
-JUDUL
-========================= */
-
         .story-title {
             margin-top: 30px;
 
@@ -661,12 +556,6 @@ JUDUL
 
             letter-spacing: 2px;
         }
-
-
-        /* =========================
-
-TEKS SEJARAH
-========================= */
 
         .story-text {
             margin-top: 15px;
@@ -680,11 +569,6 @@ TEKS SEJARAH
             text-align: center;
         }
 
-
-        /* =========================
-
-TOMBOL
-========================= */
 
         .story-close {
             display: none !important;
@@ -704,11 +588,7 @@ TOMBOL
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* =========================
-
-ANIMASI
-========================= */
-
+      
         @keyframes storyFade {
 
             from {
@@ -749,7 +629,6 @@ ANIMASI
 
         }
 
-        /*loading*/
         #loader {
             position: fixed;
             inset: 0;
@@ -1064,13 +943,11 @@ ANIMASI
             display: none !important;
         }
 
-        /* JUDUL TETAP */
         #galeri>h1,
         #galeri2>h1 {
             flex-shrink: 0;
         }
 
-        /* DAFTAR PRESTASI */
         .daftar-prestasi {
             width: 90%;
             max-width: 500px;
@@ -1091,7 +968,6 @@ ANIMASI
             display: none;
         }
 
-        /* TOMBOL NAMA PRESTASI */
         .item-prestasi {
             position: relative;
             width: 100%;
@@ -1120,7 +996,6 @@ ANIMASI
             user-select: none;
         }
 
-        /* AREA FOTO PRESTASI */
         #fotoPrestasi {
             width: 100%;
             flex: 1;
@@ -1153,7 +1028,6 @@ ANIMASI
             margin: 0 auto;
         }
 
-        /* AREA FOTO GALERI */
         #galeri2 .gallery-container {
             flex: 1;
             min-height: 0;
@@ -1169,8 +1043,6 @@ ANIMASI
             margin: 15px auto;
         }
 
-        /* SAMAKAN TATA LETAK GALERI DAN PRESTASI */
-
         #galeri,
         #galeri2 {
             display: flex;
@@ -1181,13 +1053,6 @@ ANIMASI
             overflow: hidden;
         }
 
-
-        /* =========================
-
-PRESTASI DAN PRESTASI 2
-========================= */
-
-        /* HALAMAN */
         #galeri,
         #galeriPrestasi2,
         #galeriPrestasi3 {
@@ -1199,7 +1064,7 @@ PRESTASI DAN PRESTASI 2
             overflow: hidden;
         }
 
-        /* JUDUL TETAP DI ATAS */
+     
         #galeri>h1,
         #galeriPrestasi2>h1,
         #galeriPrestasi3>h1 {
@@ -1212,7 +1077,7 @@ PRESTASI DAN PRESTASI 2
             pointer-events: none;
         }
 
-        /* DAFTAR NAMA PRESTASI */
+
         #daftarPrestasi,
         #daftarPrestasi2,
         #daftarPrestasi3 {
@@ -1244,9 +1109,7 @@ PRESTASI DAN PRESTASI 2
             display: none;
         }
 
-        /* TOMBOL NAMA */
-
-        /* AREA FOTO PRESTASI */
+       
         #fotoPrestasi,
         #fotoPrestasi2,
         #fotoPrestasi3 {
@@ -1271,14 +1134,14 @@ PRESTASI DAN PRESTASI 2
             display: none;
         }
 
-        /* JUDUL FOTO */
+     
         #fotoPrestasi h2,
         #fotoPrestasi2 h2,
         #fotoPrestasi3 h2 {
             flex-shrink: 0;
         }
 
-        /* CONTAINER FOTO */
+       
         #fotoPrestasi .gallery-container,
         #fotoPrestasi2 .gallery-container,
         #fotoPrestasi3 .gallery-container {
@@ -1299,7 +1162,7 @@ PRESTASI DAN PRESTASI 2
             overflow: visible;
         }
 
-        /* FADE AREA FOTO */
+      
         #fotoPrestasi,
         #fotoPrestasi2,
         #fotoPrestasi3 {
@@ -1316,7 +1179,7 @@ PRESTASI DAN PRESTASI 2
             transparent 100%);
         }
 
-        /* KARTU FOTO */
+       
         #fotoPrestasi .gallery-card,
         #fotoPrestasi2 .gallery-card,
         #fotoPrestasi3 .gallery-card {
@@ -1324,8 +1187,6 @@ PRESTASI DAN PRESTASI 2
             box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
         }
 
-        /* TOMBOL KEMBALI MELAYANG */
-        /* TOMBOL KEMBALI */
         #galeri>#tombolKembaliPrestasi,
         #galeri>#kembaliFotoPrestasi,
         #galeriPrestasi2>#tombolKembaliPrestasi2,
@@ -1340,7 +1201,6 @@ PRESTASI DAN PRESTASI 2
             z-index: 101;
         }
 
-        /* HP */
         @media (max-width: 600px) {
 
             #fotoPrestasi .gallery-container,
@@ -1360,8 +1220,6 @@ PRESTASI DAN PRESTASI 2
 
         }
 
-        /* FADE ATAS BAWAH DAFTAR PRESTASI */
-        /* DAFTAR NAMA PRESTASI */
         #daftarPrestasi,
         #daftarPrestasi2,
         #daftarPrestasi3 {
@@ -1388,10 +1246,6 @@ PRESTASI DAN PRESTASI 2
             overscroll-behavior: contain;
         }
 
-        /* ITEM DAFTAR PRESTASI */
-
-
-        /* NAMA DAN JUMLAH */
         .prestasi-info {
             display: flex;
             flex-direction: column;
@@ -1404,7 +1258,6 @@ PRESTASI DAN PRESTASI 2
             color: #aaa;
         }
 
-        /* TOMBOL INSTAGRAM */
         .prestasi-instagram {
             width: 38px;
             height: 38px;
@@ -1470,7 +1323,7 @@ PRESTASI DAN PRESTASI 2
             .
         </div>
     </div>
-    <!-- INTRO -->
+    
     <section id="intro" class="active">
         <h1 style="font-family: 'Caveat', cursive;
             ">CANOST<br>FIGHTER<br>MUAYTHAI</h1>
@@ -1478,7 +1331,7 @@ PRESTASI DAN PRESTASI 2
     </section>
 
 
-    <!-- HOME -->
+    
     <section id="home" class="page">
         <img src="img/logo.webp" alt="Logo Canost Fighter Muaythai" width="200" height="200">
 
@@ -1509,7 +1362,7 @@ PRESTASI DAN PRESTASI 2
     </section>
 
 
-    <!-- EVENT -->
+    
     <section id="event" class="page">
 
         <div class="menu-content">
@@ -1523,11 +1376,7 @@ PRESTASI DAN PRESTASI 2
                 muaythai ke berbagai sekolah dan sering dipercaya menjadi tuan rumah kejuaraan besar tingkat daerah,
                 seperti Walikota Cup hingga Kejurprov Kalimantan Selatan 2025.
             </p>
-            <!--   <button style="font-family: 'Nunito', sans-serif;background-color: #E1306C; color: white; border: none;"
-                                                                                                                                                                                                                                                                                                                                    onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
-                                                                                                                                                                                                                                                                                                                                    canostfightermuaythai
-                                                                                                                                                                                                                                                                                                                                </button>
-                                                                                                                                                                                                                                                                                                                                <!-- isi event -->
+           
 
             <button onclick="showPage('home')">
                 KEMBALI
@@ -1536,7 +1385,7 @@ PRESTASI DAN PRESTASI 2
     </section>
 
 
-    <!-- GALERI -->
+    
     <section id="galeri" class="page">
         <h1>PRESTASI</h1>
 
@@ -1551,7 +1400,7 @@ PRESTASI DAN PRESTASI 2
 
         <button id="tombolKembaliPrestasi" onclick="showPage('home')">KEMBALI</button>
     </section>
-    <!-- PRESTASI 2 -->
+    
     <section id="galeriPrestasi2" class="page">
         <h1>GALERI</h1>
 
@@ -1566,7 +1415,7 @@ PRESTASI DAN PRESTASI 2
 
         <button id="tombolKembaliPrestasi2" onclick="showPage('home')">KEMBALI</button>
     </section>
-    <!-- BOOK -->
+    
     <div class="gallery-overlay" id="galleryOverlay">
 
         <div class="gallery-panel">
@@ -1584,7 +1433,7 @@ PRESTASI DAN PRESTASI 2
 
     </div>
 
-    <!-- PRESTASI 3 -->
+    
     <section id="galeriPrestasi3" class="page">
         <h1>STORE</h1>
 
@@ -1599,7 +1448,7 @@ PRESTASI DAN PRESTASI 2
 
         <button id="tombolKembaliPrestasi3" onclick="showPage('home')">KEMBALI</button>
     </section>
-    <!-- KARAKTER -->
+    
     <section id="karakter" class="page character-page">
 
         <h1>Coach</h1>
@@ -1608,7 +1457,7 @@ PRESTASI DAN PRESTASI 2
         <div class="character-container">
 
 
-            <!-- WARRIOR 111-->
+            
 
             <div class="character active bg-gold" data-name="Indra Prasetyo" data-role="Coach Andalan"
                 data-description="Sekretaris Umum Muaythai Indonesia (MI) Kota Banjarmasin." data-hp="100"
@@ -1662,11 +1511,6 @@ PRESTASI DAN PRESTASI 2
             </div>
 
         </div>
-
-
-        <!-- =========================
-                                                                                                                                                                                                                                                                                                                 INFORMASI KARAKTER
-                                                                                                                                                                                                                                                                                                            ========================= -->
 
         <div class="character-info">
 
@@ -1728,8 +1572,6 @@ PRESTASI DAN PRESTASI 2
         <button onclick="showPage('home')">
             KEMBALI
         </button>
-        <!-- pemilihan karakter kamu
-                                                                                                                                                                                                                                                                                                                         dimasukkan di sini -->
 
     </section>
     <section id="karakter2" class="page character-page">
@@ -1738,9 +1580,6 @@ PRESTASI DAN PRESTASI 2
 
 
         <div class="character-container">
-
-
-            <!-- WARRIOR 111-->
 
             <div class="character bg-ungu" data-name="M Akmal Anshari" data-role="The Lunatic"
                 data-description="Kemampuan pengambilan foto dengan akurasi tinggi." data-hp="100" data-atk="80"
@@ -1930,10 +1769,6 @@ PRESTASI DAN PRESTASI 2
             </div>
 
 
-
-
-            <!-- TANK -->
-
             <div class="character bg-orange" data-name="Usamah Fattaqun" data-role="The Titan Collosal"
                 data-description="Mampu mengelola berbagai macam bahan makanan menjadi hidangan lezat." data-hp="100"
                 data-atk="60" data-def="80"
@@ -2084,18 +1919,7 @@ PRESTASI DAN PRESTASI 2
                 </div>
 
             </div>
-
-
-
-
-
-
         </div>
-
-
-        <!-- =========================
-                                                                                                                                                                    INFORMASI KARAKTER
-                                                                                                                                                                    ========================= -->
 
         <div class="character-info">
 
@@ -2158,9 +1982,7 @@ PRESTASI DAN PRESTASI 2
         <button onclick="showPage('home')">
             KEMBALI
         </button>
-        <!-- pemilihan karakter kamu
-                                                                                                                                                                    dimasukkan di sini -->
-
+       
     </section>
     <section id="karakter3" class="page character-page">
 
@@ -2170,8 +1992,7 @@ PRESTASI DAN PRESTASI 2
         <div class="character-container">
 
 
-            <!-- WARRIOR 111-->
-
+         
             <div class="character bg-ungu" data-name="nama lengkap" data-role="nama panggung/gelar"
                 data-description="deskripsi singkat"
                 data-hp="95" data-atk="85" data-def="90"
@@ -2428,33 +2249,8 @@ PRESTASI DAN PRESTASI 2
                 </div>
 
             </div>
-            <!--
-                                                                                                                                                                                                        <div class="character" data-name="SERUMPUN" data-role="Serumpun Brothers"
-                                                                                                                                                                                                            data-description="will u join us ?" data-hp="99" data-atk="99" data-def="99"
-                                                                                                                                                                                                            data-story="Solid - Selaras - Swiswiswi">
-
-                                                                                                                                                                                                            <div class="character-bck">
-
-                                                                                                                                                                                                                <div class="character-bg" style="--bg-image:url('img/laut.webp');">
-                                                                                                                                                                                                                </div>
-
-                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                            <div class="character-image">
-
-                                                                                                                                                                                                                <img src="img/text.webp">
-
-                                                                                                                                                                                                            </div>
-
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                            -->
-
-
+     
         </div>
-
-
-        <!-- =========================
-                                                                                                                                                                    INFORMASI KARAKTER
-                                                                                                                                                                    ========================= -->
 
         <div class="character-info">
 
@@ -2518,11 +2314,9 @@ PRESTASI DAN PRESTASI 2
         <button onclick="showPage('home')">
             KEMBALI
         </button>
-        <!-- pemilihan karakter kamu
-                                                                                                                                                                    dimasukkan di sini -->
-
+       
     </section>
-    <!-- LAIN-LAIN -->
+    
     <section id="lain" class="page">
         <div class="menu-content">
             <h1>INFO</h1>
@@ -2544,24 +2338,13 @@ PRESTASI DAN PRESTASI 2
 
             <br>
             <br>
-            <!--
-                                                                                                                                                                                                                                <button style="font-family: 'Nunito', sans-serif;"
-                                                                                                                                                                                                                                    onclick="window.location.href='https://www.instagram.com/serumpunbrothers/';">
-                                                                                                                                                                                                                                    serumpunbrothers
-                                                                                                                                                                                                                                </button><br><br>
-
-                                                                                                                                                                                                                                 event -->
+     
 
             <button onclick="showPage('home')">
                 KEMBALI
             </button>
         </div>
     </section>
-
-
-    <!-- =========================
-                                                                                        SEJARAH KARAKTER
-                                                                                        ========================= -->
 
     <div class="story-overlay" id="storyOverlay">
 
@@ -2839,10 +2622,6 @@ PRESTASI DAN PRESTASI 2
             }
         }
 
-        /* =========================
-            DATA PRESTASI 2
-            ========================= */
-
         const dataPrestasi2 = {};
 
         const dataPrestasi3 = {
@@ -3023,7 +2802,6 @@ PRESTASI DAN PRESTASI 2
             }, durasi);
         }
 
-        /* TAMPILKAN SEMUA DAFTAR PRESTASI */
         tampilkanDaftarPrestasi(1);
         tampilkanDaftarPrestasi(2);
         tampilkanDaftarPrestasi(3);
@@ -3055,14 +2833,7 @@ PRESTASI DAN PRESTASI 2
             },
                 500);
         }
-        /* =========================
-            CONTAINER
-            ========================= */
-        /* =========================
-            CHARACTER SYSTEM
-            MULTI SECTION
-            ========================= */
-
+    
         let characterStates = {};
 
         function getCharacterPage() {
@@ -3090,10 +2861,7 @@ PRESTASI DAN PRESTASI 2
         }
 
 
-        /* =========================
-            STATE PER SECTION
-            ========================= */
-
+      
         function getCharacterState(page) {
 
             if (!page) return null;
@@ -3115,63 +2883,60 @@ PRESTASI DAN PRESTASI 2
 
             return characterStates[id];
         }
-      function aturPosisiAwal(page, index) {
-    const container = getCharacterContainer(page);
-    const characters = getCharacters(page);
-    const state = getCharacterState(page);
+        function aturPosisiAwal(page, index) {
+            const container = getCharacterContainer(page);
+            const characters = getCharacters(page);
+            const state = getCharacterState(page);
 
-    if (!container || !characters.length) return;
-    if (index < 0 || index >= characters.length) return;
+            if (!container || !characters.length) return;
+            if (index < 0 || index >= characters.length) return;
 
-    const target = characters[index];
-
-    state.currentIndex = index;
-    state.isMoving = true;
-
-    saveLastCharacter(page, index);
-
-    characters.forEach(character => {
-        character.classList.remove("active");
-    });
-
-    target.classList.add("active");
-    updateInfo(target);
-
-    container.style.scrollSnapType = "none";
-
-    requestAnimationFrame(() => {
-        const containerRect = container.getBoundingClientRect();
-        const targetRect = target.getBoundingClientRect();
-
-        const posisiTengah =
-            targetRect.left +
-            targetRect.width / 2;
-
-        const posisiContainer =
-            containerRect.left +
-            container.clientWidth / 2;
-
-        container.scrollTo({
-            left: container.scrollLeft + posisiTengah - posisiContainer,
-            behavior: "auto"
-        });
-
-        requestAnimationFrame(() => {
-            container.style.scrollSnapType = "x mandatory";
+            const target = characters[index];
 
             state.currentIndex = index;
+            state.isMoving = true;
+
             saveLastCharacter(page, index);
 
-            setTimeout(() => {
-                state.isMoving = false;
-            }, 400);
-        });
-    });
-}
-        /* =========================
-            INFO
-            ========================= */
+            characters.forEach(character => {
+                character.classList.remove("active");
+            });
 
+            target.classList.add("active");
+            updateInfo(target);
+
+            container.style.scrollSnapType = "none";
+
+            requestAnimationFrame(() => {
+                const containerRect = container.getBoundingClientRect();
+                const targetRect = target.getBoundingClientRect();
+
+                const posisiTengah =
+                targetRect.left +
+                targetRect.width / 2;
+
+                const posisiContainer =
+                containerRect.left +
+                container.clientWidth / 2;
+
+                container.scrollTo({
+                    left: container.scrollLeft + posisiTengah - posisiContainer,
+                    behavior: "auto"
+                });
+
+                requestAnimationFrame(() => {
+                    container.style.scrollSnapType = "x mandatory";
+
+                    state.currentIndex = index;
+                    saveLastCharacter(page, index);
+
+                    setTimeout(() => {
+                        state.isMoving = false;
+                    }, 400);
+                });
+            });
+        }
+     
         function getStatColor(value) {
             value = Math.max(0, Math.min(100, Number(value) || 0));
 
@@ -3280,11 +3045,6 @@ PRESTASI DAN PRESTASI 2
 
             });
         }
-
-
-        /* =========================
-            CENTER CHARACTER
-            ========================= */
 
         function centerCharacter(
             index,
@@ -3398,68 +3158,59 @@ PRESTASI DAN PRESTASI 2
 
             }, smooth ? 350: 0);
         }
+        function updateActive(page) {
+            if (!page || !page.classList.contains("active")) return;
+            if (!page) return;
 
+            const container = getCharacterContainer(page);
+            const characters = getCharacters(page);
+            const state = getCharacterState(page);
 
-        /* =========================
-            CARI CHARACTER TERDEKAT  
-            ========================= */
+            if (!container || !characters.length) return;
 
-    function updateActive(page) {
-        if (!page || !page.classList.contains("active")) return;
-    if (!page) return;
+            if (state.isMoving) return;
 
-    const container = getCharacterContainer(page);
-    const characters = getCharacters(page);
-    const state = getCharacterState(page);
+            const containerRect = container.getBoundingClientRect();
 
-    if (!container || !characters.length) return;
+            const center =
+            containerRect.left + container.clientWidth / 2;
 
-    if (state.isMoving) return;
+            let closest = null;
+            let distance = Infinity;
 
-    const containerRect = container.getBoundingClientRect();
+            characters.forEach(character => {
+                const rect = character.getBoundingClientRect();
 
-    const center =
-        containerRect.left + container.clientWidth / 2;
+                const characterCenter =
+                rect.left + rect.width / 2;
 
-    let closest = null;
-    let distance = Infinity;
+                const difference = Math.abs(center - characterCenter);
 
-    characters.forEach(character => {
-        const rect = character.getBoundingClientRect();
+                if (difference < distance) {
+                    distance = difference;
+                    closest = character;
+                }
+            });
 
-        const characterCenter =
-            rect.left + rect.width / 2;
+            if (!closest) return;
 
-        const difference = Math.abs(center - characterCenter);
+            const current = container.querySelector(".character.active");
 
-        if (difference < distance) {
-            distance = difference;
-            closest = character;
+            if (current === closest) return;
+
+            if (current) {
+                current.classList.remove("active");
+            }
+
+            closest.classList.add("active");
+
+            playClick();
+            updateInfo(closest);
+
+            state.currentIndex = Array.from(characters).indexOf(closest);
+            saveLastCharacter(page, state.currentIndex);
         }
-    });
-
-    if (!closest) return;
-
-    const current = container.querySelector(".character.active");
-
-    if (current === closest) return;
-
-    if (current) {
-        current.classList.remove("active");
-    }
-
-    closest.classList.add("active");
-
-    playClick();
-    updateInfo(closest);
-
-    state.currentIndex = Array.from(characters).indexOf(closest);
-    saveLastCharacter(page, state.currentIndex);
-}
-        /* =========================
-            SETUP SETIAP CHARACTER PAGE
-            ========================= */
-
+      
         function setupCharacterPage(page) {
 
             if (!page) return;
@@ -3483,10 +3234,7 @@ PRESTASI DAN PRESTASI 2
             }
 
 
-            /* -------------------------
-            WHEEL
-            ------------------------- */
-
+         
             container.addEventListener(
                 "wheel",
                 function (e) {
@@ -3565,10 +3313,7 @@ PRESTASI DAN PRESTASI 2
             );
 
 
-            /* -------------------------
-            SCROLL
-            ------------------------- */
-
+          
             container.addEventListener("scroll",
                 () => {
 
@@ -3587,12 +3332,6 @@ PRESTASI DAN PRESTASI 2
                     });
 
                 });
-
-
-            /* -------------------------
-
-            CLICK CHARACTER
-            ------------------------- */
 
             characters.forEach((character,
                 index) => {
@@ -3616,11 +3355,6 @@ PRESTASI DAN PRESTASI 2
 
         }
 
-
-        /* =========================
-            AKTIFKAN SEMUA SECTION
-            ========================= */
-
         document
         .querySelectorAll(
             ".character-page"
@@ -3633,9 +3367,6 @@ PRESTASI DAN PRESTASI 2
 
         });
 
-        /* =========================
-            PILIH
-            ========================= */
 
         function pilihKarakter(character = null) {
             playClick();
@@ -3740,10 +3471,6 @@ PRESTASI DAN PRESTASI 2
             }
         });
 
-        /* =========================
-            LOADING
-            ========================= */
-
         const dots =
         document.getElementById(
             "loadingDots"
@@ -3809,14 +3536,14 @@ PRESTASI DAN PRESTASI 2
         // AMBIL INDEX KARAKTER TERAKHIR
 
         function getLastCharacter(page) {
-    if (lastCharacters[page.id] !== undefined) {
-        return lastCharacters[page.id];
-    }
+            if (lastCharacters[page.id] !== undefined) {
+                return lastCharacters[page.id];
+            }
 
-    const characters = getCharacters(page);
+            const characters = getCharacters(page);
 
-    return Math.floor(characters.length / 2);
-}
+            return Math.floor(characters.length / 2);
+        }
 
         function playClick() {
             if (!clickSource) return;
@@ -3832,7 +3559,6 @@ PRESTASI DAN PRESTASI 2
         document.querySelectorAll("button").forEach(button => {
             button.addEventListener("click", playClick);
         });
-
 
     </script>
 
