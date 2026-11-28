@@ -3056,13 +3056,10 @@ ANIMASI
                     characters = getCharacters(next);
 
                     if (container && characters.length > 0) {
-                        let startIndex = 0;
+                        let startIndex = getLastCharacter(next);
+startIndex = Math.min(startIndex, characters.length - 1);
 
-                        if (next.id === "karakter2" || next.id === "karakter3") {
-                            startIndex = 5;
-                        }
-
-                        startIndex = Math.min(startIndex, characters.length - 1);
+target = characters[startIndex]; 
                         target = characters[startIndex];
 
                         container.style.scrollSnapType = "none";
@@ -3333,6 +3330,7 @@ ANIMASI
 
             state.currentIndex =
             index;
+            saveLastCharacter(page, index);
 
             state.isMoving =
             true;
@@ -3509,6 +3507,7 @@ ANIMASI
             ).indexOf(
                 closest
             );
+            saveLastCharacter(page, state.currentIndex);
         }
 
 
@@ -3852,6 +3851,29 @@ ANIMASI
                 console.error("Suara tombol gagal dimuat:", clickSource.currentSrc);
             });
         }
+        
+        // Simpan karakter terakhir yang dibuka
+function saveLastCharacter(page, index) {
+    localStorage.setItem('lastCharacter_' + page.id, index);
+}
+
+function getLastCharacter(page) {
+    const saved = localStorage.getItem('lastCharacter_' + page.id);
+
+    if (saved !== null) {
+        return Number(saved);
+    }
+
+    if (page.id === "karakter2") {
+    return 5;
+}
+
+if (page.id === "karakter3") {
+    return 5;
+}
+
+return 0;
+}
 
         function playClick() {
             if (!clickSource) return;
