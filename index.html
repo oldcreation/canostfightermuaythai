@@ -93,43 +93,37 @@ JUDUL
 CAROUSEL
 ========================= */
 
-        .character-container {
-            width: 100%;
-            max-width: 1200px;
+       .character-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
 
-            height: 430px;
+    overflow-x: auto;
+    overflow-y: hidden;
 
-            overflow-x: auto;
-            overflow-y: hidden;
+    touch-action: pan-x;
 
-            touch-action: pan-x;
+    display: flex;
+    align-items: center;
 
-            display: flex;
-            align-items: center;
+    gap: 25px;
 
-            gap: 25px;
+    padding: 110px 50% 40px;
 
-            padding: 110px 50% 40px;
+    scroll-behavior: auto;
+    scrollbar-width: none;
+    flex-shrink: 0;
 
-            scroll-behavior: auto;
+    scroll-snap-type: x mandatory;
 
-            scrollbar-width: none;
-
-            flex-shrink: 0;
-
-            scroll-snap-type: x mandatory;
-
-            scroll-padding-left: calc(50% - 20%);
-            scroll-padding-right: calc(50% - 20%);
-            -webkit-mask-image: linear-gradient(
-            to right,
-            transparent 0%,
-            black 10%,
-            black 90%,
-            transparent 100%
-            );
-
-        }
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+}
 
         .character-container::-webkit-scrollbar {
             display: none;
@@ -1530,10 +1524,10 @@ PRESTASI DAN PRESTASI 2
                 seperti Walikota Cup hingga Kejurprov Kalimantan Selatan 2025.
             </p>
             <!--   <button style="font-family: 'Nunito', sans-serif;background-color: #E1306C; color: white; border: none;"
-                                                                                                                                                                                                                                                                                                                        onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
-                                                                                                                                                                                                                                                                                                                        canostfightermuaythai
-                                                                                                                                                                                                                                                                                                                    </button>
-                                                                                                                                                                                                                                                                                                                    <!-- isi event -->
+                                                                                                                                                                                                                                                                                                                                    onclick="window.location.href='https://www.instagram.com/canostfightermuaythai/';">
+                                                                                                                                                                                                                                                                                                                                    canostfightermuaythai
+                                                                                                                                                                                                                                                                                                                                </button>
+                                                                                                                                                                                                                                                                                                                                <!-- isi event -->
 
             <button onclick="showPage('home')">
                 KEMBALI
@@ -1671,8 +1665,8 @@ PRESTASI DAN PRESTASI 2
 
 
         <!-- =========================
-                                                                                                                                                                                                                                                                                                         INFORMASI KARAKTER
-                                                                                                                                                                                                                                                                                                    ========================= -->
+                                                                                                                                                                                                                                                                                                                 INFORMASI KARAKTER
+                                                                                                                                                                                                                                                                                                            ========================= -->
 
         <div class="character-info">
 
@@ -1735,7 +1729,7 @@ PRESTASI DAN PRESTASI 2
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                                                                                                                                                                                                                 dimasukkan di sini -->
+                                                                                                                                                                                                                                                                                                                         dimasukkan di sini -->
 
     </section>
     <section id="karakter2" class="page character-page">
@@ -2100,8 +2094,8 @@ PRESTASI DAN PRESTASI 2
 
 
         <!-- =========================
-                                                                                                                                                            INFORMASI KARAKTER
-                                                                                                                                                            ========================= -->
+                                                                                                                                                                    INFORMASI KARAKTER
+                                                                                                                                                                    ========================= -->
 
         <div class="character-info">
 
@@ -2165,7 +2159,7 @@ PRESTASI DAN PRESTASI 2
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                                                            dimasukkan di sini -->
+                                                                                                                                                                    dimasukkan di sini -->
 
     </section>
     <section id="karakter3" class="page character-page">
@@ -2435,32 +2429,32 @@ PRESTASI DAN PRESTASI 2
 
             </div>
             <!--
-                                                                                                                                                                                            <div class="character" data-name="SERUMPUN" data-role="Serumpun Brothers"
-                                                                                                                                                                                                data-description="will u join us ?" data-hp="99" data-atk="99" data-def="99"
-                                                                                                                                                                                                data-story="Solid - Selaras - Swiswiswi">
+                                                                                                                                                                                                        <div class="character" data-name="SERUMPUN" data-role="Serumpun Brothers"
+                                                                                                                                                                                                            data-description="will u join us ?" data-hp="99" data-atk="99" data-def="99"
+                                                                                                                                                                                                            data-story="Solid - Selaras - Swiswiswi">
 
-                                                                                                                                                                                                <div class="character-bck">
+                                                                                                                                                                                                            <div class="character-bck">
 
-                                                                                                                                                                                                    <div class="character-bg" style="--bg-image:url('img/laut.webp');">
-                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                <div class="character-bg" style="--bg-image:url('img/laut.webp');">
+                                                                                                                                                                                                                </div>
 
-                                                                                                                                                                                                </div>
-                                                                                                                                                                                                <div class="character-image">
+                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                            <div class="character-image">
 
-                                                                                                                                                                                                    <img src="img/text.webp">
+                                                                                                                                                                                                                <img src="img/text.webp">
 
-                                                                                                                                                                                                </div>
+                                                                                                                                                                                                            </div>
 
-                                                                                                                                                                                            </div>
-                                                                                                                                                                                -->
+                                                                                                                                                                                                        </div>
+                                                                                                                                                                                            -->
 
 
         </div>
 
 
         <!-- =========================
-                                                                                                                                                            INFORMASI KARAKTER
-                                                                                                                                                            ========================= -->
+                                                                                                                                                                    INFORMASI KARAKTER
+                                                                                                                                                                    ========================= -->
 
         <div class="character-info">
 
@@ -2525,7 +2519,7 @@ PRESTASI DAN PRESTASI 2
             KEMBALI
         </button>
         <!-- pemilihan karakter kamu
-                                                                                                                                                            dimasukkan di sini -->
+                                                                                                                                                                    dimasukkan di sini -->
 
     </section>
     <!-- LAIN-LAIN -->
@@ -2551,12 +2545,12 @@ PRESTASI DAN PRESTASI 2
             <br>
             <br>
             <!--
-                                                                                                                                                                                                                    <button style="font-family: 'Nunito', sans-serif;"
-                                                                                                                                                                                                                        onclick="window.location.href='https://www.instagram.com/serumpunbrothers/';">
-                                                                                                                                                                                                                        serumpunbrothers
-                                                                                                                                                                                                                    </button><br><br>
+                                                                                                                                                                                                                                <button style="font-family: 'Nunito', sans-serif;"
+                                                                                                                                                                                                                                    onclick="window.location.href='https://www.instagram.com/serumpunbrothers/';">
+                                                                                                                                                                                                                                    serumpunbrothers
+                                                                                                                                                                                                                                </button><br><br>
 
-                                                                                                                                                                                                                     event -->
+                                                                                                                                                                                                                                 event -->
 
             <button onclick="showPage('home')">
                 KEMBALI
@@ -2566,8 +2560,8 @@ PRESTASI DAN PRESTASI 2
 
 
     <!-- =========================
-                                                                                    SEJARAH KARAKTER
-                                                                                    ========================= -->
+                                                                                        SEJARAH KARAKTER
+                                                                                        ========================= -->
 
     <div class="story-overlay" id="storyOverlay">
 
@@ -3044,69 +3038,23 @@ PRESTASI DAN PRESTASI 2
             }
 
             setTimeout(() => {
-                let target = null;
-                let container = null;
-                let characters = [];
-                let state = null;
-
-                if (next.classList.contains("character-page")) {
-                    state = getCharacterState(next);
-                    container = getCharacterContainer(next);
-                    characters = getCharacters(next);
-
-                    if (container && characters.length > 0) {
-                        let startIndex = getLastCharacter(next);
-
-                        startIndex = Math.max(0, Math.min(startIndex, characters.length - 1));
-
-                        target = characters[startIndex];
-                        container.style.scrollSnapType = "none";
-
-                        characters.forEach(character => {
-                            character.classList.remove("active");
-                            character.classList.add("no-transition");
-                        });
-
-                        target.classList.add("active");
-
-                        state.currentIndex = startIndex;
-                        state.isMoving = true;
-
-                        updateInfo(target);
-
-                        const containerRect = container.getBoundingClientRect();
-                        const targetRect = target.getBoundingClientRect();
-
-                        const selisih =
-                        targetRect.left + targetRect.width / 2 -
-                        (containerRect.left + containerRect.width / 2);
-
-                        // Posisikan carousel sebelum halaman ditampilkan
-                        container.scrollLeft += selisih;
-                    }
-                }
-
                 next.classList.add("active");
 
-                if (container && target) {
-                    requestAnimationFrame(() => {
-                        requestAnimationFrame(() => {
+                if (!next.classList.contains("character-page")) return;
 
-                            characters.forEach(character => {
-                                character.classList.remove("no-transition");
-                            });
+                let index = getLastCharacter(next);
 
-                            container.style.scrollSnapType = "x mandatory";
-                            state.isMoving = false;
+                const characters = getCharacters(next);
 
-                        });
-                    });
-                }
+                if (!characters.length) return;
+
+                index = Math.max(0, Math.min(index, characters.length - 1));
+
+                aturPosisiAwal(next, index);
 
             },
                 500);
         }
-
         /* =========================
             CONTAINER
             ========================= */
@@ -3167,8 +3115,59 @@ PRESTASI DAN PRESTASI 2
 
             return characterStates[id];
         }
+      function aturPosisiAwal(page, index) {
+    const container = getCharacterContainer(page);
+    const characters = getCharacters(page);
+    const state = getCharacterState(page);
 
+    if (!container || !characters.length) return;
+    if (index < 0 || index >= characters.length) return;
 
+    const target = characters[index];
+
+    state.currentIndex = index;
+    state.isMoving = true;
+
+    saveLastCharacter(page, index);
+
+    characters.forEach(character => {
+        character.classList.remove("active");
+    });
+
+    target.classList.add("active");
+    updateInfo(target);
+
+    container.style.scrollSnapType = "none";
+
+    requestAnimationFrame(() => {
+        const containerRect = container.getBoundingClientRect();
+        const targetRect = target.getBoundingClientRect();
+
+        const posisiTengah =
+            targetRect.left +
+            targetRect.width / 2;
+
+        const posisiContainer =
+            containerRect.left +
+            container.clientWidth / 2;
+
+        container.scrollTo({
+            left: container.scrollLeft + posisiTengah - posisiContainer,
+            behavior: "auto"
+        });
+
+        requestAnimationFrame(() => {
+            container.style.scrollSnapType = "x mandatory";
+
+            state.currentIndex = index;
+            saveLastCharacter(page, index);
+
+            setTimeout(() => {
+                state.isMoving = false;
+            }, 400);
+        });
+    });
+}
         /* =========================
             INFO
             ========================= */
@@ -3402,113 +3401,61 @@ PRESTASI DAN PRESTASI 2
 
 
         /* =========================
-            CARI CHARACTER TERDEKAT
+            CARI CHARACTER TERDEKAT  
             ========================= */
 
-        function updateActive(page) {
+    function updateActive(page) {
+        if (!page || !page.classList.contains("active")) return;
+    if (!page) return;
 
-            if (!page) return;
+    const container = getCharacterContainer(page);
+    const characters = getCharacters(page);
+    const state = getCharacterState(page);
 
+    if (!container || !characters.length) return;
 
-            const container =
-            getCharacterContainer(page);
+    if (state.isMoving) return;
 
-            const characters =
-            getCharacters(page);
+    const containerRect = container.getBoundingClientRect();
 
-            const state =
-            getCharacterState(page);
+    const center =
+        containerRect.left + container.clientWidth / 2;
 
+    let closest = null;
+    let distance = Infinity;
 
-            if (!container || !characters.length) {
-                return;
-            }
+    characters.forEach(character => {
+        const rect = character.getBoundingClientRect();
 
+        const characterCenter =
+            rect.left + rect.width / 2;
 
-            const center =
-            container.scrollLeft +
-            container.clientWidth / 2;
+        const difference = Math.abs(center - characterCenter);
 
-
-            let closest = null;
-            let distance = Infinity;
-
-
-            characters.forEach(character => {
-
-                const characterCenter =
-                character.offsetLeft +
-                character.offsetWidth / 2;
-
-
-                const difference =
-                Math.abs(
-                    center -
-                    characterCenter
-                );
-
-
-                if (
-                    difference <
-                    distance
-                ) {
-
-                    distance =
-                    difference;
-
-                    closest =
-                    character;
-
-                }
-
-            });
-
-
-            if (!closest) return;
-
-
-            const current =
-            container.querySelector(
-                ".character.active"
-            );
-
-
-            if (current === closest) {
-                return;
-            }
-
-
-            if (current) {
-
-                current.classList.remove(
-                    "active"
-                );
-
-            }
-
-
-            closest.classList.add(
-                "active"
-            );
-
-
-            playClick();
-
-            updateInfo(
-                closest
-            );
-
-
-            state.currentIndex =
-            Array.from(
-                characters
-            ).indexOf(
-                closest
-            );
-            saveLastCharacter(page, state.currentIndex);
+        if (difference < distance) {
+            distance = difference;
+            closest = character;
         }
+    });
 
+    if (!closest) return;
 
+    const current = container.querySelector(".character.active");
+
+    if (current === closest) return;
+
+    if (current) {
+        current.classList.remove("active");
+    }
+
+    closest.classList.add("active");
+
+    playClick();
+    updateInfo(closest);
+
+    state.currentIndex = Array.from(characters).indexOf(closest);
+    saveLastCharacter(page, state.currentIndex);
+}
         /* =========================
             SETUP SETIAP CHARACTER PAGE
             ========================= */
@@ -3850,30 +3797,20 @@ PRESTASI DAN PRESTASI 2
             });
         }
 
-        // RESET POSISI LAMA SEKALI SAJA
+        // SIMPAN KARAKTER TERAKHIR
+        // SIMPAN KARAKTER TERAKHIR SELAMA HALAMAN MASIH TERBUKA
 
-        const versiIndex = "index-awal-5-v2";
-
-        if (localStorage.getItem("versiIndexKarakter") !== versiIndex) {
-            localStorage.removeItem("lastCharacter_karakter2");
-            localStorage.removeItem("lastCharacter_karakter3");
-
-            localStorage.setItem("versiIndexKarakter", versiIndex);
-        }
-
-        // Simpan karakter terakhir yang dibuka
+        let lastCharacters = {};
 
         function saveLastCharacter(page, index) {
-            localStorage.setItem("lastCharacter_" + page.id, index);
+            lastCharacters[page.id] = index;
         }
 
-        // Ambil index karakter terakhir
+        // AMBIL INDEX KARAKTER TERAKHIR
 
         function getLastCharacter(page) {
-            const saved = localStorage.getItem("lastCharacter_" + page.id);
-
-            if (saved !== null && saved !== "") {
-                return Number(saved);
+            if (lastCharacters[page.id] !== undefined) {
+                return lastCharacters[page.id];
             }
 
             if (
