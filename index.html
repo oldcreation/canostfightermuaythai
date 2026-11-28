@@ -3858,23 +3858,20 @@ function saveLastCharacter(page, index) {
 }
 
 function getLastCharacter(page) {
-    const saved = localStorage.getItem('lastCharacter_' + page.id);
-
-    if (saved !== null) {
-        return Number(saved);
-    }
 
     if (page.id === "karakter2") {
-    return 5;
-}
+        return 5;
+    }
 
-if (page.id === "karakter3") {
-    return 5;
-}
+    if (page.id === "karakter3") {
+        return 5;
+    }
 
-return 0;
-}
+    const saved = localStorage.getItem('lastCharacter_' + page.id);
 
+    return saved !== null ? Number(saved) : 0;
+}
+ 
         function playClick() {
             if (!clickSource) return;
 
