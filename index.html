@@ -1742,7 +1742,7 @@ PRESTASI DAN PRESTASI 2
 
             <!-- WARRIOR 111-->
 
-            <div class="character bg-ungu" data-name="Akmal Anshari" data-role="The Lunatic"
+            <div class="character bg-ungu" data-name="M Akmal Anshari" data-role="The Lunatic"
                 data-description="Kemampuan pengambilan foto dengan akurasi tinggi." data-hp="100" data-atk="80"
                 data-def="90"
                 data-story="Mampu menangkap setiap momen dengan ketepatan dan kreativitas yang tinggi. Dengan kepekaan terhadap detail, pencahayaan, dan komposisi, mampu mengubah momen sederhana menjadi sebuah karya visual yang penuh cerita dan berkesan."
@@ -1792,7 +1792,7 @@ PRESTASI DAN PRESTASI 2
 
 
 
-            <div class="character bg-ungu" data-name="Aldi Pratama" data-role="THE IRONMAN" data-description="Memiliki jurus mematikan, ledakan
+            <div class="character bg-ungu" data-name="M Aldi Pratama" data-role="THE IRONMAN" data-description="Memiliki jurus mematikan, ledakan
                 api yg membara & suka friendly fire." data-hp="85" data-atk="100" data-def="85"
                 data-story="Ampunnya Alalak Selatan, penjagaunya Handil, p info gladiator."
                 data-buttons='[{"name":"IG","link":"https://www.instagram.com/aldiiu13/"},{"name":"🅢","link":"https://www.instagram.com/serumpunbrothers/"}]'>
@@ -1839,7 +1839,7 @@ PRESTASI DAN PRESTASI 2
 
             </div>
 
-            <div class="character bg-ungu" data-name="Maulana" data-role="Lanut" data-description="Gamers Fighter"
+            <div class="character bg-ungu" data-name="Ridwan Maulana" data-role="Lanut" data-description="Gamers Fighter"
                 data-hp="100" data-atk="70" data-def="100" data-story="Menguasai elemen Api."
                 data-buttons='[{"name":"IG","link":"https://www.instagram.com/lanut211/"}]'>
 
@@ -1883,7 +1883,7 @@ PRESTASI DAN PRESTASI 2
 
             </div>
 
-            <div class="character bg-ungu" data-name="M Lutfi" data-role="The Mafia" data-description="Tahan banting, berdedikasi tinggi."
+            <div class="character bg-ungu" data-name="M Lutfi Thohir" data-role="The Mafia" data-description="Tahan banting, berdedikasi tinggi."
                 data-hp="90" data-atk="90" data-def="90" data-story="Pemuda pejuang tangguh."
                 data-buttons='[{"name":"IG","link":"https://www.instagram.com/muhmmdlthfi__/"}]'>
 
@@ -1934,7 +1934,7 @@ PRESTASI DAN PRESTASI 2
 
             <!-- TANK -->
 
-            <div class="character bg-orange" data-name="Sam Daeng" data-role="The Titan Collosal"
+            <div class="character bg-orange" data-name="Usamah Fattaqun" data-role="The Titan Collosal"
                 data-description="Mampu mengelola berbagai macam bahan makanan menjadi hidangan lezat." data-hp="100"
                 data-atk="60" data-def="80"
                 data-story="Kemampuan mengolah berbagai bahan menjadi hidangan yang lezat dan menggugah selera. Dengan kreativitas, ketelitian, serta keahlian dalam memadukan rasa, ia mampu menciptakan sajian yang tidak hanya nikmat, tetapi juga memiliki cita rasa dan karakter yang khas."
@@ -3809,19 +3809,14 @@ PRESTASI DAN PRESTASI 2
         // AMBIL INDEX KARAKTER TERAKHIR
 
         function getLastCharacter(page) {
-            if (lastCharacters[page.id] !== undefined) {
-                return lastCharacters[page.id];
-            }
+    if (lastCharacters[page.id] !== undefined) {
+        return lastCharacters[page.id];
+    }
 
-            if (
-                page.id === "karakter2" ||
-                page.id === "karakter3"
-            ) {
-                return 5;
-            }
+    const characters = getCharacters(page);
 
-            return 0;
-        }
+    return Math.floor(characters.length / 2);
+}
 
         function playClick() {
             if (!clickSource) return;
